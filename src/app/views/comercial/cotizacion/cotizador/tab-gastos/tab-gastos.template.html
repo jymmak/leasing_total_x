@@ -1,0 +1,160 @@
+<div id="tab-gastos">
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div>
+                <div class="card-body">
+                    <div class="col-sm-12 col-md-12 col-sm-12" style="margin-top: 10px;">
+                        <div class="row">
+                            <div class="col-sm-12 text-right">
+                                <button type="button" class="btn btn-primary mb-3 mr-3" id="cronograma" (click)="cronograma()">Cronograma</button>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-sm-6 b-r" *ngFor="let lista of listaGastos; let index = index">
+                                <ul>
+                                    <li style=" display: block"><strong> {{index}}. {{lista.cantidad}} {{lista.nivel}}
+                                            {{lista.tipo}} {{lista.marca}}</strong>
+                                        <div class="marginTable">{{lista.moneda}}/. {{lista.precio}} </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li style=" display: block">
+                                        <div class="row pinky" style="width: 102%; margin-top: 23px;">
+                                            <div class="col-sm-8 col-md-8 col-sm-8">
+                                                <h6>Gastos de Seguro</h6>
+                                            </div>
+                                            <div class="marginTableLeft">{{lista.moneda}}/. {{lista.gastosSeguro}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-3 col-sm-3">
+                                                <h5>Categoría:</h5>
+                                            </div>
+                                            <div class="col-sm-3 col-md-3 col-sm-3" style="margin-top: 13px; font-size: 13px;">{{lista.categoria}}
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <h5>Tasa:</h5>
+                                            </div>
+                                            <div class="col-sm-3 col-md-3 col-sm-3" style="margin-top: 13px;">{{lista.tasa}}%
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li style=" display: block">
+                                        <div class="row pinky" style="width: 102%;">
+                                            <div class="col-sm-8 col-md-8 col-sm-8">
+                                                <h6>Gastos de Legales </h6>
+                                            </div>
+                                            <div class="marginTableLeft">{{lista.moneda}}/. {{lista.gastosLegales}}
+                                            </div>
+                                        </div>
+                                        <div class="row" style="width: 102%;">
+                                            <div class="col-sm-8 col-md-8 col-sm-8" style="margin-top: -8px;">
+                                                <h5>Comision de Ventas </h5>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4 col-sm-4 marginleft" style="margin-top: -2px;">{{lista.moneda}}/.
+                                                {{lista.gastosLegales}}
+                                            </div>
+                                        </div>
+                                        <div class="row" style="width: 102%;">
+                                            <div class="col-sm-8 col-md-8 col-sm-8" style="margin-top: -8px;">
+                                                <h5>Comision de Revision de Póliza </h5>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4 col-sm-4 marginleft" style="margin-top: -2px;">{{lista.moneda}}/.
+                                                {{lista.gastosLegales}}
+                                            </div>
+                                        </div>
+                                        <div class="row" style="width: 102%;">
+                                            <div class="col-sm-8 col-md-8 col-sm-8" style="margin-top: -8px;">
+                                                <h5>Comision por tasación </h5>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4 col-sm-4 marginleft" style="margin-top: -2px;">{{lista.moneda}}/.
+                                                {{lista.gastosLegales}}
+                                            </div>
+                                        </div>
+                                        <div class="row" style="width: 102%;">
+                                            <div class="col-sm-8 col-md-8 col-sm-8" style="margin-top: -8px;">
+                                                <h5>Gastos por Servicios de GPS </h5>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4 col-sm-4 marginleft" style="margin-top: -2px;">{{lista.moneda}}/.
+                                                {{lista.gastosLegales}}
+                                            </div>
+                                        </div>
+                                        <div class="row" style="width: 102%;">
+                                            <div class="col-sm-8 col-md-8 col-sm-8" style="margin-top: -8px;">
+                                                <h5>Gastos de Procuraduria </h5>
+                                            </div>
+                                            <div class="col-sm-4 col-md-4 col-sm-4 marginleft" style="margin-top: -2px;">{{lista.moneda}}/.
+                                                {{lista.gastosLegales}}
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li style=" display: block">
+                                        <div class="row pinky" style="width: 102%; margin-top: 23px;">
+                                            <div class="col-sm-8 col-md-8 col-sm-8">
+                                                <h6>Gastos Notariales </h6>
+                                            </div>
+                                            <div class="marginTableLeft">{{lista.moneda}}/. {{lista.gastosLegales}}
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header classheader" id="headingOne">
+                <h5 class="mb-0">
+                    <div class="row">
+                        <div class="col-sm-2">
+
+                        </div>
+                        <div class="col-sm-6 title">
+                            <h5 class=" title"> TOTAL GASTOS </h5>
+                        </div>
+                        <div class="col-sm-4 price">
+                            <div class=" text-navy">
+                                <p>S/. 2,780.00</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </h5>
+            </div>
+            <div>
+                <div class="row classrw">
+                    <div class="col-sm-6">
+                        <h5> Gastos de Estructuracion</h5>
+                    </div>
+                    <div class="col-sm-4" style="margin-top: 4px; text-align: right;">
+                        <div>
+                            <span style="font-size: 12px;">S/. 200.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12  mt-4 mb-3 text-right">
+            <button type="button" (click)="atras()" class="btn btn-secondary mr-3">
+                <span class="mdi mdi-chevron-left"></span>
+                Atrás
+            </button>
+            <button type="button" (click)="guardar()" class="btn btn-primary mr-3">
+                Siguiente
+                <span class="mdi mdi-chevron-right"></span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<boton-up></boton-up>

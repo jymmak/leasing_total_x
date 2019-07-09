@@ -1,0 +1,64 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+
+<div id="embudo" class="container-fluid">
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+
+        <div class="ibox">
+          <div class="ibox-title" style="box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);">
+
+
+            <div class="row mt-3 ml-5">
+              <div class="col-md-1">
+
+                <label class="label-banner">Mes</label>
+
+              </div>
+           
+              <div class="col-md-3">
+
+                <input class="col-md-12 " id="datepicker" [(ngModel)]="fechaEmicion" required class="icon-calendario btn-rounded  _input pinky margin-bottom30 "
+                  width="276" autocomplete="off">
+
+              </div>
+              <div class="col-md-1">
+                <label class="label-banner">Sucursal</label>
+
+
+              </div>
+              <div class="col-md-3">
+
+                <select select2 theme="FondoRosado" (onSelect)="selectedSucursal($event)">
+                  <option *ngFor="let  item of sucursal" [value]="item.id">{{item.text}}</option>
+                </select>
+
+
+              </div>
+              <div class="col-md-1">
+                <label class="label-banner">Ejecutivo </label>
+
+              </div>
+
+              <div class="col-md-3">
+                <select select2 theme="FondoRosado" (onSelect)="selectedEjecutivos($event)">
+                  <option *ngFor="let  item of Ejecutivo" [value]="item.id">{{item.text}}</option>
+                </select>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="ibox-content">
+            <div class="related-news ">
+              <div id="funnel" style="min-width: 410px; max-width: 300px; height: 300px; margin: 0 auto"></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

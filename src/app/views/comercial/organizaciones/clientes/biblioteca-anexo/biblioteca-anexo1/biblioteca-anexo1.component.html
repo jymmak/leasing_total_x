@@ -1,0 +1,84 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="clientes">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="ibox">
+          <div class="ibox-title">
+            <form action="/search" id="searchbox5" style="margin-left: 30px;  margin-top: 50px; ">
+              <input id="search51" [(ngModel)]="buscarBiblioteca" name="q" type="text" size="40" placeholder="Buscar" (keyup)="busquedaBiblioteca()" />
+            </form>
+
+            <div class="ibox-tools" style=" margin-top: 26px;  margin-right: 26px;">
+              <div class="circulobotonsdelete" style="margin-right: 5px;" id="comboIcons">
+                <button class="mdi mdi-format-list-bulleted   iconsborder " disabled="disabled"  (click)="detalleBiblioteca2()"></button>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="ibox-content">
+            <div class="related-news">
+              <div class="table-responsive">
+                <table class="table table-striped  table-hover " id="tableCliente">
+                  <thead>
+                    <tr>
+
+                      <th>No.</th>
+                      <th>Ruc</th>
+                      <th>Cliente </th>
+                      <th>Fecha Apertura </th>
+                      <th>Última Actualización</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of listaBiblioteca" (click)="select(item)">
+
+                      <td (click)="clientes($event)">{{item.id}}</td>
+                      <td>{{item.ruc}}</td>
+                      <td>{{item.cliente}}</td>
+                      <td>{{item.fechaApertura}}</td>
+                      <td>{{item.ultimaActualizacion}}  {{item.fechaApertura}}</td>
+                    </tr>
+
+                  </tbody>
+
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="modal fade" id="modalConfirmar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true" data-backdrop="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="border-radius: 16px;">
+      <div class="modal-body">
+        <div class="row">
+
+          <strong style="margin-left: 97px;">¿Estás seguro que desea eliminar al cliente?</strong>
+        </div>
+      </div>
+      <div class="modal-footer borderFoter">
+        <div class="col-md-4 col-md-offset-2">
+          <button type="button" class="btn-rounded button button-cg " (click)="confirmarGuardarContacto()" data-dismiss="modal">Cancelar</button>
+        </div>
+
+        <div class="col-md-4 col-md-offset-2" style="padding-top: 2px;">
+          <button type="button" class="buttonAceptarModal" (click)="eliminarCliente(item)" data-dismiss="modal">
+            Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- 
+<formulario-buscar (buscar)="busquedaAvanzada($event)"></formulario-buscar> -->
+<!-- <formulario-email></formulario-email> -->

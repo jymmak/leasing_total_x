@@ -1,0 +1,50 @@
+#embudo{
+    .ibox {
+        .ibox-tools {
+          //top: 34px;
+          right: 15px;
+          margin-right: 44px;
+      
+          button {
+            color: #FFFFFF;
+            padding: 0.35rem;
+            margin: 20px;
+            box-shadow: 0 0 3.3px 0 #d22919;
+    
+            .mdi {
+              font-size: 1rem;
+            }
+    
+            span {
+              margin-right: 6px;
+            }
+          }
+        }
+    
+        .ibox-content {
+          .table-striped tbody tr:nth-of-type(odd) {
+
+            background-color: rgba(255, 254, 254, 0);
+          }
+    
+          .table th,
+          .table td {
+            color: #707070;
+            border-top: 1px solid #fff7f7 !important;
+          }
+        }
+      }
+ 
+
+
+ .mr-2, .mx-2 {
+  margin-right: -3.5rem !important;
+}
+
+.label-banner{
+    color: #707070;
+    font-family: Helvetica, Bold;
+    font-size: 12px;
+    font-weight: 600;
+}
+}

@@ -1,0 +1,153 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="detalle-two" class="container-fluid">
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="ibox">
+          <div class="ibox-title">
+
+            <div  class="row label" *ngFor="let panelInf of panelInf">
+            
+                  <table class=" tableClienteDetalle">
+
+                    <tr>
+
+                      <td>
+                        <div class="label-info-titel">Información </div>
+                      </td>
+                      <td>
+                        <div class="label-info-titel" style="margin-left: 15px;">Fecha Apertura: </div>
+                        <div class="label-info-result">{{panelInf.fechaApertura}}</div>
+                      </td>
+                      <td>
+                        <div class="label-info-titel" style="margin-left: 10px;">Estado:</div>
+                        <div class="titel-results" style="margin-left: 5px;"> {{panelInf.enEvaluacion}}</div>
+                      </td>
+                      <td>
+                        <div class="label-info-titel" style="margin-left: 10px;">Sucursal: </div>
+                        <div class="titel-results" style="margin-left: 5px;"> {{panelInf.distrito}}</div>
+                      </td>
+                      <td>
+                        <div class="label-info-titel" style="margin-left: 10px;">Tipo Operación: </div>
+                        <div class="titel-results" style="margin-left: 5px;"> {{panelInf.tipoOperacion}}</div>
+                      </td>
+                      <td>
+                        <div><button type="button" class="detalle-documeto" (click)="DocumentosExpedintes(item)">
+                            Documentos</button></div>
+                      </td>
+
+                    </tr>
+                  </table>
+                
+            </div>
+          </div>
+
+
+        </div>
+        <div class="ibox-content">
+          <div class="related-news" style=" margin-top: -22px;">
+
+            <div class="row">
+              <div class=" col-md-6 col-sm-4 pl-4">
+                <div class="titel-tabla">Seguiminto Ubicación </div>
+                <table class="table table-striped   table-responsive " id="tableCliente">
+                  <thead>
+                    <tr>
+
+                      <th style="width:10%;">Ubicación</th>
+                      <th style="width:10%;">Ingreso</th>
+                      <th style="width:10%;">Días </th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of lstUbicacion" (click)="select(item)">
+
+                      <td style="width:10%;">{{item.ubicacion}}</td>
+                      <td style="width:10%;">{{item.hora}} {{item.ingreso}}</td>
+                      <td style="width:10%;">{{item.dias}}</td>
+
+                  </tbody>
+
+                </table>
+                <label class="titel-tabla">Observacion</label>
+                <div class="card col-md-12">
+
+                  <label class="nota-ubicacion">
+                    {{notaUbicacion}}
+                  </label>
+                </div>
+
+              </div>
+              <div class="col-md-6 col-md-2">
+                <div class="titel-tabla">Historial de expediente </div>
+                <div id="timeline" class="historial-container">
+                  <ul class="progress-tracker progress-tracker--text progress-tracker--vertical progress-tracker--spaced">
+                    <li class="progress-step is-complete" *ngFor="let item of lstHistorial">
+                      <div class="row">
+                        <div class="col-sm-2">
+                          <span class="progress-marker"></span>
+                        </div>
+                        <div class="col-sm-10" style="padding-left: 100px;">
+                          <span class="progress-text font-span">
+                            <div class="text-navy progress-content">
+                               <label class="titel-exp-righ">{{item.hora}} {{item.ingreso}}
+                                <label class="titel-exp-left">{{item.nombre}}<br>{{item.cargo}}</label> </label> 
+                              <label class="status-historial"> {{item.estado}} </label>
+                              <label class="px-5" style=" width: 142%;"> {{item.estado2}} </label>
+                              </div>
+                          </span>
+                        </div>
+                      </div>
+
+
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+
+              <!--<table class="table table-striped   table-responsive " id="tableCliente">
+                  <thead>
+                    <tr>
+
+                    
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    <tr *ngFor="let item of lstHistorial" (click)="select(item)">
+                      <td  class="mdi mdi-checkbox-blank-circle-outline  ">
+
+
+                      <td style="width:60%;"> <label class="titel-exp-righ">{{item.hora}} {{item.ingreso}} </label>
+                        <label style=" margin-top: 51px;"> {{item.estado}}<br>{{item.estado2}}</label>
+                      </td>
+                      <td style="width:30%;"><label class="titel-exp-left">{{item.nombre}}<br>{{item.cargo}}</label></td>
+
+                    </tr>
+                  </tbody>
+
+                </table>
+               -->
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="actions text-right ">
+
+        <button (click)="dettalleOne()" class="btn btn-secondary mr-3"><span class="mdi mdi-chevron-left"></span>
+          Atras </button>
+
+
+      </div>
+
+
+    </div>
+  </div>
+</div>

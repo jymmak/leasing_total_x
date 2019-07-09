@@ -1,0 +1,253 @@
+#navigation {
+  .main-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 185px;
+    position: absolute;
+    height: 100%;
+
+    .fa-2x {
+      font-size: 2em;
+    }
+    .mdi {
+      position: relative;
+      display: table-cell;
+      width: 36px;
+      height: 36px;
+      vertical-align: inherit;
+      font-size: 15px;
+    }
+    .metismenu{
+      .mm-active{
+        &>a[aria-expanded=true]{
+          box-shadow: 1px 2px 6px rgba(0,0,0,.5);
+          color: #d22919;
+          font-weight: 800 !important;
+          .mdi-account-outline::before{
+            content: "\F004"
+          }
+          .mdi-content-copy::before{
+            content: "\F18F"
+          }
+
+        }
+      }&.mshow{
+        background-color: #fff7f7 !important;
+      
+      }
+    }
+  }
+
+.claseSubMenu{
+  color:#d22919 !important;
+  font-weight: 580;
+}
+
+
+.mshow{
+  background-color: #fff7f7 !important;
+
+}
+
+.mm-show:active {
+  background-color: #fff7f7 !important;
+}
+
+
+//->
+.mm-show ul {
+  list-style: none;
+}
+
+
+.mm-show li {	
+  background: #fff7f7;
+  border-left: 1px solid #fff;
+  border-bottom: 1px ridge #eae3e3;
+}
+
+// .mm-show li.active
+// {
+//   background: #fff7f7;
+//   color: white;
+// }
+
+
+// .hide {
+//   display: none;
+// }
+
+//<-
+
+
+  .main-menu > ul {
+    margin: 7px 0;
+  }
+
+  .main-menu li.sub-title {
+    position: relative;
+    display: block;
+
+    &:hover {
+      background: #fff7f7;
+    }
+  }
+
+  .main-menu li > a {
+    cursor: pointer;
+    position: relative;
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #666666;
+    text-decoration: none;
+    -webkit-transform: translateZ(0) scale(1, 1);
+    -webkit-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+    width: 100%;
+  }
+
+  .main-menu .nav-icon {
+    position: relative;
+    display: table-cell;
+
+    height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+  }
+
+  .main-menu .nav-text {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: "Titillium Web", sans-serif;
+  }
+
+  .main-menu > ul.logout {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .main-menu.no-touch .scrollable.hover {
+    overflow-y: hidden;
+  }
+
+  .main-menu.no-touch .scrollable.hover:hover {
+    overflow-y: auto;
+    overflow: visible;
+  }
+
+  .main-menu a:hover,
+  .main-menu a:focus {
+    text-decoration: none;
+  }
+
+  .main-menu li:hover > a,
+  nav.main-menu li.active > a,
+  .dropdown-menu > li > a:hover,
+  .dropdown-menu > li > a:focus,
+  .dropdown-menu > .active > a,
+  .dropdown-menu > .active > a:hover,
+  .dropdown-menu > .active > a:focus,
+  .no-touch .dashboard-page nav.dashboard-menu ul li:hover a,
+  .dashboard-page nav.dashboard-menu ul li.active a {
+    color: #d22919;
+  }
+
+  .main-menu .logo {
+    padding: 14px;
+    max-width: 88%;
+    margin-left: 9px;
+    margin-top: 11px;
+    cursor: pointer;
+  }
+  .main-menu .modulos-title {
+    background: #d22919;
+    color: #ffffff;
+    // height: 55px;
+    font-weight: 500;
+    padding-bottom: 11px;
+    padding-top: 11px;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    // padding-top: 10px;
+    // a {
+    //   span {
+    //     font-size: 1.2rem;
+    //   }
+    // }
+  }
+  .main-menu  li.sub-title{
+    border: {
+      left: none;
+      right: none;
+      top: 1px solid #d3cbcb;
+      bottom: none;
+      //add 6/12
+      
+    }
+    background: white !important;
+    i {
+      padding: 9px;
+      border-right: 1px solid rgb(211, 203, 203);
+    }
+    .mdi-chevron-right {
+      border-right: none !important;
+    }
+    span {
+      position: absolute;
+      font-size: 0.8em;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+
+      margin: {
+        left: 10px;
+        top: 11px;
+      }
+    }
+    ul {
+      // display: none;
+
+      .text-submenu {
+        font-size: 0.75em;
+      }
+    }
+  }
+  // .main-menu .lista li {
+  //   border: {
+  //     left: none;
+  //     right: none;
+  //     top: 1px solid #d3cbcb;
+  //     bottom: none;
+  //   }
+
+  //   i {
+  //     padding: 9px;
+  //     border-right: 1px solid rgb(211, 203, 203);
+  //   }
+  //   .mdi-chevron-right {
+  //     border-right: none !important;
+  //   }
+  //   span {
+  //     position: absolute;
+  //     font-size: 0.8em;
+  //     font-family: "Poppins", sans-serif;
+  //     font-weight: lighter;
+
+  //     margin: {
+  //       left: 10px;
+  //       top: 11px;
+  //     }
+  //   }
+  //   ul {
+  //     display: none;
+
+  //     .text-submenu {
+  //       font-size: 0.75em;
+  //     }
+  //   }
+  // }
+}

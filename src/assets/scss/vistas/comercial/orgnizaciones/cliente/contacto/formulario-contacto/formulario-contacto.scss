@@ -1,0 +1,166 @@
+#formulario-contacto {
+  h5 {
+    color: #4d4d4d;
+    font-size: medium;
+    font-weight: 600;
+    margin-top: 18px;
+    margin-left: 30px;
+  }
+
+  .box-consulta {
+    padding: 5px 11px 5px 11px;
+  }
+
+  .buttonBuscarRuc {
+    border-radius: 50px;
+    background: #e5e5e5;
+    padding: 0.32rem;
+    color: #aaaaaa;
+    width: 125px;
+    margin-left: 55px;
+  }
+
+  .buttonBuscarRucActive {
+    background: #d22919;
+    border: none;
+    background: linear-gradient(to right, #e03020 0%, #cf3b2e 100%);
+    text-shadow: 1px 1px 1px #E91E63;
+    color: white;
+  }
+
+  .btnSiguienteConsultaRuc {
+    border-radius: 50px;
+    background: #d22919;
+    font-size: 0.75rem;
+    border: 0;
+    padding: 0.32rem;
+    color: #ffffff;
+    width: 125px;
+  }
+
+
+  .select2-container .select2-selection {
+    border-radius: 10px;
+    border: 1px solid #fdccc9;
+    border-radius: 2em;
+    /* background: #fdccc9 !important; */
+    background: #fff7f7 !important;
+  }
+
+  .pinky {
+    background-color: #fff7f7;
+    border: 1px solid #fdccc9;
+  }
+
+  button {
+    outline: none;
+  }
+
+  .borderDerecho {
+    border-radius: 44px 0px 0px 44px;
+    color: #000000de;
+    height: 33px;
+  }
+
+  .borderIzquierdo {
+    border-radius: 0px 44px 44px 0px;
+    color: #000000de;
+    height: 33px;
+  }
+
+  .boderbuttongropu {
+    width: 100%;
+  }
+
+
+  .btn-secondary:not(:disabled):not(.disabled).active,
+  .btn-secondary:not(:disabled):not(.disabled):active,
+  .show>.btn-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: red;
+    border-color: red;
+  }
+
+  .btn-secondary:hover {
+    color: #fff;
+    background-color: red;
+    border-color: red;
+
+  }
+
+  .btn.focus,
+  .btn:focus {
+    color: #fff;
+    background-color: red;
+    border-color: red;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem red;
+  }
+
+  .modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-top: 0px solid #e9ecef;
+  }
+
+  .addContacto {
+    color: #d22919;
+    cursor: pointer;
+  }
+
+}
+
+
+.select2-container--FondoRosado {
+  &.select2-container--open .select2-dropdown--below {
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background: #fff7f7;
+    border: 1px solid #fdccc9;
+    border-top: 0px;
+  }
+
+  .select2-selection__arrow {
+    display: none;
+  }
+
+
+
+  .select2-selection--single {
+    position: relative;
+
+    &::after {
+      content: "▾";
+      position: absolute;
+      top: 0;
+      right: 6px;
+      font-size: 21px;
+      color: $color-primary;
+    }
+  }
+
+  &.select2-container--open {
+    .select2-selection--single {
+      position: relative;
+
+      &::after {
+        content: "▴";
+        position: absolute;
+        top: 0;
+        right: 6px;
+        font-size: 21px;
+        color: $color-primary;
+      }
+    }
+
+  }
+
+}
+
+
+.select2-container--open .select2-selection {
+  border-radius: 10px 10px 0px 0px !important;
+}

@@ -1,0 +1,20 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="oficinas">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row row-eq-height">
+
+            <div class="ibox float-e-margins">
+                <div class="ibox-content" [ngClass]="{'sk-loading':spinner}">
+                    <spinner-basico [show]="spinner"></spinner-basico>
+                   
+                    <!-- <hr> -->
+                   
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<formulario-sucursal></formulario-sucursal>
+<sucursal-buscador></sucursal-buscador>

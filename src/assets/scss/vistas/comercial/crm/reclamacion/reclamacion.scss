@@ -1,0 +1,164 @@
+#reclamacion{
+ /* Create a custom checkbox */
+ .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+ }
+ 
+ /* Hide the browser's default checkbox */
+ .container input {
+ position: absolute;
+ opacity: 0;
+ cursor: pointer;
+ height: 0;
+ width: 0;
+ }
+ .checkmark {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 1rem;
+ height: 1rem;
+ background-color: #fff;
+ border-radius: 4px;
+ border: solid 1px #000000;
+ }
+ .input:checked {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 1rem;
+ height: 1rem;
+ background-color: #fff;
+ border-radius: 4px;
+ border: solid 1px red;
+ }
+
+ /* On mouse-over, add a grey background color */
+ .container:hover input ~ .checkmark {
+ background-color: #ccc;
+ }
+
+ /* When the checkbox is checked, add a blue background */
+ .container input:checked ~ .checkmark {
+ background-color: #2196F3;
+ border: solid 1px #2196f3;
+ }
+
+ /* Create the checkmark/indicator (hidden when not checked) */
+ .checkmark:after {
+ content: "";
+ position: absolute;
+ display: none;
+ }
+ 
+ /* Show the checkmark when checked */
+ .container input:checked ~ .checkmark:after {
+ display: block;
+ }
+
+ /* Style the checkmark/indicator */
+ .container .checkmark:after {
+ left: 5px;
+ top: 1px;
+ width: 5px;
+ height: 11px;
+ border: solid white;
+ border-width: 0 2px 2px 0;
+ -webkit-transform: rotate(45deg);
+ transform: rotate(45deg);
+ }
+
+ .button-panel-info {
+    padding: 0.35rem;
+    box-shadow: 0 0 0 0 #d22919;
+    background: white;
+    color: #d22919 !important;
+    border-radius: 50px;
+    height: 39px;
+    font-size: 13px;
+    width: 209px;
+    border: 1px solid #d22919;
+    margin-left: 17px;
+    cursor: pointer;
+ }
+
+ .ibox-tools {
+ display: block;
+ float: none;
+ margin-top: 0;
+ position: absolute;
+ top: 15px;
+ right: -25px;
+ padding: 0;
+ text-align: right;
+ }
+
+ .ibox {
+ .ibox-tools {
+     button {
+        
+         span {
+             margin-right: 6px;
+         }
+     }
+ }
+ .ibox-content {
+     .table-striped tbody tr:nth-of-type(odd) {
+         background-color: rgba(255, 254, 254, 0);
+     }
+     .table th,
+     .table td {
+         border-top: 1px solid #fff7f7 !important;
+     }
+ }
+ }
+ .th-table{
+ width: 10%;
+ padding-left: 0px;
+ padding-right: 0px;
+ }
+
+ td {
+ cursor: pointer;
+ } // scroll de la tabla
+ tbody {
+ display: block;
+ height: 450px;
+ overflow: auto;
+ margin-top: 5px;
+ font-family: Helvetica, Regular !important;
+ font-size: 12px;
+ }
+ thead,
+ tbody tr {
+ display: table;
+ width: 100%;
+ table-layout: fixed;
+ }
+ thead {
+ width: calc(100% - 0em);
+ box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.07);
+ font-family: Helvetica, Bold !important;
+ font-size: 12px;
+ }
+ ::-webkit-scrollbar {
+ width: 7px;
+ }
+ ::-webkit-scrollbar-track {
+ -webkit-box-shadow: inset 0 0 6px #ffffff;
+ border-radius: 7px;
+ }
+ ::-webkit-scrollbar-thumb {
+ border-radius: 7px;
+ -webkit-box-shadow: inset 0 0 66px #b9b9b9;
+ }
+}

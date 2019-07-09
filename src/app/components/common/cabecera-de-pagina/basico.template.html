@@ -1,0 +1,17 @@
+<div id="cabecera-de-pagina">
+    <div class="wrapper border-bottom white-bg page-heading ng-scope">
+
+        <ol class="breadcrumbb">
+            <ng-container *ngFor="let link of links;let index = index;">
+                <li [ngClass]="{active: links.length == (index + 1) }">
+                    <a *ngIf="links.length != (index + 1)" [routerLink]="[link.link]">{{link.titulo}}/</a>
+                    <strong *ngIf="links.length == (index + 1)" style="
+                    margin-left: 4px;
+                ">{{link.titulo}}</strong>
+                </li>
+            </ng-container>
+        </ol>
+
+    </div>
+</div>
+<calendario-principal></calendario-principal>

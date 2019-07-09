@@ -1,0 +1,70 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+
+<div id="contacto">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+        <div class="ibox">
+          <div class="ibox-title">
+            <form action="/search" id="searchbox5" style="margin-left: 30px;">
+              <input id="search51" [(ngModel)]="buscar" name="q" type="text" size="40" (ngModelChange)="listarContactos()"
+                placeholder="Buscar" />
+            </form>
+            <div class="ibox-tools">
+              <div class="circulobotonsdelete" style="margin-right: 5px;" id="comboIcons" [ngClass]="{'btn-activo':selectItem.id}">
+                <button (click)="editarContacto()" class="mdi mdi-pencil tooltip  iconsborder " [disabled]="!selectItem.id">
+                  <span class="tooltiptext">
+                    Edit</span></button>
+              </div>
+              <div class="circulobotonsdelete" style="margin-right: 5px;" id="comboIcons" [ngClass]="{'btn-activo':selectItem.id}">
+                <button class="mdi mdi-format-list-bulleted  tooltipBotton  iconsborder " [disabled]="!selectItem.id"
+                  (click)="detalleContacto()"><span class="tooltiptextBotton">Detalle</span></button>
+              </div>
+              <div class="circulobotonsdelete" style="margin-right: 5px;" id="comboIcons" [ngClass]="{'btn-activo':selectItem.id}">
+                <button class="mdi mdi-delete tooltip  iconsborder " [disabled]="!selectItem.id" (click)="eliminar()">
+                  <span class="tooltiptext">
+                    Eliminar</span></button>
+              </div>
+              <button class="button long button_ln-gradient btn-rounded btn-outline" (click)="formularioContact()"><span
+                  class="mdi mdi-plus"></span>Nuevo</button>
+            </div>
+          </div>
+          <div class="ibox-content">
+            <div class="related-news">
+              <div class="table-responsive tableFixHead">
+                <table class="table table-striped  table-hover " id="tableContacto">
+                  <thead>
+                    <tr>
+                      <th style="width:50px">No.</th>
+                      <th>Nombre</th>
+                      <th>Apellidos </th>
+                      <!-- <th style="width:11%;">Empresa </th> -->
+                      <th>Cargo</th>
+                      <th>Correo Electronico </th>
+                      <th> Celular</th>
+                    </tr>
+                  </thead>
+                  <tbody infiniteScroll (scrolled)="listarContactos(true)">
+                    <tr *ngFor="let item of contactos; let index = index" (click)="select(item)" [ngClass]="{'highlighted':item.id==selectItem.id}">
+                      <td (click)="clientes($event)">{{index + 1}}</td>
+                      <td>{{item.nombre}}</td>
+                      <td>{{item.apellido}}</td>
+                      <!-- <td style="width:11%;">{{item.Empresa}}</td> -->
+                      <td>{{item.cargo}}</td>
+                      <td>{{item.email}}</td>
+                      <td>{{item.celular}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 text-right">
+        <button type="button" class="btn btn-secondary " (click)="cancelarContacto()">
+          <span class="mdi mdi-chevron-left"></span>Atrás</button>
+      </div>
+    </div>
+  </div>
+</div>

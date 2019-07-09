@@ -1,0 +1,240 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="detalles-operaciones" class="container-fluid" [ngClass]="{'active':active}">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="ibox">
+          <div class="ibox-title tabless-bannel">
+            <label class="titel-bannel">Operación</label>
+          </div>
+          <div class="ibox-content">
+            <div class="related-news">
+              <div class="table-responsive tbale-bannel">
+                <table class="table table-md" id="detallesOperaciones-1">
+                  <thead>
+                  </thead>
+                  <tbody class="body" *ngFor="let lstOperacion of lstOperacion">
+                    <tr>
+                      <th scope="row">N° Operación:</th>
+                      <td>{{lstOperacion.operacion}}</td>
+
+                      <th scope="row">C Inicial %</th>
+                      <td>{{lstOperacion.inicial}}</td>
+
+                      <th scope="row">Coloc Neta.</th>
+                      <td>{{lstOperacion.coloNeta}}</td>
+
+                      <th scope="row"></th>
+                      <td></td>
+
+                    </tr>
+                    <tr>
+                      <th scope="row">Ubicación</th>
+                      <td>{{lstOperacion.ubicacion}}</td>
+
+                      <th scope="row">TEA %</th>
+                      <td>{{lstOperacion.Tea}}</td>
+
+                      <th scope="row">Expediente</th>
+                      <td>{{lstOperacion.expediente}}</td>
+
+                      <th scope="row"></th>
+                      <td>
+                        <button type="button" (click)="guardar()" class="btn btn-primary centewr">
+                          Ver
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row"></th>
+                      <td></td>
+
+                      <th scope="row"></th>
+                      <td></td>
+
+                      <th scope="row">CAF:</th>
+                      <td>{{lstOperacion.caf}}</td>
+
+                      <th scope="row"></th>
+                      <td>
+                        <button type="button" (click)="guardar()" class="btn btn-primary centewr">
+                          Ver
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row"> Estado</th>
+                      <td>{{lstOperacion.estado}}</td>
+
+                      <th scope="row"> Plazo</th>
+                      <td>{{lstOperacion.plazo}}</td>
+
+                      <th scope="row"> Ejecutivo</th>
+                      <td>{{lstOperacion.ejecutivo}}</td>
+
+                      <th scope="row"></th>
+                      <td></td>
+
+                    </tr>
+                    <tr>
+                      <th scope="row">Moneda</th>
+                      <td>{{lstOperacion.moneda}}</td>
+
+                      <th scope="row">Mes de Gracia</th>
+                      <td>{{lstOperacion.mesGracia}}</td>
+
+                      <th scope="row">Garantías</th>
+                      <td>{{lstOperacion.garantias}}</td>
+
+                      <th scope="row"></th>
+                      <td></td>
+
+                    </tr>
+                    <tr>
+                      <th scope="row"> VAF</th>
+                      <td>{{lstOperacion.vaf}}</td>
+
+                      <th scope="row"> Op. Compra % </th>
+                      <td>{{lstOperacion.opcCompra}}</td>
+
+                      <th scope="row"> Evaluado Por</th>
+                      <td>{{lstOperacion.evaluadoPor}}</td>
+
+                      <th scope="row"></th>
+                      <td></td>
+
+                    </tr>
+
+
+                  </tbody>
+                </table>
+              </div>
+              <div class="ibox-title tabless">
+                <label class="titel-bannel">Bienes</label>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-striped  table-hover " id="tableCliente">
+                  <thead>
+                    <tr>
+
+                      <th style="width:10%;">Item</th>
+                      <th style="width:15%;">SubNivel </th>
+                      <th style="width:10%;">Clase </th>
+                      <th style="width:10%;">Marca </th>
+                      <th style="width:8%;">Año</th>
+                      <th style="width:11%;">Precio</th>
+                      <th style="width:15%;">Cantidad</th>
+                      <th style="width:15%;">Valor Total </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of lstBienes" (click)="select(item)" [ngClass]="{'highlighted':item.id==selectItem.id}">
+
+                      <td style="width:10%;">{{item.item}}</td>
+                      <td style="width:12%;">{{item.subNivel}}</td>
+                      <td style="width:15%;">{{item.clase}}</td>
+                      <td style="width:10%;">{{item.marca}}</td>
+                      <td style="width:11%;">{{item.ano}}</td>
+                      <td style="width:8%;">{{item.precio}}</td>
+                      <td style="width:11%;">{{item.cantidad}}</td>
+                      <td style="width:15%;">{{item.valorTotal}}</td>
+                      <td style="width:15%;" class="pr-3">
+                        <button type="button" (click)="guardar()" class="btn btn-primary centewr">
+                          Ver
+                        </button>
+                      </td>
+                    </tr>
+
+                  </tbody>
+
+                </table>
+              </div>
+              <div class="ibox-title tabless">
+                <label class="titel-bannel">Garantías</label>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-striped  table-hover " id="tableCliente">
+                  <thead>
+                    <tr>
+
+                      <th style="width:10%;">Item</th>
+                      <th style="width:10%;">Categoria </th>
+                      <th style="width:10%;">Tipo </th>
+                      <th style="width:35%;">Descripción </th>
+                      <th style="width:10%;">Valor</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of lstGarantias" (click)="select(item)" [ngClass]="{'highlighted':item.id==selectItem.id}">
+
+                      <td style="width:10%;">{{item.item}}</td>
+                      <td style="width:10%;">{{item.categoria}}</td>
+                      <td style="width:10%;">{{item.tipo}}</td>
+                      <td style="width:35%;">{{item.descripcion}}</td>
+                      <td style="width:10%;">{{item.valor}}</td>
+                      <td style="width:10%;">
+                        <button type="button" (click)="guardar()" class="btn btn-primary centewr">
+                          Ver
+                        </button>
+                      </td>
+                    </tr>
+
+                  </tbody>
+
+                </table>
+              </div>
+
+              <div class="ibox-title  tabless">
+                <label class="titel-bannel">Cliente</label>
+              </div>
+              <table class="table table-md tableMd" id="detallesOperaciones-1" >
+                <thead>
+                </thead>
+                <tbody class="body" *ngFor="let item of lstCliente">
+                  <tr>
+                    <th scope="row">Nombre</th>
+                    <td>{{item.nombre}}</td>
+
+                    <th scope="row"> Tipo</th>
+                    <td>{{item.Tipo}}</td>
+
+                    <th scope="row"> Contacto Principal</th>
+                    <td>{{item.contactoPrinciapl}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">RUC:</th>
+                    <td>{{item.ruc}}</td>
+
+                    <th scope="row">Calif. Cred.</th>
+                    <td>{{item.califCtred}}</td>
+
+                    <th scope="row"></th>
+                    <td></td>
+                    <th scope="row"></th>
+                    <td>
+                      <button type="button" (click)="guardar()" class="btn marginVer centewr">
+                        Ver
+                      </button>
+                    </td>
+                  </tr>
+
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions text-right ">
+
+          <button (click)="listaOperaciones()" class="btn btn-secondary mr-3" style="width: 144px;"><span class="mdi mdi-chevron-left"></span>
+            Atras </button>
+  
+  
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+
+<div id="agenda">
+
+  <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="wrapper wrapper-content animated fadeInUp">
+
+          <div class="ibox">
+
+            <div class="ibox-content">
+            <button (click)="listaTareas()" class="mdi mdi-format-list-bulleted icon-bulleted fs-33 mt-2"></button>
+              <div id="calendar" class="mt-4"> </div>
+              <button (click)="agregarActividad()" type="button" class="btn btn-circle btn-primary fs-25">
+                <i class="mdi mdi mdi-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

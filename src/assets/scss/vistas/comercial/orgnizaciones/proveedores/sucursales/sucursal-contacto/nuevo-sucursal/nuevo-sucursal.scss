@@ -1,0 +1,38 @@
+#nuevo-sucursal {
+
+  .title-banner {
+    color: #707070;
+    font-family: Helvetica, Bold;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 25px;
+  }
+
+  .ibox-content {
+    label {
+      display: inline-block;
+      margin-bottom: 0.3rem;
+      font-size: 13px;
+      margin-left: 5px;
+    }
+
+
+
+    .select2-selection__rendered {
+      font-size: 14px;
+    }
+
+    button {
+      outline: none;
+    }
+
+    input {
+      margin-bottom: 7px;
+    }
+
+    .modal-footer {
+      justify-content: center;
+      border-top: none !important;
+    }
+  }
+}

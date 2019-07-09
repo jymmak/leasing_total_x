@@ -1,0 +1,99 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="principales-activos">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="ibox">
+          <div class="ibox-title">
+              <div style="margin-top: 20px;">
+                  <button id="antecedentes" class="button-panel-info" (click)="antecedentes()" >Antecendentes</button>
+                  <button id="socios" class="button-panel-info"  (click)="socios()" >Socios
+                    y Accionistas</button>
+                  <button id="principales" class="button-panel-info" (click)="Principales()" >Principales
+                    Activos</button>
+                  <button id="Comerciales" class="button-panel-info"  (click)="comerciales()">Ref.
+                    Comerciales</button>
+                </div>
+
+            <div class="ibox-tools">
+              <button class="button long button_ln-gradient btn-rounded btn-outline" (click)="nuevoCliente()"><span
+                  class="mdi mdi-plus"></span>Nuevo</button>
+            </div>
+          </div>
+          <div class="ibox-content">
+            <div class="related-news">
+              <div class="table-responsive">
+                <table class="table table-striped  table-hover " id="tableCliente">
+                  <thead>
+                    <tr>
+
+                      <th style="width:8%;">Activo</th>
+                      <th style="width:11%;">Valor de Compra</th>
+                      <th style="width:11%;">Fecha de Compra </th>
+                      <th style="width:11%;">Año </th>
+                      <th style="width:11%;">Placa</th>
+                      <th style="width:13%;">Marca y Modelo </th>
+                      <th style="width:11%;">Grabado a Favor de </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of lstPrincipalesActivos" (click)="select(item)">
+
+                      <td style="width:8%;" (click)="clientes($event)">{{item.activo}}</td>
+                      <td style="width:11%;">{{item.moneda}}/. {{item.valorCompra}}</td>
+                      <td style="width:11%;">{{item.fechaCompra}}</td>
+                      <td style="width:11%;">{{item.years}}</td>
+                      <td style="width:11%;">{{item.placa}}</td>
+                      <td style="width:13%;">{{item.marcaModelo}}</td>
+                      <td style="width:11%;">{{item.gravadoFavor}}</td>
+                    </tr>
+
+                  </tbody>
+
+                </table>
+              </div>
+              <div class="text-right margin-right20">
+                  <button class="btn-rounded button button-cg  margin-right20 " type="button">
+                    <span class="mdi mdi-chevron-left"></span> Atrás </button>
+                  <button class="btnSiguiente" id="btnnext" type="button"> Guardar
+                  
+                  </button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="modal fade" id="modalConfirmar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content" style="border-radius: 16px;">
+        <div class="modal-body">
+          <div class="row">
+
+            <strong style="margin-left: 97px;">¿estás seguro que desea eliminar al cliente?</strong>
+          </div>
+        </div>
+        <div class="modal-footer borderFoter">
+          <div class="col-md-4 col-md-offset-2">
+            <button type="button" class="btn-rounded button button-cg " (click)="confirmarGuardarContacto()"
+              data-dismiss="modal">Cancelar</button>
+          </div>
+
+          <div class="col-md-4 col-md-offset-2" style="padding-top: 2px;">
+            <button type="button" class="buttonAceptarModal" (click)="eliminarCliente(item)" data-dismiss="modal">
+              Aceptar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 
+<formulario-buscar (buscar)="busquedaAvanzada($event)"></formulario-buscar> -->
+<!-- <formulario-email></formulario-email> -->

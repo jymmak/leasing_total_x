@@ -1,0 +1,99 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="condiciones">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+        <div class="ibox">
+          <div class="ibox-title">
+            <h5 class="margin-bottom40 font-weight-bold mt-4 mr-2" style="font-size: 14px; color: #707070;">
+              CREAR SUCURSAL</h5>
+            <div class="ibox-tools mt-3 pr-3">
+
+
+            </div>
+          </div>
+          <div class="ibox-content">
+            <div class="related-news" style="margin-top: -30px;">
+              <div class="row m-3">
+                <div class="col-md-6 ml-4">
+                  <h5 class="fs-14 text-muted">
+                    Código: {{codigo}}</h5>
+                </div>
+                <div class="col-md-6 pr-5  mt-3">
+                  
+                    <div class="col-md-12 d-inline-block">
+                      <div class="col-md-12">
+                        <label>Nombre</label>
+                        <input class=" btn-rounded  _input pinky" [(ngModel)]="nombre" required>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label>Ciudad</label>
+                      <select select2 theme="FondoRosado" (onSelect)="capturarplazo($event)" class="margintopselect"
+                        required>
+                        <option></option>
+                        <option *ngFor="let  item of ciudad" [value]="item.id">{{item.text}}</option>
+                      </select>
+                    </div>
+                    <div class="col-md-12 d-inline-block mt-3">
+                      <div class="col-md-12">
+                        <label> Dirección</label>
+                        <input class=" btn-rounded  _input pinky" [(ngModel)]="direccion" required>
+                      </div>
+                    </div>
+                    <div class="col-md-12 d-inline-block mt-3">
+                      <div class="col-md-12">
+                        <label> Teléfono</label>
+                        <input class=" btn-rounded  _input pinky" [(ngModel)]="telefono" required>
+                      </div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-6 pl-5 mt-3">
+
+                  <div class="col-md-4 mb-3">
+                    <label>Tipo</label>
+                    <select select2 theme="FondoRosado" (onSelect)="capturarplazo($event)" class="margintopselect"
+                      required>
+                      <option></option>
+                      <option *ngFor="let  item of tipo" [value]="item.id">{{item.text}}</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label>Distrito</label>
+                    <select select2 theme="FondoRosado" (onSelect)="capturarplazo($event)" class="margintopselect"
+                      required>
+                      <option></option>
+                      <option *ngFor="let  item of distrito" [value]="item.id">{{item.text}}</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-12 d-inline-block">
+                    <div class="col-md-12">
+                      <label>Encargado</label>
+                      <input class=" btn-rounded  _input pinky" [(ngModel)]="nombre" required>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="actions text-right mt-5">
+
+                <button (click)="atras()" class="btn btn-secondary mr-3">
+
+                  Cancelar
+                </button>
+
+                <button (click)="guardar()" class="btn btn-primary">
+                  Guardar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

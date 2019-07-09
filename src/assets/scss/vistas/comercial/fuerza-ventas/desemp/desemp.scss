@@ -1,0 +1,462 @@
+#desemp {
+
+  rect {
+    x: 0px;
+    y: 0px;
+    width: 82px !important;
+    height: 100px !important;
+    stroke: none;
+    stroke-width: 0;
+    fill: white;
+}
+  .ibox {
+    clear: both;
+    margin-bottom: 25px;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .ibox-title {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #fff7f7;
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 2px 0 0;
+    color: #666666;
+    margin-bottom: 0;
+    padding: 7px 30px 0px 15px;
+    min-height: 28px;
+    position: relative;
+    clear: both;
+    text-align: right;
+
+    p {
+      font-size: 1rem;
+      text-align: center;
+      margin-bottom: 0 !important;
+      margin-top: 11px;
+      position: relative;
+      bottom: 8px;
+    }
+  }
+
+  .ibox-content {
+    clear: both;
+  }
+
+  .ibox-content {
+    background-color: #ffffff;
+    color: inherit;
+    padding: 2px 20px 20px 20px;
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0;
+  }
+
+  .circle {
+    border-radius: 50%;
+    /* the magic */
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    text-align: center;
+    color: #666666 !important;
+    font-size: 8px;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    background-color: #fff7f7;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  
+.titel-pogress{
+  font-size: 12px;
+    font-family: Helvetica, Light;
+    color: #666666;
+    margin-top: 11px;
+}
+
+  .line1 {
+    line-height: 50px;
+  }
+
+  .line2 {
+    line-height: 42px;
+  }
+
+  .cir1 {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cir2 {
+    width: 40px;
+    height: 40px;
+  }
+
+  #donutChart {
+    display: inline-block !important;
+    vertical-align: middle !important;
+    width: 45% !important;
+
+
+    #chart {
+      height: 115px !important;
+      position: relative !important;
+
+      svg {
+        height: 115px !important;
+        margin-top: 8px;
+      }
+    }
+
+    img {
+      position: absolute !important;
+      /* margin-top: -172px; */
+      height: 43px;
+      /* margin-left: 20px; */
+      border-radius: 100%;
+      width: 43px;
+      bottom: 36px;
+      margin: 30px;
+       left: -7px; 
+      top: 7px;
+  
+    }
+  }
+
+  #circle1 {
+    display: inline-block !important;
+    vertical-align: middle !important;
+    width: 22% !important;
+    margin-right: 10px;
+    margin-left: 3px;
+    // margin-top: -60px !important;
+  }
+
+  #circle2 {
+    display: inline-block !important;
+    vertical-align: middle !important;
+    width: 20% !important;
+    // margin-top: -60px !important;
+  }
+
+  #circle1,
+  #circle2 {
+
+    p,
+    span {
+      font-size: 9px;
+      color: #666666;
+      margin-left: 3px;
+      margin-bottom: 0.3rem !important;
+      width: 100%;
+    }
+  }
+
+  #cartera,
+  #proveedores,
+  #visitas,
+  #cotizaciones {
+    display: inline-block !important;
+    vertical-align: middle !important;
+    width: 25% !important;
+
+    p {
+      font-size: 11px;
+      margin-bottom: 0.3rem !important;
+      text-align: initial;
+      margin-top: 1px;
+      font-family: Helvetica, Light;
+    }
+  }
+
+  .titleBar {
+    margin-bottom: 0.5rem !important;
+    font-size: 11px;
+  }
+
+  /* Bar Graph Class */
+  .wrap {
+    margin-bottom: 18px;
+  }
+
+  .barGraph {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .graph {
+    position: relative;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: calc(100%);
+  }
+
+  .graph-barBack {
+    border-radius: 10px;
+    background: #dae4eb;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .graph-bar {
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 9999;
+    display: block;
+    height: 12px;
+    width: 0%;
+  }
+
+  .graph-bar:hover {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+  .red {
+    background-color: #d22919;
+    border-radius: 10px;
+  }
+
+  .orange {
+    background-color: #fc6719;
+  }
+
+  .yellow {
+    background-color: #f6a704;
+  }
+
+  .graph-bar:last-child {
+    margin-bottom: 0;
+  }
+
+  // .graph-bar:after {
+  //   position: absolute;
+  //   content: attr(data-value);
+  //   display: none;
+  //   font-size: 12px;
+  //   border-radius: 4px;
+  //   background: rgba(0, 0, 0, 0.5);
+  //   color: #fff;
+  //   line-height: 20px;
+  //   height: 20px;
+  //   padding: 0 10px;
+  //   margin-left: 5px;
+  //   left: 100%;
+  //   top: 0;
+  // }
+
+  // .graph-bar:hover:after {
+  //   display: block;
+  // }
+
+  .graph-legend {
+    position: absolute;
+    margin-right: 10px;
+    left: -40px;
+    z-index: 9999;
+  }
+
+  .barGraph-title {
+    float: right;
+    font-size: 10px;
+    color: #666666;
+  }
+
+  .progress {
+    display: flex;
+    height: 23px;
+    overflow: hidden;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    margin-top: 11px;
+    font-size: 10px;
+    font-family: Poppins, Regular;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #333333;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #FFED00;
+  transition: width 0.6s ease;
+  /* border-radius: 27%; */
+  border-radius: 14px;
+  z-index: 1;
+}
+
+
+.centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+h4 {
+  font-weight: 200;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-top: 25px;
+  font-size: 13px;
+  color: #666666;
+  text-align: center;
+}
+
+p a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+
+/*
+ * Switcher Styles
+ */
+
+.switcher {
+  display: inline-block;
+  height: 30px;
+  margin-top: 3px;
+  padding: 4px;
+  background: #fff;
+  border-radius: 2px;
+  width: 170px;
+  border-radius: 30px;
+  /* border: solid 1px #ddd; */
+  position: relative;
+  box-shadow: 0px 3px 6px #00000016;
+}
+
+.switcher__input {
+  display: none;
+}
+
+.switcher__label_ComisionMes {
+  float: left;
+  width: 50%;
+  font-size: 12px;
+  line-height: 30px;
+  color: #333333;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+  position: inherit;
+  z-index: 10;
+  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  font-family: Poppins, Bold;
+  top: -1px;
+
+}
+.switcher__label_Comision {
+  float: left;
+  width: 50%;
+  font-size: 12px;
+  line-height: 30px;
+  color: #333333;
+  text-align: center;
+  font-size: 10px;
+  cursor: pointer;
+  position: inherit;
+  z-index: 10;
+  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  font-family: Poppins, Regular;
+}
+
+.switcher__toggle_20-40 {
+  position: absolute;
+  float: left;
+  height: 30px;
+  // width: 50%;
+  font-size: 12px;
+  line-height: 30px;
+  cursor: pointer;
+  // background-color: #FFED00;
+  border-radius: 30px;
+  left: -1px;
+  top: 0px;
+  transition: left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.switcher__toggle_40-60 {
+  position: absolute;
+  float: left;
+  height: 30px;
+  width: 50%;
+  font-size: 12px;
+  line-height: 30px;
+  cursor: pointer;
+  background-color: #FC6719;
+  border-radius: 30px;
+  left: -1px;
+  top: 0px;
+  transition: left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+.switcher__toggle_60-100 {
+  position: absolute;
+  float: left;
+  height: 30px;
+  width: 50%;
+  font-size: 12px;
+  line-height: 30px;
+  cursor: pointer;
+  background-color: #F6A704;
+  border-radius: 30px;
+  left: -1px;
+  top: 0px;
+  transition: left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+.switcher__toggle_100 {
+  position: absolute;
+  float: left;
+  height: 30px;
+  width: 50%;
+  font-size: 12px;
+  line-height: 30px;
+  cursor: pointer;
+  background-color: #D22919;
+  border-radius: 30px;
+  left: -1px;
+  top: 0px;
+  transition: left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+.switcher__input:checked + .switcher__label {
+  color: #fff;
+}
+
+.switcher__input--yang:checked ~ .switcher__toggle {
+  left: 100px;
+}
+}

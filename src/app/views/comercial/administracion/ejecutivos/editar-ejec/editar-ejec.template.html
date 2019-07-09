@@ -1,0 +1,91 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+
+<div id="editar-ejec">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="ibox">
+          <div class="ibox-title">
+            <h5 class=" margin20">Editar Ejecutivo</h5>
+          </div>
+
+          <div class="ibox-content" *ngFor="let date of Ejecutivo">
+            <div class="row">
+
+              <div class="col-sm-8 offset-sm-2">
+                <div class="row">
+                  <div class="col-sm-2 font-weight-bold">Ejecutivo:</div>
+                  <div class="col-sm-5 ">{{date.name}}</div>
+
+                </div>
+              </div>
+              <div class="col-sm-8 offset-sm-2">
+                <div class="row">
+
+                  <div class="col-sm-2 font-weight-bold">Cargo:</div>
+                  <div class="col-sm-5 ">{{date.cargo}}</div>
+                </div>
+              </div>
+
+              <div class="col-md-4 offset-sm-2 mt-2">
+                <label>Sucursal</label>
+                <select select2 [theme]="'FondoRosado'" [data]="datosSucursal" class="margin_select"></select>
+              </div>
+              <div class="col-md-12 mt-4">
+                <div class="col-md-4 offset-sm-2 d-inline-block">
+
+                  <label>Mes</label>
+                  <select select2 [theme]="'FondoRosado'" [data]="datosSucursal" class="margin_select"></select>
+                </div>
+                <div class="col-md-4 offset-sm-0 d-inline-block">
+                
+                  <input class=" btn-rounded  _input pinky" [(ngModel)]="mes" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-right margin40 ejec">
+
+              <button (click)="cancelarAddEditar()" type="button" class="btn-rounded button button-cg  margin-right20">
+                Cancelar
+              </button>
+
+              <button type="button" class="btnSiguienteEjec" data-dismiss="modal" data-toggle="modal" data-target="#modalConfirmar">
+                Guardar
+              </button>
+            </div>
+
+
+            <div class="modal fade" id="modalConfirmar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+              aria-hidden="true" data-backdrop="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content" style="border-radius: 16px;">
+                  <div class="modal-body">
+                    <div class="row">
+
+                      <strong style="margin-left: 97px;">¿estás seguro de guardar los datos?</strong>
+                    </div>
+                  </div>
+                  <div class="modal-footer borderFoter">
+                    <div class="col-md-4 col-md-offset-2">
+                      <button type="button" class="btn-rounded button button-cg " data-dismiss="modal">Cancelar</button>
+                    </div>
+
+                    <div class="col-md-4 col-md-offset-2" style="padding-top: 2px;">
+                      <button type="button" class="btnSiguienteEjec" (click)="confirmarGuardarEjec()" data-dismiss="modal">
+                        Aceptar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>

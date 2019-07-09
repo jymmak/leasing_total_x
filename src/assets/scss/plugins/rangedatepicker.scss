@@ -1,0 +1,56 @@
+@import "~daterangepicker/daterangepicker.css";
+
+.daterangepicker {
+ position: absolute;
+ color: inherit;
+ background-color: #fff7f7;
+ border-radius: 4px;
+ border: 1px solid #fdccc9;
+ width: 520px;
+ max-width: none;
+ padding: 13px;
+ margin-top: 10px;
+ top: 100px;
+ left: 20px;
+ z-index: 3001;
+ display: none;
+ font-family: arial;
+ font-size: 15px;
+ line-height: 1em;
+}
+
+.daterangepicker:before {
+ top: -7px;
+ border-right: 7px solid transparent;
+ border-left: 7px solid #ffffff;
+ border-bottom: 7px solid #fff7f7;
+}
+
+table tr:nth-child(even) {
+ background: #ffffff;
+}
+
+
+.daterangepicker:after {
+ top: -6px;
+ border-right: 6px solid transparent;
+ border-bottom: 6px solid #fff0;
+ border-left: 6px solid transparent;
+}
+
+.daterangepicker td.in-range {
+ background-color: #ffdede;
+ border-color: transparent;
+ color: #000;
+ border-radius: 0;
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover {
+ background-color: #ffdede;
+ border-color: transparent;
+ color: #515457;
+}
+
+.daterangepicker.ltr .drp-calendar.right {
+ margin-left: 8px;
+}

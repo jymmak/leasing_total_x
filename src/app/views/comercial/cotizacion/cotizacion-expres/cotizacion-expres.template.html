@@ -1,0 +1,92 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="cotizacion-expres">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrapper wrapper-content animated fadeInUp">
+
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <form action="/search" id="searchbox5" style="margin-left: 30px;">
+                            <input id="search51" name="q" type="text" size="40" placeholder="Buscar" />
+                        </form>
+
+                        <div class="ibox-tools">
+                            <button class="button long button_ln-gradient btn-rounded btn-outline" (click)="Convertir()"
+                                data-toggle="modal" data-target="#modalConfirmar" data-dismiss="modal"><span></span>Convertir</button>
+
+                        </div>
+
+                    </div>
+                    <div class="ibox-content">
+                        <div class="related-news" style="margin-top: -19px;">
+                            <div class="table-responsive">
+                                <table class="table table-striped  table-hover " id="tableCotizacionEpress">
+                                    <thead>
+                                        <tr>
+
+                                            <th style="width: 8%;">No.</th>
+                                            <th style="width: 10%;">No.Cotización</th>
+                                            <th style="width: 14%;">Cliente </th>
+                                            <th style="width: 12%;">VAF </th>
+                                            <th style="width: 10%;">F.Emisión</th>
+                                            <th style="width: 14%;">Ejecutivo </th>
+                                            <th style="width: 10%;">Estado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of listaCotizacion" (click)="selectTr(item)"  [ngClass]="{'highlighted':item.id==selectItem.id}">
+
+                                            <td style="width: 8%;" (click)="columnaCotizacion($event)">{{item.id}}</td>
+                                            <td style="width: 10%;">{{item.cotizacion}}</td>
+                                            <td style="width: 14%;">{{item.Cliente}}</td>
+                                            <td  style="width: 12%;">{{item.ValorFin}}</td>
+                                            <td  style="width: 10%;">{{item.FechaEmision}}</td>
+                                            <td  style="width: 14%;">{{item.ejecutivo}}</td>
+                                            <td  style="width: 10%;">{{item.Estado}}</td>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="modal fade" id="modalConfirmar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content modalRecize" >
+                                <div class="modal-body">
+                                    <div class="row">
+
+                                        <strong style="margin-left: 70px;">¿Seguro que quieres cancelar?</strong>
+                                    </div>
+                                </div>
+                                <div class="modal-footer" style="border-top: 1px; margin-right:154px;;">
+                                    <div class="col-sm-4">
+                                        <button type="button" class="btn btn-secondary  Cancelarbtn2" data-dismiss="modal"
+                                            (click)="CancelarModal()">Cancelar</button>
+
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <button type="button" class="btn button_ln-gradient" style="padding: 0.29rem 2.9rem; color: #ffffff;font-weight: lighter;border-radius: 50px;font-size: 12px;margin-left: 77px;"
+                                            (click)="confirmarExpress()" data-toggle="modal" data-target="#Confirmarmodal3"
+                                            data-dismiss="modal">
+                                            Enviar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 
+<formulario-buscar (buscar)="busquedaAvanzada($event)"></formulario-buscar> -->
+<!-- <formulario-email></formulario-email> -->

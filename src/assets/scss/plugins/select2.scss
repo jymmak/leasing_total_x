@@ -1,0 +1,249 @@
+@import "~select2/dist/css/select2.min.css";
+.select2-container {
+    .circulo {
+        width: 10px;
+        height: 10px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        display: inline-block;
+        &.green {
+            background: #90e296;
+        }
+        &.red {
+            background: #e78d85;
+        }
+        &.blue {
+            background: #89d9e7;
+        }
+        &.yellow {
+            background: #face7a;
+        }
+    }
+    .select2-selection {
+        border-radius: 10px;
+    }
+    .select2-dropdown {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        overflow: hidden;
+        border-top: 0px;
+        top: -1px;
+    }
+    li {
+        color: #444444;
+        font-size: 12px;
+    }
+    .select2-results__option[aria-selected="true"] {
+        display: none;
+    }
+    &.select2-container--open .select2-selection--single .select2-selection__arrow b,
+    .select2-selection--single .select2-selection__arrow b {
+        width: 5px;
+        height: 5px;
+        border: 0px;
+        transform: rotate(44deg);
+        border-bottom: 1px solid #555;
+        border-right: 1px solid #555;
+    }
+    .select2-container--flat .select2-selection--single .select2-selection__arrow b {
+        border-color: #fff transparent transparent transparent;
+        top: 60%;
+        border-style: solid;
+        border-width: 5px 4px 0 4px;
+        height: 0;
+        left: 50%;
+        margin-left: -4px;
+        margin-top: -2px;
+        position: absolute;
+        width: 0;
+    }
+}
+
+.select2-container--FondoRosado {
+    &.select2-container .select2-selection {
+        border-radius: 10px;
+        border: 1px solid #fdccc9;
+        border-radius: 2em;
+        /* background: #fdccc9 !important; */
+        background: #fff7f7 !important;
+    }
+    img {
+        height: 30px;
+        width: 30px;
+        border-radius: 50px;
+        margin: 3px 17px;
+      }
+    &.select2-container--open .select2-dropdown--below {
+        border-top: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        background: #fff7f7;
+        border: 1px solid #fdccc9;
+        border-top: 0px;
+    }
+    .select2-selection__arrow {
+        display: none;
+    }
+    .select2-selection--single {
+        position: relative;
+        &::after {
+            content: "▾";
+            position: absolute;
+            top: 0;
+            right: 6px;
+            font-size: 21px;
+            color: $color-primary;
+        }
+    }
+    &.select2-container--open {
+        .select2-selection--single {
+            position: relative;
+            &::after {
+                content: "▴";
+                position: absolute;
+                top: 0;
+                right: 6px;
+                font-size: 21px;
+                color: $color-primary;
+            }
+        }
+    }
+    .select2-results__options {
+        height: auto;
+        max-height: 150px;
+        overflow-y: auto;
+    }
+    .select2-container .select2-search--inline .select2-search__field {
+        box-sizing: border-box;
+        border: none;
+        font-size: 100%;
+        margin-top: 5px;
+        padding: 0;
+        width: 267px !important;
+    }
+    .select2-search__field {
+        width: 246px !important;
+        border: 1px solid #fdccc9;
+        background: #fff7f7 !important;
+    }
+    .placeholder-fix:focus::-webkit-input-placeholder {
+        color: transparent;
+    }
+    .placeholder-fix:focus::-moz-placeholder {
+        color: transparent;
+    }
+    .placeholder-fix:-moz-placeholder {
+        color: transparent;
+    }
+    ::-webkit-scrollbar {
+        width: 5px !important;
+    }
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px #ffffff !important;
+        border-radius: 7px !important;
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 7px !important;
+        height: 50px;
+        -webkit-box-shadow: inset 0 0 66px #b9b9b9 !important;
+    }
+    .select2-results {
+        display: block;
+        margin-right: 11px;
+    }
+}
+
+.select2-container--FondoSinBorder {
+    &.select2-container .select2-selection {
+        border-radius: 10px;
+       // border: 1px solid #fdccc9;
+        border-radius: 2em;
+        /* background: #fdccc9 !important; */
+        background: #fff7f7 !important;
+    }
+    img {
+        height: 30px;
+        width: 14%;
+        border-radius: 50px;
+        margin: 3px 17px;
+      }
+    &.select2-container--open .select2-dropdown--below {
+        border-top: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        background: #fff7f7;
+        border: 1px solid #fdccc9;
+        border-top: 0px;
+    }
+    .select2-selection__arrow {
+        display: none;
+    }
+    .select2-selection--single {
+        position: relative;
+        &::after {
+            content: "▾";
+            position: absolute;
+            top: 0;
+            right: 6px;
+            font-size: 21px;
+            color: black;
+        }
+    }
+    &.select2-container--open {
+        .select2-selection--single {
+            position: relative;
+            &::after {
+                content: "▴";
+                position: absolute;
+                top: 0;
+                right: 6px;
+                font-size: 21px;
+                color: $color-primary;
+            }
+        }
+    }
+    .select2-results__options {
+        height: auto;
+        max-height: 150px;
+        overflow-y: auto;
+    }
+    .select2-container .select2-search--inline .select2-search__field {
+        box-sizing: border-box;
+        border: none;
+        font-size: 100%;
+        margin-top: 5px;
+        padding: 0;
+        width: 267px !important;
+    }
+    .select2-search__field {
+        width: 246px !important;
+        border: 1px solid #fdccc9;
+        background: #fff7f7 !important;
+    }
+    .placeholder-fix:focus::-webkit-input-placeholder {
+        color: transparent;
+    }
+    .placeholder-fix:focus::-moz-placeholder {
+        color: transparent;
+    }
+    .placeholder-fix:-moz-placeholder {
+        color: transparent;
+    }
+    ::-webkit-scrollbar {
+        width: 5px !important;
+    }
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px #ffffff !important;
+        border-radius: 7px !important;
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 7px !important;
+        height: 50px;
+        -webkit-box-shadow: inset 0 0 66px #b9b9b9 !important;
+    }
+    .select2-results {
+        display: block;
+        margin-right: 11px;
+    }
+}

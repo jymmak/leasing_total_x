@@ -1,0 +1,119 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+
+<div id="automotriz">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="ibox">
+          <div class="ibox-title">
+            <form action="/search" id="searchbox5" style="margin-left: 30px;
+                    ">
+              <input id="search51" name="q" type="text" size="40" placeholder="Buscar" />
+
+
+            </form>
+
+
+            <div class="ibox-tools">
+
+              <a class="btn-rounded button  dash" (click)="dashboard()"> Ver Dashboard</a>
+
+            </div>
+            <div class="margin-title">
+              <table class="table table-striped  table-hover  table-borderless tables tabBorder tableFather" id="tableAutomotriz">
+                <thead>
+                  <tr>
+
+                    <th>Segmento</th>
+                    <th style="width:11%">Acum Jul-17</th>
+                    <th style="width:7.5%">Ene-18</th>
+                    <th style="width:7%">Feb-18</th>
+                    <th style="width:7%">Mar-18</th>
+                    <th style="width:7%">Abr-18</th>
+                    <th style="width:7%">May-18</th>
+                    <th style="width:7%">Jun-18</th>
+                    <th style="width:7%">Jul-18</th>
+                    <th style="width:7%">Ago-18</th>
+                    <th style="width:7%">Sep-18</th>
+                    <th style="width:7%">Oct-18</th>
+                    <th style="width:7%">Nov-18</th>
+                    <th style="width:7%">Dic-18</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+
+              </table>
+            </div>
+          </div>
+          <div class="ibox-content">
+            <div class="related-news scrrol">
+              <div class="table-responsive">
+                <div class="row" *ngFor="let item of automotriz">
+                  <div class="col-sm-12">
+
+
+                    <table class="table table-striped   table-hover  table-borderless tables  tblecildren" id="tableAutomotriz">
+                      <thead class="margbottom">
+                        <tr>
+                          <div class="mdi mdi-chevron-down positions" style="width:2%"></div>
+                          <th style="width:7%">
+                            {{item.segmento}}
+                          </th>
+                          <th style="width:7%">{{item.acumulado}}</th>
+                          <th style="width:7%">{{item.ene}} </th>
+                          <th style="width:7%"> {{item.feb}}</th>
+                          <th style="width:7%"> {{item.mar}}</th>
+                          <th style="width:7%"> {{item.abr}}</th>
+                          <th style="width:7%"> {{item.may}}</th>
+                          <th style="width:7%"> {{item.jun}}</th>
+                          <th style="width:7%"> {{item.jul}}</th>
+                          <th style="width:7%">{{item.ago}}</th>
+                          <th style="width:7%">{{item.sep}}</th>
+                          <th style="width:7%"> {{item.oct}}</th>
+                          <th style="width:7%"> {{item.nov}}</th>
+                          <th style="width:7%"> {{item.dic}}</th>
+
+
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr *ngFor="let datos of lstAcciones">
+
+                          <td style="width: 3%"></td>
+                          <td style="width:17%">{{datos.item1}}</td>
+                          <td style="width:7%">{{datos.n1}}</td>
+                          <td style="width:7%">{{datos.n2}}</td>
+                          <td style="width:7%">{{datos.n3}}</td>
+                          <td style="width:7%">{{datos.n4}}</td>
+                          <td style="width:7%">{{datos.n5}}</td>
+                          <td style="width:7%">{{datos.n6}}</td>
+                          <td style="width:7%">{{datos.n7}}</td>
+                          <td style="width:7%">{{datos.n8}}</td>
+                          <td style="width:7%">{{datos.n9}}</td>
+                          <td style="width:7%">{{datos.n10}}</td>
+                          <td style="width:7%">{{datos.n11}}</td>
+                          <td style="width:7%">{{datos.n12}}</td>
+                          <td style="width:7%">{{datos.n13}}</td>
+
+                        </tr>
+
+                      </tbody>
+
+
+
+                    </table>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="cartera">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="ibox">
+          <div class="ibox-content">
+            <div id='wrapper'>
+              <div class='tabs' id='tab1'>
+                <div class='tab tab-one '>
+                  <input  checked='true' id='tabs1-1' name='tabs1' type='radio'>
+                  <label class='tab-label' for='tabs1-1'>ASIGNAR PROVEEDORES</label>
+                  <div class='tab-content'>
+                    <asignar-proveedores></asignar-proveedores>
+                  </div>
+                </div>
+                <div class='tab'>
+                  <input id='tabs1-2' name='tabs1' type='radio'>
+                  <label class='tab-label' for='tabs1-2'>ASIGNAR CLIENTES</label>
+                  <div class='tab-content'>
+                    <asignar-clientes></asignar-clientes>
+
+                  </div>
+                </div>
+                <div class='tab tab-three '>
+                  <input  id='tabs1-3' name='tabs1' type='radio'>
+                  <label class='tab-label' for='tabs1-3'>CARTERA DE EJECUTIVOS</label>
+                  <div class='tab-content'>
+                    <cartera-ejecutivos></cartera-ejecutivos>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,96 @@
+#cronograma {
+  .ibox-content {
+    .button-cr {
+      padding: 0.4rem 1.3rem;
+      color: #ffffff;
+      font-weight: lighter;
+      margin-right: 30px;
+    }
+    .t-cot {
+      color: #707070;
+      font-size: smaller;
+      margin-top: 30px;
+      text-align: right;
+    }
+    .table-striped tbody tr:nth-of-type(odd) {
+      // background-color: #ffffff;
+      
+  background-color: rgba(255, 254, 254, 0);
+    }
+    .table th,
+    .table td {
+      color: #707070;
+      // font-size: 83%;
+      border-top: 1px solid #fff7f7 !important;
+    }
+  }
+  .table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    text-align: center;
+    overflow-y: hidden
+}
+
+// scroll de la tabla
+tbody {
+display:block;
+height:450px;
+overflow:auto;
+margin-top: 5px;
+font-family: Helvetica, Regular !important;
+font-size: 12px;
+text-align: justify;
+}
+
+thead, tbody tr {
+display:table;
+width:100%;
+table-layout:fixed;
+}
+thead {
+width: calc( 100% - 0em );
+box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.07); 
+font-family: Helvetica, Bold !important;
+ font-size: 16px;
+}
+
+::-webkit-scrollbar {
+width: 7px;
+}
+
+::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px #ffffff; 
+border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+border-radius: 7px;
+-webkit-box-shadow: inset 0 0 66px #b9b9b9;
+}
+
+.btnAtraas {
+  padding: 0.32rem;
+  color: #ffffff;
+  width: 124px;
+  margin-right: 29px;
+  border-radius: 50px;
+  background: #bcbcbc;
+  border: 0;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+.actions{
+  height: 39px;
+color: #f7f7f7;
+background: #f7f7f7;
+margin-top: -16px;
+}
+
+button{
+  outline: none;
+}
+
+}
+
+

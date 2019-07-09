@@ -1,0 +1,81 @@
+<div id="busqueda-avanzada">
+    <form [formGroup]="bien1Control">
+        <div class="form-group">
+            <div class="dropdown-content cf">
+                <!-- <div class="dropdown-item " [ngClass]="{'active':active}" id="ocultar-dropdown"> -->
+                <div class="dropdown-item formularioBusquedaAvanzada" id="ocultar-dropdown" [ngClass]="{'active':show && active}">
+                    <!-- <p><u>Búsqueda Avanzada</u><span class="mdi mdi-menu-down"></span></p> -->
+                    <div class="dropdown dropdown-options">
+                        <div class="triangulo"></div>
+                        <div class="ibox-content">
+                            <div class="margin-top20">
+                                <div class="row ">
+                                    <div class="col-sm-6">
+                                        <label>N° Cotización</label>
+                                        <input [(ngModel)]="numCotizacion"   formControlName="Cotizacion" required class=" btn-rounded  _input pinky margin-bottom30 ">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Cliente</label>
+                                        <input [(ngModel)]="cliente"   formControlName="cliente" required  class=" btn-rounded  _input pinky margin-bottom30 ">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Bien</label>
+                                        <select select2 theme="FondoRosado" (onSelect)="capturarBien($event)" class="margintopselect"
+                                            formControlName="bien" required>
+                                            <option *ngFor="let  listaBien of listaBien" [value]="listaBien.id">{{listaBien.text}}</option>
+                                        </select>
+                                        <!-- <select id="bien" [(ngModel)]="bien"  select2 [theme]="'FondoRosado'" [data]="listaBien"></select> -->
+
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Tipo</label>
+                                        <!-- <input class=" btn-rounded  _input pinky margin-bottom30 "> -->
+                                        <select select2 theme="FondoRosado" (onSelect)="capturarTipo($event)" class="margintopselect"
+                                            formControlName="listaTipo" required>
+                                            <option *ngFor="let  listaTipo of listaTipo" [value]="listaTipo.id">{{listaTipo.text}}</option>
+                                        </select>
+                                        <!-- <select id="tipo" select2 [theme]="'FondoRosado'" [data]="listaEstado"></select> -->
+
+                                    </div>
+                                    <div class="col-sm-6  margintops">
+                                        <label>Valor a Financiar</label>
+                                        <input [(ngModel)]="valorFinanciar"  formControlName="Vfinanciar" required class=" btn-rounded  _input pinky margin-bottom30 ">
+                                    </div>
+                                    <div class="col-sm-6 margintops"  id="fechaEmicion">
+                                        <label>Fecha de Emisión </label>
+                                        <input id="datepicker" [(ngModel)]="fechaEmicion" formControlName="fEmision" required class="icon-calendario btn-rounded  _input pinky margin-bottom30 "
+                                            width="276" autocomplete="off">
+
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Fecha de Vencimiento </label>
+                                        <input id="datepicker2" formControlName="fVencimiento" required [(ngModel)]="datepicker2" class="icon-calendario btn-rounded  _input pinky margin-bottom30  "
+                                            width="276" autocomplete="off">
+
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Estado</label>
+                                        <!-- <select id="Estado" select2 [theme]="'FondoRosado'" [data]="listaEstado"></select> -->
+                                        <select select2 theme="FondoRosado" (onSelect)="capturarTipo($event)" class="margintopselect"
+                                        formControlName="Estado" required>
+                                        <option *ngFor="let  listaEstado of listaEstado" [value]="listaEstado.id">{{listaEstado.text}}</option>
+                                    </select>
+                                        <!-- <input class=" btn-rounded  _input pinky margin-bottom30 ">ng  -->
+                                    </div>
+                                </div>
+                                <div class="text-right margin-right20">
+                                    <button (click)="desactivarDrow()" type="button" class="btn-rounded button button-cg  gray  margin-right20">
+                                        Cancelar
+                                    </button>
+                                    <button (click)="buscarCotizacion()" type="button " class="btn-rounded button  button-cg button_ln-gradient">
+                                        Buscar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

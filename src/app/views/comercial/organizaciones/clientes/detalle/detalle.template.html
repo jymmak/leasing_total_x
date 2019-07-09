@@ -1,0 +1,224 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="detalle">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="ibox">
+          <div class="ibox-title p-0">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="box-shadow pr-4 pt-4 pb-4">
+                  <label class="m-0 pl-4 font-weight-bold">
+                    DETALLE CLIENTE
+                    <p class="m-0 mt-1" *ngIf="detalleCliente3"> Datos de Riesgos</p>
+                  </label>
+                  <button *ngIf="detalleCliente3" type="button" class="btn btn-primary float-right">
+                    Editar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="ibox-tools" *ngIf="detalleCliente3"> -->
+
+
+
+          <!-- </div> -->
+          <div class="ibox-content">
+            <div class="related-news">
+              <div class="table table-responsive">
+
+                <table class="table" id="tableDetalle">
+                  <thead>
+                  </thead>
+                  <tbody *ngIf="detalleCliente">
+                    <tr>
+                      <th scope="row">Ruc:</th>
+                      <td>{{ruc}}</td>
+                      <th scope="row">Estado:</th>
+                      <td>{{estado}}</td>
+                      <th scope="row">Código SBS:</th>
+                      <td>{{codigoSbs}}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Razón Social:</th>
+                      <td>{{razonSocial}}</td>
+                      <th scope="row">Condición:</th>
+                      <td>{{condicion}}</td>
+                      <th scope="row">CIIU:</th>
+                      <td>{{ciiu}}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Nombre Comercial:</th>
+                      <td>{{razonComercial}}</td>
+                      <th scope="row">F. de Inicio de Act.:</th>
+                      <td>{{fechaIni}}</td>
+                      <th scope="row">N° Partida Regional:</th>
+                      <td>{{partidaRegional}}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Tipo Cliente:</th>
+                      <td>{{tipoCliente}}</td>
+                      <th scope="row">Antigüedad Como Cliente:</th>
+                      <td>{{antiguedadCliente}}</td>
+                      <th scope="row">Representante Legal:</th>
+                      <td>{{representanteLegal}}</td>
+                      <!-- <th scope="row"></th>
+                                                    <td></td> -->
+                    </tr>
+                    <tr>
+                      <th scope="row">Tipo de Persona:</th>
+                      <td>{{tipoPersona}}</td>
+                      <th scope="row">Domicilio Fiscal:</th>
+                      <td class="w-25">{{domicilioFiscal}}</td>
+                      <th scope="row"></th>
+                      <td></td>
+                    </tr>
+                    <!-- <tr>
+                                                    <th scope="row">Constitucion:</th>
+                                                    <td>{{constitucion}}</td>
+                                                    <th scope="row">Actividad Economica</th>
+                                                    <td>{{actividadEconomica}}</td>
+                                                    <th scope="row"></th>
+                                                    <td></td>
+                                                </tr> -->
+                  </tbody>
+                  <tbody *ngIf="detalleCliente2">
+                    <tr>
+                      <th scope="row">Página Web:</th>
+                      <td>{{pgWeb}}</td>
+                      <th scope="row">Código Ubigeo:</th>
+                      <td>{{codUbigeo}}</td>
+                    </tr>
+                    <tr>
+
+                      <th scope="row">Email:</th>
+                      <td>{{correo}}</td>
+                      <th scope="row">Canal de Prospecto:</th>
+                      <td>{{canalProspecto}}</td>
+                    </tr>
+                    <tr>
+
+                      <th scope="row">Teléfono:</th>
+                      <td>{{telefono}}</td>
+                      <th scope="row">Referencia de Canal:</th>
+                      <td>{{refCanal}}</td>
+                    </tr>
+                    <tr>
+
+                      <th scope="row"> Provincia:</th>
+                      <td>{{provincia}}</td>
+                      <th scope="row">Valor de Cliente(CLV):</th>
+                      <td>{{valorCliente}}</td>
+                    </tr>
+                    <tr>
+
+                      <th scope="row"> Distrito:</th>
+                      <td>{{distrito}}</td>
+                      <th scope="row">Actualizado al:</th>
+                      <td>{{actualizado}}</td>
+                    </tr>
+                    <tr>
+
+                      <th scope="row">Dirección Principal</th>
+                      <td>{{dirPrincipal}}</td>
+                      <th scope="row"></th>
+                      <td></td>
+                    </tr>
+                  </tbody>
+
+
+                  <tbody *ngIf="detalleCliente3">
+                    <tr>
+                      <th scope="row">Código SBS:</th>
+                      <td>{{codigoSBS}}</td>
+                      <th scope="row">Código CIIU:</th>
+                      <td>{{codigoCU}}</td>
+
+                    </tr>
+                    <tr>
+                      <th scope="row">Actividad Económica:</th>
+                      <td>{{actividadEconomica}}</td>
+                      <th scope="row">Número Partida Registral:</th>
+                      <td>{{partidaRegistral}}</td>
+
+
+                    </tr>
+                    <tr>
+
+                      <th scope="row">Segmento:</th>
+                      <td>{{segmento}}</td>
+                      <th scope="row">Tamaño</th>
+                      <td>{{tamano}}</td>
+
+                    </tr>
+                    <tr>
+                      <th scope="row">Factura Anual($):</th>
+                      <td>$ {{factAnual}}</td>
+                      <th scope="row">Constitución:</th>
+                      <td>{{constitucion}}</td>
+
+
+                    </tr>
+                    <tr>
+                      <th scope="row">N° de Empleados:</th>
+                      <td>{{numEmpleado}}</td>
+                      <th scope="row">Accionistas PEP:</th>
+                      <td>{{accionista}}</td>
+
+                    </tr>
+
+                    <tr>
+                      <th scope="row">Accionistas Beneficiario Final:</th>
+                      <td>{{accionistaBenfFinal }}</td>
+                      <th scope="row">Régimen Sujeto:</th>
+                      <td>{{regimenSujeto}}</td>
+
+
+                    </tr>
+                    <tr>
+                      <th scope="row">Sujeto Obligado:</th>
+                      <td>{{sujetoObligado}}</td>
+                      <th scope="row">Incluido en Listas:</th>
+                      <td>{{incluidoListas}}</td>
+
+
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+
+              <div class="text-right margin-right20" *ngIf="btn1">
+                <button (click)="btnVolver()" class="btn-rounded button button-cg  margin-right20 " type="button">
+                  <span class="mdi mdi-chevron-left"></span> Volver </button>
+                <button (click)="clientedetalle2()" class="btnSiguiente" id="btnnext" type="button">
+                  Siguiente
+                  <span class="mdi mdi-chevron-right"></span>
+                </button>
+              </div>
+              <div class="text-right margin-right20" *ngIf="btn2">
+                <button (click)="btnAtras2()" class="btn-rounded button button-cg  margin-right20 " type="button">
+                  <span class="mdi mdi-chevron-left"></span> Atrás </button>
+                <button (click)="clientedetalle3()" class="btnSiguiente" id="btnnext" type="button">
+                  Siguiente
+                  <span class="mdi mdi-chevron-right"></span>
+                </button>
+              </div>
+              <div class="text-right margin-right20" *ngIf="btn3">
+                <button (click)="btnAtras3()" class="btn-rounded button button-cg  margin-right20 " type="button">
+                  <span class="mdi mdi-chevron-left"></span> Atrás </button>
+                <button type="button" class="btn-guardar" (click)="confirmarDetallesCliente()" data-dismiss="modal">
+                  Aceptar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

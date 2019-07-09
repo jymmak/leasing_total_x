@@ -1,0 +1,231 @@
+#contenedor {
+  height: 100%;
+  width: 100%;
+
+  .contenedor-fondo {
+    height: 100vh;
+    width: 100%;
+    background-image: url("/assets/img/Fondo Login.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0;
+
+    &>img {
+      width: 100%;
+    }
+
+    .contenedor-mapa-login {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: translate(0%, -50%);
+
+      .contenedor-form-login {
+        display: inline-block !important;
+        vertical-align: middle !important;
+        width: 53% !important;
+        text-align: right;
+
+        .login {
+          display: inline-block !important;
+          vertical-align: middle !important;
+          width: 45% !important;
+          max-width: 280px;
+          background-color: #ffffff;
+          min-height: 100px;
+          text-align: center;
+          margin-left: 6%;
+          padding: 26px;
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14),
+            0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+
+          .contenedor-logo {
+            padding: 12px;
+
+            img {
+              width: 100px;
+            }
+
+            h2 {
+              font-family: Arial, sans-serif;
+              color: #5d5d5d;
+              font-weight: bold;
+              font-size: 1.7em;
+            }
+          }
+
+          .contenedor-login {
+            .contenedor-title-login {
+              h1 {
+                color: #d22919;
+                font-size: medium;
+                margin-top: 9px;
+                font-family: "Poppins", sans-serif;
+              }
+            }
+
+            .contenedor-cuerpo-login {
+              padding: 12px;
+
+              .contenedor-input {
+                margin: 10px 0;
+              }
+
+              .email,
+              .pass {
+                width: 100%;
+                margin: 15px 0;
+                box-sizing: border-box;
+                border: none;
+                border-bottom: 1px solid #4D4D4D;
+                border-radius: 0;
+                font-family: "Poppins", sans-serif;
+                font-weight: lighter;
+                font-size: 0.9em;
+                outline: 0;
+              }
+
+              .msj {
+                color: #D22919;
+                font-size: 12px;
+                margin-bottom: 15px;
+              }
+
+
+              .contenedor-boton {
+                width: 100%;
+
+                .box-next {
+                  display: inline-block !important;
+                  vertical-align: middle !important;
+                  width: 50% !important;
+                  text-align: left;
+
+                  a {
+                    color: #4d4d4d;
+                    text-align: left;
+
+                    u {
+                      font-size: 10px;
+                      padding: 2%;
+                      font-family: "Poppins", sans-serif;
+                      font-weight: 500;
+                    }
+                  }
+                }
+
+                .botonn {
+                  color: #FFFFFF;
+                }
+
+                .box-boton {
+                  button {
+                    padding: 6px 18px;
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 14px;
+                    border: none;
+                    background: #D22919;
+                    color: white;
+                    box-shadow: inset #D22919 0 -2px 0;
+                    cursor: pointer;
+                    outline: none;
+                    transition: background-color 0.2s ease-out;
+                    border-radius: 5px;
+                  }
+
+                  button:disabled {
+                    background: #bcbcbc;
+                    box-shadow: inset #bcbcbc 0 -2px 0;
+                  }
+
+
+                }
+              }
+
+              .box-forgot {
+                margin-top: 40px;
+
+                a {
+                  color: #d22919;
+                  font-weight: 500;
+
+                  u {
+                    font-size: 0.7em;
+                    font-family: "Poppins", sans-serif;
+                    font-weight: 500;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .contenedor-bienvenido {
+          min-height: 300px;
+          display: inline-block !important;
+          vertical-align: middle !important;
+          width: 52% !important;
+          // background-image: url("/assets/img/img-uno.png");
+          background-image: url("/assets/img/Cuadro login.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+
+
+          .box-red {
+            position: relative;
+            //  background-color: #d22919;
+            min-height: 350px;
+            opacity: 0.9;
+            width: 100% !important;
+            color: #ffffff;
+
+            .text-red {
+              padding: 30px;
+              position: absolute;
+              text-align: center;
+
+              h1 {
+                font-weight: lighter;
+                font-family: "Poppins", sans-serif !important;
+                font-size: 30px;
+                margin-left: -45px;
+                margin-top: 14px;
+              }
+
+              p {
+                font-size: 0.8em;
+                font-weight: 400;
+                font-family: "Poppins", sans-serif !important;
+                text-align: left;
+                margin-top: 29px;
+              }
+            }
+          }
+        }
+      }
+
+      .contenedor-mapa {
+        height: 100%;
+        display: inline-block !important;
+        vertical-align: middle !important;
+        width: 47% !important;
+        text-align: center;
+
+        img {
+          height: 100%;
+          margin-left: 10%;
+          max-width: 90%;
+        }
+      }
+    }
+  }
+
+  // #btnAplicar:disabled  {
+  //   //  background: #dddbdb;
+  //   background: black;
+  //   //  color: #848484;
+  // }
+}

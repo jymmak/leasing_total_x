@@ -1,0 +1,107 @@
+#asignar{
+    .ibox-content {
+        .table-striped tbody tr:nth-of-type(odd) {
+          // background-color: #ffffff;
+    
+          background-color: rgba(255, 254, 254, 0);
+        }
+    
+        .table th,
+        .table td {
+          color: #707070;
+          // font-size: 66%;
+          border-top: 1px solid #ffffff !important;
+          cursor: pointer;
+        }
+    
+        .table thead th {
+          font-size: 0.7em !important;
+        }
+      }
+    
+    
+      // scroll de la tabla
+      tbody {
+        display: block;
+        height: 450px;
+    
+         overflow-y: scroll;
+       overflow-x: hidden;
+      margin-top: 5px;
+      font-family: Helvetica, Regular !important;
+       font-size: 0.7em !important;
+      }
+    
+      thead,
+      tbody tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+      }
+    
+      thead {
+        width: calc(100% - 0em);
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.07);
+        font-family: Helvetica, Bold !important;
+    
+      }
+    
+      ::-webkit-scrollbar {
+        width: 7px;
+      }
+    
+      ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px #ffffff;
+        border-radius: 7px;
+      }
+    
+      ::-webkit-scrollbar-thumb {
+        border-radius: 7px;
+        -webkit-box-shadow: inset 0 0 66px #b9b9b9;
+      }
+      .documentos-label{
+        text-align: left;
+        font-weight: 800;
+        color: #707070;
+        font-family: Helvetica, Bold;
+        font-size: 12px;
+        margin-left: 25px;
+        margin-top: 18px;
+     }
+    .body{
+    height: 100px;
+    overflow: hidden;
+    }
+  .tr-Class{
+   background: #ffffff;
+   font-size: 12px;
+  }
+
+  .item2{
+   font-weight: 700;
+  }
+   
+  .documento-label{
+    font-size: 14px;
+    margin-left: 25px;
+  }
+
+ .table2{
+       position: relative;
+       display: flex;
+       flex-direction: column;
+       min-width: 0;
+       word-wrap: break-word;
+       background-color: #fff;
+       background-clip: border-box;
+       /* border: 1px solid rgba(0, 0, 0, 0.125); */
+       border-radius: 0.25rem;
+       box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
+       width: 100%;
+       height: 27%;
+       margin-left: 156px;
+       margin-top: -3px;
+       overflow: hidden;
+ }
+
+}

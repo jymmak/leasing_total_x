@@ -1,0 +1,91 @@
+#cotizacion-expres {
+  .ibox-content {
+    .button-cr {
+      padding: 0.4rem 1.3rem;
+      color: #ffffff;
+      font-weight: lighter;
+      margin-right: 30px;
+    }
+    .t-cot {
+      color: #707070;
+      font-size: smaller;
+      margin-top: 30px;
+      text-align: right;
+    }
+    .table-striped tbody tr:nth-of-type(odd) {
+      // background-color: #ffffff;
+
+      background-color: rgba(255, 254, 254, 0);
+    }
+    .table th,
+    .table td {
+      color: #707070;
+      border-top: 1px solid #fff7f7 !important;
+    }
+  }
+  .table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    text-align: center;
+    overflow-y: hidden;
+  }
+
+  tbody {
+    display: block;
+    height: 450px;
+    overflow: auto;
+    font-family: Helvetica, Regular !important;
+    font-size: 12px;
+  }
+  thead,
+  tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  thead {
+    width: calc(100% - 1em);
+    font-family: Helvetica, Bold !important;
+    font-size: 12px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #ffffff;
+    border-radius: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+    -webkit-box-shadow: inset 0 0 66px #b9b9b9;
+  }
+  .Cancelarbtn2 {
+    padding: 0.32rem 2.5rem;
+    color: #ffffff;
+    font-weight: lighter;
+    border-radius: 50px;
+    font-size: 12px;
+    background-color: #b9b9b9;
+    border-color: #e2e2e2;
+  }
+
+  .button_ln-gradient {
+    color: #ffffff;
+    padding: 0.35rem;
+    margin: 20px;
+    background-color: #d22919;
+    font-size: 18px;
+  }
+  .modalRecize {
+    border-radius: 16px;
+    height: 102px;
+    width: 384px;
+  }
+  .modal-footer{
+    justify-content: center;
+  }
+}

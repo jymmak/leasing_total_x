@@ -1,0 +1,101 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="nuevo-sucursal">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="ibox">
+          <div class="ibox-title col-sm-12 col-md-12 col-lg-12">
+            <div class="title-banner">{{titulo}}</div>
+          </div>
+
+          <div class="ibox-content">
+            <form [formGroup]="formformularioSucursal">
+              <div class="form-group">
+                <div class="related-news">
+                  <div class="tab-content  margin-top20 " id="myTabContent">
+                    <div class="row">
+
+                      <div class="col-sm-5">
+                        <div class="col-sm-10">
+                          <label>Nombre</label>
+                          <input autocomplete="off" class=" btn-rounded  _input pinky margin-bottom30 " formControlName="nombre"
+                            required>
+                        </div>
+
+                        <div class="col-sm-10 mt-3">
+                          <label>Provincia</label>
+                          <select select2 theme="FondoRosado" (onSelect)="capturarProvincia($event)" class="margintopselect"
+                            formControlName="idprovincia" required>
+                            <option></option>
+                            <option *ngFor="let  item of provincias" [value]="item.id">{{item.text}}</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-10 mt-3">
+                          <label>Distrito</label>
+                          <select select2 theme="FondoRosado" (onSelect)="capturaRDistrito($event)" class="margintopselect"
+                            formControlName="iddist" required>
+                            <option *ngFor="let  distrito of distrito" [value]="distrito.id">{{distrito.text}}</option>
+                          </select>
+                        </div>
+
+                        <div class="col-sm-10 mt-3">
+                          <label>Dirección</label>
+                          <input id="coordenadas" [(ngModel)]="direccion"  (keyup)="geocodeAaddress(direccion)" autocomplete="off" class=" btn-rounded  _input pinky margin-bottom30 "
+                            formControlName="direccion" requeired>
+                        </div>
+
+                        <div class="col-sm-10">
+                          <label>Teléfono </label>
+                          <input [EnteroPositivo] (valueEntero)="validarTelefono($event)" autocomplete="off" class=" btn-rounded  _input pinky margin-bottom30 "
+                            formControlName="telefono">
+                        </div>
+
+                      </div>
+
+                      <div class="col-sm-7">
+                        <!-- <sucursal-map></sucursal-map> -->
+                        <div id="sucursal-map">
+
+                            <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom"  (markerClick)="clickedMarkesr(m.label, i)">
+                              <agm-marker *ngFor="let m of markers; let i = index"    (dragEnd)="markerDragEnd(m, $event)"  (markerClick)="clickedMarker(m.lat, m.lng)"
+                              [latitude]="m.lat" [longitude]="m.lng" [label]="m.label" [markerDraggable]="m.draggable" 
+                              [iconUrl]="'/assets/iconos/origen.png'">
+                          
+                              <agm-info-window >
+                                <p ng-non-bindable><strong>{{m.title}}</strong><br />
+                                  latitud {{ m.lat | number:'2.2-4' }}, longitud {{ m.lng | number:'2.2-4' }}
+                               
+                                
+                                </p>
+                              </agm-info-window>
+                            </agm-marker>
+                            </agm-map>
+                          </div>
+                          
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="actions text-right margin-top20">
+                  <button type="button" class="btn-rounded button button-cg " style="    margin-right: 35px;" (click)="regresar()">
+                    Cancelar</button>
+                  <button id="btnnext" type="button" class="btn btn-primary" (click)="guardar()" [disabled]="!formformularioSucursal.valid">
+                    Guardar
+                  </button>
+                </div>
+              </div>
+            </form>
+
+
+
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

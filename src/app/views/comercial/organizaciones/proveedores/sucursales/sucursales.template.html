@@ -1,0 +1,92 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="sucursales">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="ibox">
+          <div class="ibox-title p-3 pb-4 pt-4">
+            <div class="row">
+              <div class="col-md-3">
+                <input id="search51" name="q" type="text" size="40" [(ngModel)]="buscar" placeholder="Buscar RUC, Razón Social"
+                  (ngModelChange)="listarProveedores()" autocomplete="off" />
+              </div>
+
+              <div class="col-md-9 text-right">
+
+                <button [disabled]="!selectItem.id" [ngClass]="{'btn-activo':selectItem.id}" (click)="mostrarAvanzada = !mostrarAvanzada"
+                  class="btn btn-primary btn-circle mr-2" (click)="ubicacionProvedor()" data-toggle="tooltip"
+                  data-placement="top" title="Ubicación">
+                  <i class="info mdi mdi-map-marker"></i>
+                </button>
+
+
+                <button [disabled]="!selectItem.id" [ngClass]="{'btn-activo':selectItem.id}" (click)="mostrarAvanzada = !mostrarAvanzada"
+                  class="btn btn-primary btn-circle mr-2" (click)="contacto()" data-toggle="tooltip" data-placement="top"
+                  title="Contacto">
+                  <i class="info mdi mdi-book-open"></i>
+                </button>
+
+                <button [disabled]="!selectItem.id" [ngClass]="{'btn-activo':selectItem.id}" (click)="mostrarAvanzada = !mostrarAvanzada"
+                  class="btn btn-primary btn-circle mr-2" (click)="editarSucursal()" data-toggle="tooltip"
+                  data-placement="top" title="Editar">
+                  <i class="info mdi mdi-pencil"></i>
+                </button>
+
+                <button (click)="eliminar()" type="button" class="btn btn-circle btn-primary mr-1" [disabled]="!selectItem.id"
+                  data-dismiss="modal" data-toggle="modal" data-target="#modalConfirmar" data-placement="top" title="Eliminar">
+                  <i class="mdi  mdi-delete"></i>
+                </button>
+
+                <button class="btn btn-primary fs-16" (click)="nuevoSucursal()"><span class="mdi mdi-plus"></span>Nuevo</button>
+
+              </div>
+            </div>
+          </div>
+          <div class="ibox-content">
+            <div class=" tableScroll" infiniteScroll (scrolled)="listarSucursales(true)">
+              <table class="table table-striped  table-hover " id="tableCliente">
+                <thead>
+                  <tr>
+
+                    <th class="w-5">No.</th>
+                    <th  class="w-15" >Nombre </th>
+                    <th  class="w-15" >Teléfono Fijo</th>
+                    <th  class="w-40" >Dirección</th>
+                    <th  class="w-10" >Contacto Principal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of sucursal; let index = index" (click)="select(item)" [ngClass]="{'highlighted':item.id==selectItem.id}">
+
+                    <td class="text-uppercase w-5">{{item.id}}</td>
+                    <td class="text-uppercase w-15 ">{{item.nombre}}</td>
+                    <td class="text-uppercase w-15">{{item.telefono}}</td>
+                    <td class="text-uppercase w-40">
+                      <div class="text-info mdi mdi-map-marker d-inline-block"></div><label (click)="ubicacionProvedor()"
+                        class="text-decoration text-info">{{item.direccion}}</label>
+                    </td>
+                    <td class="text-uppercase w-10">{{item.contacto}}</td>
+                  </tr>
+
+                </tbody>
+
+              </table>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+      <div class="actions text-right margin-top20">
+        <button type="button" class="btn-rounded button button-cg " (click)="atras()" data-dismiss="modal">
+          <span class="mdi mdi-chevron-left"></span>Atrás</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- 
+<formulario-buscar (buscar)="busquedaAvanzada($event)"></formulario-buscar> -->
+<!-- <formulario-email></formulario-email> -->

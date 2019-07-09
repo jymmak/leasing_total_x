@@ -1,0 +1,54 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="ubicacion">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="ibox">
+
+          <div class="ibox-content">
+            <!-- <div id="map"></div> -->
+
+            <div class="row">
+              <div class="col-sm-12 margin20">
+                <strong>UBICACiÓN PROVEEDORES: GRUPO PANA {{ubicacionProvedores}}</strong>
+              </div>
+              <br>
+              <div class="col-sm-12" style="
+              padding-left: 40px;
+              padding-right: 40px;
+          ">
+                <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+                  <agm-marker *ngFor="let m of markers; let i = index" [latitude]="m.lat" [longitude]="m.lng" [label]="m.label"
+                    [markerDraggable]="m.draggable" (dragEnd)="markerDragEnd(m, $event)" [iconUrl]="'/assets/iconos/origen.png'">
+
+                    <agm-info-window>
+                      <p ng-non-bindable><strong>{{m.title}}</strong><br />
+                        latitud {{ m.lat | number:'2.2-4' }}, longitud {{ m.lng | number:'2.2-4' }}
+
+
+                      </p>
+                    </agm-info-window>
+                  </agm-marker>
+                </agm-map>
+              </div>
+            </div>
+
+
+            <div class="actions text-right margin30 ">
+
+              <button type="button" class="btnSiguiente" (click)="atras()"> Salir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+<!-- 
+<formulario-buscar (buscar)="busquedaAvanzada($event)"></formulario-buscar> -->
+<!-- <formulario-email></formulario-email> -->

@@ -1,0 +1,39 @@
+#nuevo-contacto {
+  .title-banner {
+    color: #707070;
+    font-family: Helvetica, Bold;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 25px;
+  }
+
+  label {
+    display: inline-block;
+    margin-bottom: 0.3rem;
+    font-size: 13px;
+    margin-left: 5px;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 319px;
+    margin-bottom: 0;
+    list-style: none;
+  }
+
+  .margintopselect {
+    margin-top: 13px;
+  }
+
+  .colrs-add {
+    color: #D22919;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: Helvetica, Regular;
+    cursor: pointer;
+    margin-top: 31px;
+  }
+
+  
+}

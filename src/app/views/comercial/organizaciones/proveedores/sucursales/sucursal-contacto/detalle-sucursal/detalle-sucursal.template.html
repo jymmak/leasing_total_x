@@ -1,0 +1,61 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="detalle-sucursal">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="ibox">
+          <div class="ibox-title" style=" box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.07);">
+            <label> DETALLE DE CONTACTO</label> <br>
+            <span *ngIf="datosRiesgos"><label style="margin-top: 5px;"> Datos de Riesgos</label> </span>
+          </div>
+          <div class="ibox-content">
+            <div class="related-news">
+              <div class="table table-responsive">
+
+                <table class="table table-hover" id="tableDetalle">
+                  <thead>
+                  </thead>
+                  <tbody *ngIf="detalleCliente">
+                    <tr>
+                      <th scope="row">Nombres:</th>
+                      <td>{{nombres}}</td>
+                      <th scope="row">Tipo:</th>
+                      <td>{{tipo}}</td>
+
+                    </tr>
+                    <tr>
+                      <th scope="row">Cargo:</th>
+                      <td>{{cargo}}</td>
+                      <th scope="row">Teléfono:</th>
+                      <td>{{telefono}}</td>
+
+                    </tr>
+                    <tr>
+                      <th scope="row">Correo Electrónico:</th>
+                      <td>{{email}}</td>
+                      <th scope="row">Fecha de Nacimiento:</th>
+                      <td>{{fechaNac}}</td>
+
+                    </tr>
+                    <tr>
+                      <th scope="row">Celular:</th>
+                      <td>{{celular}}</td>
+                      <th scope="row"></th>
+                      <td></td>
+
+                    </tr>
+
+                  </tbody>
+
+
+                </table>
+
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>

@@ -1,0 +1,44 @@
+#boton-up {
+ 
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    z-index: 3999;
+    width: 47px;
+    height: 47px;
+
+  .button-to-top {
+    position: relative;
+    bottom: 15px;
+    right: 15px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    background: #d22919;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    -webkit-border-top-left-radius: 50%;
+    -webkit-border-top-right-radius: 50%;
+    -webkit-border-bottom-right-radius: 50%;
+    -webkit-border-bottom-left-radius: 50%;
+    -webkit-box-sizing: border-box;
+    text-align: -webkit-center;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: background 0.2s;
+    -moz-transition: background 0.2s;
+    -ms-transition: background 0.2s;
+    -o-transition: background 0.2s;
+    transition: background 0.2s;
+  }
+  i {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,200 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="registro">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="ibox">
+          <div class="ibox-title">
+            <div class="mt-3">
+              <h1 class="fs-16 font-weight-bold ml-3">REGISTRO DE RESULTADO DE GESTIÓN</h1>
+            </div>
+            <div class="ibox-tools mt-3">
+
+              <button (click)="editar()" class="btn btn-primary fs-16" *ngIf="static"><span class="mdi mdi-border-color"></span>
+                Editar</button>
+
+            </div>
+          </div>
+
+          <div class="ibox-content" *ngFor="let item of listaRegistro; let index = index">
+            <div class="col-md-12 pl-0 pr-0">
+              <h1 class="fs-18 ml-4 font-weight-bold mb-3">{{item.title}}</h1>
+              <div class="col-md-4" *ngIf="static">
+                <label> Resultado de Gestión</label>
+                <div class=" btn-rounded  _input pinky">{{item.resultado}}</div>
+
+              </div>
+              <div class="col-md-4" *ngIf="resultado_busqueda">
+                <label> Resultado de Gestión</label>
+
+                <select select2 theme="FondoRosado">
+                  <option *ngFor="let  item of resultado" [value]="item.id">{{item.text}}</option>
+                </select>
+              </div>
+              <div class="col-md-12 mt-3 ">
+                <label> Informe</label>
+                <div class=" btn-rounded  _input pinky borde" style=" height: 100px;">{{item.textInforme}}</div>
+
+              </div>
+
+              <div class="col-md-12 mt-5">
+                <div class="row">
+                  <div class="col-md-3">
+                    <h1 class="fs-18 font-weight-bold mb-3">Fotos de la actividad</h1>
+                  </div>
+                  <div class="col-md-2" *ngIf="resultado_busqueda">
+                    <div class="colrs-add d-inline-block" (click)="agregarFoto()"><span class="mdi mdi-plus"></span>Agregar
+                      Foto</div>
+                  </div>
+                </div>
+
+
+                <div class="related-news">
+                  <div class="table-responsive">
+                    <table class="table table-striped  table-hover " id="tableRegistro">
+                      <thead>
+                        <tr>
+                          <th style="width:2%;">Item</th>
+                          <th style="width:8%;">Nombre</th>
+                          <th style="width:6%;">Fecha y Hora Foto </th>
+                          <th style="width:7%;">Fecha y Hora Subida</th>
+                          <th style="width:4%;">Fotos</th>
+                        </tr>
+                      </thead>
+                      <tbody *ngIf="static">
+                        <tr *ngFor="let item of listaFotos" (click)="select(item)" [ngClass]="{'highlighted':item.id==selectItem.id}">
+
+                          <td style="width:2%;" (click)="clientes($event)">{{item.id}}</td>
+                          <td style="width:8%;">{{item.nombre}}</td>
+                          <td style="width:6%;">{{item.fhFoto}}</td>
+                          <td style="width:7%;">{{item.fhSubida}}</td>
+                          <td style="width:4%;">
+
+                            <img [src]="item.imageUrl" alt="" class="w-100 ">
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody *ngIf="resultado_busqueda">
+                        <tr *ngFor="let item of listaFotos">
+
+                          <td style="width:2%;">{{item.id}}</td>
+                          <td style="width:8%;">{{item.nombre}}</td>
+                          <td style="width:6%;">{{item.fhFoto}}</td>
+                          <td style="width:7%;">{{item.fhSubida}}</td>
+                          <td style="width:4%;">
+                            <div class="border border-secondary box"></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="actions text-right pr-5" *ngIf="resultado_busqueda">
+
+                  <button (click)="cancelar()" type="button" class="btn btn-secondary mr-3">
+                    Cancelar
+                  </button>
+                  <button (click)="guardarEditar()" class="btn btn-primary">
+                    Guardar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="actions text-right" *ngIf="static">
+        <button class="btn btn-secondary mr-3" (click)="back()">
+          <span class="mdi mdi-chevron-left"></span> Atrás </button>
+
+      </div>
+
+    </div>
+
+
+    <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true" data-backdrop="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header pdfmodal">
+            <h5 class="modal-title" id="exampleModalCenterTitle"><strong style="font-size: 15px;">{{nombreCliente}}</strong></h5>
+            <div class="circle">
+
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="cancelarModal(dato)">
+              <span aria-hidden="true" class="xflotante">
+                &#215;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <ngb-carousel *ngIf="images">
+              <ng-template ngbSlide *ngFor="let item of listaFotos">
+
+                <p class="text-center">{{item.nombreFoto}}</p>
+                <img class="" [src]="item.imageUrl" alt="Random first slide">
+                <div class="container mt-4 pb-3">
+                  <div class="row">
+                    <div class="col">Nombre: {{item.lugar}}</div>
+                    <div class="col">Fecha y Hora Foto: {{ item.fhIni}}</div>
+                    <div class="w-100"></div>
+                    <div class="col pinky">Subida por: {{item.subidaPor}}</div>
+                    <div class="col pinky"> Fecha y Hora Subida: {{item.fhSub}}</div>
+                  </div>
+                </div>
+              </ng-template>
+
+
+            </ngb-carousel>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModalFoto" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true" data-backdrop="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header pdfmodal">
+            <h5 class="modal-title" id="exampleModalCenterTitle"><strong style="font-size: 15px;">AGREGAR FOTO</strong></h5>
+            <div class="circle">
+
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="xflotante">
+                &#215;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <label>Nombre</label>
+            <input class=" btn-rounded  _input pinky">
+
+            <div class="border border-secondary boxI p-2 mt-2 ml-2">
+              <span class="mdi mdi-folder-multiple-image fs-17"><input type="file" id="inputImage" class="explorar-file"></span>
+            </div>
+
+            <img id="result" src="" alt="">
+            <div id="con">
+              <img id="blah" src="#" alt="" />
+
+            </div>
+
+            <div class="text-right mt-2">
+
+                <button type="button" class="btn btn-primary mr-3" (click)="guardar()">
+                  Guardar</button>
+              </div>
+
+
+          </div>
+       
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

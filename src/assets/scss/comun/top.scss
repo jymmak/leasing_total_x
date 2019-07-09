@@ -1,0 +1,5 @@
+@for $i from 1 through 40{
+    .top-#{$i}{
+        top: 0px + $i !important;
+    }
+}

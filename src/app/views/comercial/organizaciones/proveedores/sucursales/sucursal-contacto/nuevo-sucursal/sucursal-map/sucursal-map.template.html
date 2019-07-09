@@ -1,0 +1,15 @@
+<div id="sucursal-map">
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+    <agm-marker *ngFor="let m of markers; let i = index" (markerClick)="clickedMarker(m.label, i)" [latitude]="m.lat"
+      [longitude]="m.lng" [label]="m.label" [markerDraggable]="m.draggable" [iconUrl]="'/assets/iconos/origen.png'">
+
+      <agm-info-window>
+        <p ng-non-bindable><strong>{{m.title}}</strong><br />
+          latitud {{ m.lat | number:'2.2-4' }}, longitud {{ m.lng | number:'2.2-4' }}
+
+
+        </p>
+      </agm-info-window>
+    </agm-marker>
+  </agm-map>
+</div>

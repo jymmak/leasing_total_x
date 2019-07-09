@@ -1,0 +1,177 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+
+<div id="desemp">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content">
+        <div class="ibox-content">
+          <div class="row" style="margin-top: 9px;">
+
+
+
+
+            <div class="col-sm-4" *ngFor="let item of listaNombres; let index = index">
+              <div class="ibox ">
+                <div class="ibox-title">
+
+                  <p>{{item.nombre}}</p>
+                </div>
+                <div class="ibox-content">
+
+
+                
+                  <div>
+
+                    <div id="donutChart">
+                      <div id="chart">
+                        <google-chart [data]="item.pieChartData" (chartReady)='ready($event,index)'></google-chart>
+                        <img alt="" [src]="item.imageUrl" *ngIf="item.image==true">
+
+                      </div>
+                    </div>
+
+                    <div id="circle1">
+                      <p>Volumen de Colocaciones</p>
+                      <div class="cir1 circle line1">{{item.cantidad}}</div>
+                    </div>
+
+
+                    <div id="circle2">
+                      <p>TEA Promedio</p>
+                      <div class="cir1 circle line1">{{item.porcentaje}}%</div>
+                    </div>
+
+                  </div>
+
+
+                  <div class="wrap">
+                    <p class="titleBar"> {{item.titleBar}}</p>
+                    <div class="barGraph">
+                      <ul class="graph">
+                        <div class="row">
+                          <div class="col-sm-8">
+
+                            <span class="graph-barBack">
+
+                              <li class="graph-bar red" [ngStyle]="{'width': item.prospectos_valor + '%'}">
+
+                              </li>
+                            </span>
+
+                          </div>
+                          <div class="col-sm-4">
+                            <span class="barGraph-title">{{item.prospectos}}</span>
+
+
+                          </div>
+
+                          <div class="col-sm-8">
+
+                            <span class="graph-barBack">
+
+                              <li class="graph-bar orange" [ngStyle]="{'width': item.oportunidades_valor + '%'}">
+
+                              </li>
+                            </span>
+
+                          </div>
+                          <div class="col-sm-4">
+                            <span class="barGraph-title">{{item.oportunidades}}</span>
+
+
+                          </div>
+                          <div class="col-sm-8">
+
+                            <span class="graph-barBack">
+
+                              <li class="graph-bar yellow" [ngStyle]="{'width': item.clientes_valor + '%'}">
+
+                              </li>
+                            </span>
+
+                          </div>
+                          <div class="col-sm-4">
+                            <span class="barGraph-title">{{item.clientes}}</span>
+
+
+                          </div>
+
+
+
+                        </div>
+                      </ul>
+                    </div>
+
+                  </div>
+
+
+
+
+                  <div>
+
+
+                    <div id="cartera">
+                      <p>Cartera</p>
+                      <div class="circle cir2 line2">{{item.cartera}}</div>
+                    </div>
+
+
+                    <div id="proveedores">
+                      <p>Proveedores</p>
+                      <div class="circle cir2 line2">{{item.proveedores}}</div>
+                    </div>
+
+                    <div id="visitas">
+                      <p>Visitas</p>
+                      <div class="circle cir2 line2">{{item.visitas}}</div>
+                    </div>
+
+
+                    <div id="cotizaciones">
+                      <p>Cotizaciones</p>
+                      <div class="circle cir2 line2">{{item.cotizaciones}}</div>
+                    </div>
+
+
+                  </div>
+
+
+
+
+                  <div class="row" style="margin-top: 7px;">
+                    <div class="col-sm-4">
+                      <div class="titel-pogress">
+                        Comisiones
+                      </div>
+                    </div>
+                    <div class="col-sm-8" style="margin-top: 15px;">
+                      
+                      <div class="centerer"  >
+                        <div  class="switcher">
+                          <input type="radio" name="balance" value="yin" id="yin" class="switcher__input switcher__input--yin"
+                            checked="">
+                          <div for="yin" [ngStyle]="{'position': item.position_switcher , 'text-align': item.textalign_switcher, 'margin-left': item.marginleft_switcher, 'margin-top': item.margintop_switcher}" class="switcher__label_ComisionMes" id="comisionMesActual">{{item.moneda}}{{item.comisionMes}}</div>
+                          <input type="radio" name="balance" value="yang" id="yang" class="switcher__input switcher__input--yang">
+                          <div  id="comisionMesPasado" for="yang" class="switcher__label_Comision">  {{item.mes}} {{item.moneda}} {{item.comision}}</div>
+                          <span  id="{{item.id}}" class="switcher__toggle_20-40" [ngStyle]="{'width': item.comision_porcetnajte , 'background-color': item.color_switcher }" ></span>   
+                        </div>
+                  
+
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

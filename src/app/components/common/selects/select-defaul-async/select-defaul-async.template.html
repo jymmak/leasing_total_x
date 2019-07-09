@@ -1,0 +1,23 @@
+<div class="select-defaul-async">
+    <i class="mdi mdi-magnify icon-left" [ngClass]="{'buscar':search}"></i>
+    <div #inputSelectDiv [hidden]="showOption" class="input-select text-ellipsis">{{selected.text}}</div>
+    <input [hidden]="!showOption" #inputSelect [(ngModel)]="value" class="input-select" type="text" [readonly]="!search"
+        [placeholder]="placeholder">
+    <i class="mdi mdi-play icon-right" (click)="closeSelect()"></i>
+    <div class="list-option" infiniteScroll (scrolled)="scrolled()">
+        <div *ngFor="let row of data;let index = index" class="option-content">
+            <a class="container" (click)="selectOption(index,row)" [ngClass]="{'activo': selected.id ==row.id }">{{row.text}}
+            </a>
+        </div>
+        <div  *ngIf="loading && data.length > 0" class="option-content">
+            <a class="container" >Cargando...
+            </a>
+        </div>
+        <div *ngIf="data.length == 0" class="option-content">
+            <label class="container">
+                <span *ngIf="loading">Cargando...</span>
+                <span *ngIf="!loading">Sin resultados</span>
+            </label>
+        </div>
+    </div>
+</div>

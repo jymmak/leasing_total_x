@@ -1,0 +1,259 @@
+#cotizacion {
+    .no {
+        background: red;
+    }
+    .dropdown-content .dropdown-item.active .dropdown-options {
+        pointer-events: auto;
+        opacity: 1;
+        max-height: 430px;
+        z-index: 1;
+        border-radius: 15px;
+        position: absolute;
+    }
+    .ibox {
+        .ibox-tools {
+            button {
+                // color:#FFFFFF;
+                // padding: 0.35rem;
+                // margin: 20px;
+                // box-shadow: 0 0 3.3px 0 #d22919;
+                .mdi {
+                    // font-size: 1rem;
+                }
+                span {
+                    margin-right: 6px;
+                }
+            }
+        }
+        .ibox-content {
+            .table-striped tbody tr:nth-of-type(odd) {
+                // background-color: #ffffff;
+                background-color: rgba(255, 254, 254, 0);
+            }
+            .table th,
+            .table td {
+                color: #707070; // font-size: 66%;
+                border-top: 1px solid #fff7f7 !important;
+            }
+        }
+    }
+    .trColor {
+        background-color: #707070 !important;
+    }
+    .circulobotonsdelete {
+        width: 30px;
+        height: 30px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: #bcbcbc;
+        display: inline-block;
+        text-align: center;
+    }
+    .circulobotons_habilitados {
+        width: 30px;
+        height: 30px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: #d22919;
+        display: inline-block;
+        text-align: center;
+    }
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        opacity: inherit;
+    }
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 62px;
+        background-color: #fff;
+        /* color: #555; */
+        color: #d22919;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 162%;
+        left: 11%;
+        opacity: 9px;
+        transition: opacity 0.3s;
+        /* border: 1px solid #D22919; */
+        -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+        border-radius: 14px;
+    }
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+    td {
+        cursor: pointer;
+    } // scroll de la tabla
+    tbody {
+        display: block;
+        height: 450px;
+        overflow: auto;
+        margin-top: 5px;
+        font-family: Helvetica, Regular !important;
+        font-size: 12px;
+    }
+    thead,
+    tbody tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+    thead {
+        width: calc(100% - 0em);
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.07);
+        font-family: Helvetica, Bold !important;
+        font-size: 12px;
+    }
+    ::-webkit-scrollbar {
+        width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px #ffffff;
+        border-radius: 7px;
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 7px;
+        -webkit-box-shadow: inset 0 0 66px #b9b9b9;
+    }
+    .iconsborder {
+        padding-left: 0px !important;
+        padding-right: 11px !important;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        margin-top: 0px !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        margin-bottom: 0px !important;
+        height: 0px !important;
+        width: 0px !important;
+        border-left-width: 0px;
+        border-top-width: 0px !important;
+        border-right-width: 0px !important;
+        border-bottom-width: 0px !important;
+    }
+    button {
+        outline: none;
+    }
+    .buttonAceptarModal {
+        border-radius: 50px;
+        background: #d22919;
+        font-size: 0.75rem;
+        border: 0;
+        padding: 0.32rem;
+        color: #ffffff;
+        width: 125px;
+    }
+    .modal-footer {
+        display: flex;
+        align-items: center !important;
+        justify-content: flex-end;
+        padding: 1rem;
+        border-top: 0px solid #e9ecef;
+    }
+    .fontRos {
+        background-color: #fff7f7 !important;
+        margin-top: 1px;
+        margin-bottom: 1rem;
+        width: 100%;
+        height: 34px;
+        text-align: -webkit-auto;
+        border-radius: 14px;
+        padding-left: 6px;
+        border: 1px solid #fdccc9;
+    }
+    .cancelarModal1 {
+        padding: 0.32rem 2.5rem;
+        color: #ffffff;
+        font-weight: lighter;
+        border-radius: 50px;
+        font-size: 12px;
+        background-color: #b9b9b9;
+        border-color: #b9b9b9;
+        margin-left: 45px;
+    }
+    .xflotante {
+        margin-left: 12px;
+        margin-right: -65px;
+        height: 21px;
+        width: 21px;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        top: -23px;
+    }
+    .marginInput::after {
+        content: "x";
+        position: absolute;
+        top: 3px;
+        right: 8px;
+        font-size: 14px;
+        color: #040404;
+        cursor: pointer;
+    }
+    .bntmodal1 {
+        padding: 0.32rem 2.5rem;
+        color: #ffffff;
+        font-weight: lighter;
+        border-radius: 50px;
+        font-size: 12px;
+    }
+    .select2-container--FondoRosado .select2-selection--single::after {
+        content: "▾";
+        position: absolute;
+        top: 0;
+        right: 6px;
+        font-size: 21px;
+        color: #d22919;
+    }
+    .modal-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 1rem;
+        border-bottom: 1px solid #e9ecef;
+        border-top-left-radius: 0.3rem;
+        border-top-right-radius: 0.3rem;
+        background: #fff7f7 !important;
+        border: 2px;
+    }
+    .margin {
+        margin-top: 25px;
+    }
+    .btnAtraas {
+        padding: 0.32rem;
+        color: #ffffff;
+        width: 124px;
+        margin-right: 29px;
+        border-radius: 50px;
+        background: #bcbcbc;
+        border: 0;
+        font-size: 0.75rem;
+        cursor: pointer;
+    }
+    tr {
+        cursor: pointer;
+        transition: all 0.25s ease-in-out;
+    }
+    .busquedaAvanzada {
+        color: #dc3324;
+        background: white;
+        border-color: white;
+        margin-left: 50px;
+        border: white;
+        cursor: pointer;
+        font-size: 12px;
+    }
+    .cursorBusqueda {
+        text-decoration-line: underline;
+        cursor: pointer;
+    }
+}

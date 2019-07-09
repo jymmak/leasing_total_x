@@ -1,0 +1,302 @@
+#info-neg {
+  #timeline {
+    /*==================================
+    TIMELINE
+==================================*/
+    /*-- GENERAL STYLES
+------------------------------*/
+    .timeline {
+      line-height: 1.4em;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+    }
+    .timeline h1,
+    .timeline h2,
+    .timeline h3,
+    .timeline h4,
+    .timeline h5,
+    .timeline h6 {
+      line-height: inherit;
+    }
+
+    /*----- TIMELINE ITEM -----*/
+    .timeline-item {
+      padding-left: 40px;
+      position: relative;
+    }
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    /*----- TIMELINE INFO -----*/
+    .timeline-info {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin: 0 0 0.5em 0;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    /*----- TIMELINE MARKER -----*/
+    .timeline-marker {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 15px;
+    }
+    .timeline-marker:before {
+      background: #d22919;
+      border: 3px solid transparent;
+      border-radius: 100%;
+      content: "";
+      display: block;
+      height: 15px;
+      position: absolute;
+      top:0px;
+      left: 50px;
+      width: 15px;
+      transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+    }
+    .timeline-marker:after {
+      content: "";
+      width: 1.5px;
+      background: #d22919;
+      display: block;
+      position: absolute;
+      top: 15px;
+      bottom: 0;
+      left: 57px;
+    }
+    .timeline-item:last-child .timeline-marker:after {
+      content: none;
+    }
+
+    .timeline-item:not(.period):hover .timeline-marker:before {
+      background: transparent;
+      border: 3px solid #ff6b6b;
+    }
+
+    /*----- TIMELINE CONTENT -----*/
+    .timeline-content {
+      padding-bottom: 40px;
+    }
+    .timeline-content p:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+
+  .button-panel-info {
+    padding: 0.35rem;
+    box-shadow: 0 0 0 0 #d22919;
+    background: white;
+    color: #d22919 !important;
+    border-radius: 50px;
+    height: 35px;
+    font-size: 13px;
+    width: 144px;
+    border: 1px solid #d22919;
+    margin-left: 17px;
+    cursor: pointer;
+  }
+  .button-panel-after {
+  padding: 0.35rem;
+  box-shadow: 0 0 0 0 #d22919;
+  background: #fff7f7;
+  color: #d22919 !important;
+  border-radius: 50px;
+  height: 35px;
+  font-size: 13px;
+  width: 144px;
+  border: 1px solid #d22919;
+  margin-left: 17px;
+  cursor: pointer;
+  }
+  .ibox {
+    .ibox-tools {
+      button {
+        color: #ffffff;
+        padding: 0.35rem;
+        margin: 20px;
+        box-shadow: 0 0 3.3px 0 #d22919;
+        .mdi {
+          font-size: 1rem;
+        }
+        span {
+          margin-right: 6px;
+        }
+      }
+    }
+
+    .ibox-content {
+      .table-striped tbody tr:nth-of-type(odd) {
+        // background-color: #ffffff;
+
+        background-color: rgba(255, 254, 254, 0);
+      }
+      .table th,
+      .table td {
+        color: #707070;
+        font-size: 66%;
+        border-top: 1px solid #fff7f7 !important;
+      }
+    }
+  }
+
+  td {
+    cursor: pointer;
+  }
+
+  // scroll de la tabla
+  tbody {
+    display: block;
+    height: 450px;
+    overflow: auto;
+    margin-top: 5px;
+  }
+
+  thead,
+  tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+  }
+  thead {
+    width: calc(100% - 0em);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.07);
+  }
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #ffffff;
+    border-radius: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+    -webkit-box-shadow: inset 0 0 66px #b9b9b9;
+  }
+
+  .iconsborder {
+    padding-left: 0px !important;
+    padding-right: 11px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+    height: 0px !important;
+    width: 0px !important;
+    border-left-width: 0px;
+    border-top-width: 0px !important;
+    border-right-width: 0px !important;
+    border-bottom-width: 0px !important;
+  }
+
+  button {
+    outline: none;
+  }
+
+  .progress-step.is-complete::after {
+    background-color: #707070;
+  }
+
+  .progress-step:not(:last-child)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -10;
+    top: 13px;
+    bottom: 12px;
+    width: 100%;
+    height: 4px;
+    transition: background-color 0.3s;
+  }
+  .progress-content {
+    display: inline-block;
+    vertical-align: middle;
+    width: 58%;
+    margin-left: 28px;
+    margin-top: 25px;
+  }
+  .progress-tracker--vertical .progress-marker {
+    left: 0;
+  }
+
+  .title {
+    margin-top: 0;
+    display: inline-block;
+    width: 25%;
+    margin-top: 3px;
+    color: #b9b9b9 !important;
+    margin-left: 100px;
+  }
+
+  .text-navy {
+    color: #252424c9;
+  }
+
+  .scrrol {
+    display: block;
+    height: 344px;
+    overflow-x: hidden;
+    margin-top: 5px;
+  }
+  thead {
+    width: calc(0% - 0em);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+
+  .ibox .ibox-content .table th,
+  #info-neg .ibox .ibox-content .table td {
+    /* color: #707070; */
+    font-size: 66%;
+    /* border-top: 1px solid #fff7f7 !important; */
+  }
+  .table thead th {
+    vertical-align: bottom;
+    border-bottom: 0px solid #dee2e6;
+  }
+
+  .table {
+    width: 96%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    box-shadow: 0px -2px 5px rgba(1, 0, 0, 0.09);
+  }
+
+  .progress-tracker {
+    display: table;
+    margin: 8px auto;
+    padding: 0;
+    list-style: none;
+    font-size: 0.67em;
+  }
+
+  .progress-tracker--vertical .progress-step::after {
+    right: auto;
+    top: 19px;
+    left: 74px;
+    width: 1.2px;
+    height: 100%;
+    z-index: 2001;
+  }
+
+  .progress-step.is-complete::after {
+    background-color: #707070;
+  }
+
+  button{
+    outline: none;
+  }
+}

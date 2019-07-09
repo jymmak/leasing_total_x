@@ -1,0 +1,116 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="checklist" class="container-fluid">
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+        <div class="ibox">
+          <div class="ibox-title">
+            <label class="label-titel-exp"> Expediente {{expedienteId}}</label>
+
+            <div class="ibox-tools">
+
+              <!-- <div (click)="PdfDocumentosExpediente($event)" class="circulobotonsdelete" style="margin-right: 5px;  display: inline-block;"
+                id="comboIcons" [ngClass]="{'btn-activo':selectItem.id}">
+                <button class="mdi mdi-file-document tooltip iconsborder " disabled="disabled" [disabled]="!selectItem.id"><span
+                    class="tooltiptext">
+                    Pdf</span></button>
+              </div> -->
+
+              <div style="display: contents;">
+                <button type="button" class="checklist" (click)="checklist(item)">
+                  Enviar a Riesgos</button>
+              </div>
+            </div>
+            <div class="documentos-label">Checklist Comercial</div>
+          </div>
+
+          <div class="ibox-content">
+            <div class="related-news" style=" margin-top: -22px;">
+              <div class="table-responsive">
+                <div class="row">
+                  <table class="table table-striped  table-hover " id="tableCliente">
+
+                    <thead>
+                      <tr class="checkHead">
+
+                        <th style="width:15%;">Prioridad</th>
+                        <th style="width:15%;">Tipo</th>
+                        <th style="width:40%;"> Nombre</th>
+                        <th style="width:15%;"> Comercial</th>
+                        <!-- <th style="width:15%;"> Riesgos </th> -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <div class="titel-body">Documentos Financieros</div>
+                      <tr *ngFor="let item of lstDocumentosFinancieros ; let index = index " (click)="select(item)"
+                        [ngClass]="{'highlighted':item.id==selectItem.id}">
+
+
+                        <td class="tr-tex">{{item.prioridad}}</td>
+                        <td style="width:10%;">{{item.tipo}}</td>
+                        <td style="width:40%;">{{item.nombre}}</td>
+                        <td style="width:10%;">
+                          <label class="container">
+                            <input type="checkbox" checked="checked" name="comercialChecked{{index}}" [(ngModel)]="item.comercial"
+                              (ngModelChange)="checkedComercial($event)">
+                            <span class="checkmark"></span>
+                          </label>
+                        </td>
+<!-- 
+                        <td style="width:10%;">
+
+                          <label class="container">
+                            <input type="checkbox" name="comercialChecked{{index}}" [(ngModel)]="item.Riesgos"
+                              (ngModelChange)="checkedComercial($event)">
+                            <span class="checkmark"></span>
+                          </label>
+
+                        </td> -->
+                      </tr>
+                      <div class="margin-documents">
+                        <div class="titel-body">Documentos Legales</div>
+                      </div>
+
+                      <tr *ngFor="let item of lstDocuemntosLegales" (click)="select(item)" [ngClass]="{'highlighted':item.id==selectItem.id}">
+
+
+                        <td class="tr-tex">{{item.prioridad}}</td>
+                        <td style="width:10%;">{{item.tipo}}</td>
+                        <td style="width:40%;">{{item.nombre}}</td>
+                        <td style="width:10%;">
+                          <label class="container">
+                            <input type="checkbox" name="comercialChecked{{index}}" [(ngModel)]="item.comercial"
+                              (ngModelChange)="checkedComercial($event)">
+                            <span class="checkmark"></span>
+                          </label>
+
+
+                        </td>
+                        <!-- <td style="width:10%;">
+                          <label class="container">
+                            <input type="checkbox" name="comercialChecked{{index}}" [(ngModel)]="item.Riesgos"
+                              (ngModelChange)="checkedComercial($event)">
+                            <span class="checkmark"></span>
+                          </label>
+
+                        </td> -->
+                      </tr>
+
+                    </tbody>
+
+                  </table>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-md-offset-2">
+        <button type="button" class="btn btn-secondary  btn-cancelar" (click)="btnAtras()">
+          <span class="mdi mdi-chevron-left"></span>Atrás</button>
+      </div>
+    </div>
+  </div>

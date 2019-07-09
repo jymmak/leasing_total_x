@@ -1,0 +1,87 @@
+<div class="padding20 padding-left20 padding-right20 ">
+  <h5 class="margin-bottom40 ">REGISTRO DE GARANTÍA</h5>
+  <div class="padding-left20">
+    <div class="ibox-text margin-top20">
+      <!-- <div class="row"> -->
+        <!-- <div class="col-md-4"> -->
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <label>tipo de Garantía</label>
+            <select select2 theme="FondoRosado" (onSelect)="capturarplazo($event)" class="" required>
+              <option *ngFor="let  garantia of garantia" [value]="garantia.id">{{garantia.text}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <label>Bien de Garantía </label>
+            <input class=" btn-rounded  _input pinky" autocomplete="off" [(ngModel)]="bienGarantia">
+          </div>
+          <div class="col-md-4">
+            <label>Valor Comercial</label>
+            <input class=" btn-rounded  _input pinky" autocomplete="off" [(ngModel)]="valorComercial">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <label>Color </label>
+            <input class=" btn-rounded  _input pinky" autocomplete="off" [(ngModel)]="color">
+          </div>
+          <div class="col-md-4 ">
+            <label>Año</label>
+            <select select2 theme="FondoRosado" (onSelect)="capturarplazo($event)" class="" required>
+              <option *ngFor="let  years of years" [value]="years.id">{{years.text}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <label>Finanza</label>
+            <div class="btn-group btn-group-custom pink ">
+              <button id="FinanzaSi" (click)="FinanzaSi(FinanzaSi)" type="button" class="btn active">Si
+              </button>
+              <button id="FinanzaNo" (click)="FinanzaNo(FinanzaNo)" type="button" class="btn ">No</button>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-4 ">
+            <label>Fiador Nombre</label>
+            <input class=" btn-rounded  _input pinky" autocomplete="off" [(ngModel)]="fiadorNombre">
+          </div>
+          <div class="col-md-4 ">
+            <label> Cargo</label>
+            <input class=" btn-rounded  _input pinky" autocomplete="off" [(ngModel)]="cargoFiador">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-4 ">
+            <label>Conyugue</label>
+            <div class="btn-group btn-group btn-group-custom pink ">
+              <button id="ConyugueSi" (click)="ConyugueSi(ConyugueSi)" type="button" class="btn active">Si
+              </button>
+              <button id="ConyugueNo" (click)="ConyugueNo(ConyugueNo)" type="button" class="btn">No</button>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-4 ">
+            <label> Nombre</label>
+            <input class=" btn-rounded  _input pinky" autocomplete="off" [(ngModel)]="nombre">
+          </div>
+          <div class="col-md-4">
+            <label>Cargo</label>
+            <input class=" btn-rounded  _input pinky" autocomplete="off" [(ngModel)]="cargoConyugue">
+          </div>
+        </div>
+      <!-- </div> -->
+    </div>
+    <div class="actions text-right topbuttons">
+      <button type="button" (click)="cancelar()" class="btn btn-secondary mr-2">
+        Cancelar</button>
+      <button (click)="guardarGarantia()" class="btn btn-primary">Guardar
+      </button>
+    </div>
+  </div>
+
+</div>

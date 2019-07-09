@@ -1,0 +1,111 @@
+<div class="modal fade" id="vista-cotizacion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static"
+    data-keyboard="false">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form #formUsuarioComercial="ngForm" (ngSubmit)="guardar()">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel"> Vista Previa</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="tabs-container">
+                        <div class="wrapper wrapper-content animated fadeInRight ng-scope">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8">
+                                    <img src="assets/img/logo-aside.png" alt="">
+                                    <p class="black_leasing">LEASNIG TOTAL S.A.</p>
+                                    <p>Av. Circunvalación Club Glof N° 134 (Torre 2 Piso 16) - Lima - Santiago de Surco
+                                    </p>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 ">
+                                    <div class="text-center black">
+                                        <p>RUC: 20377892918</p>
+                                        <p>COTIZACIÓN</p>
+                                        <p>CT-000053</p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-xs-12 col-sm-6 col-md-5 col-lg-12" style="margin-top: 10px;">
+
+                                    <div class="col-xs-7 col-sm-7 col-md-6 col-lg-6 text-left data-black">
+                                        <p>ADQUIRIENTE: TRANSPORTES FLORES</p>
+                                        <p>RUC: 20457004029 </p>
+                                        <p>CONSORCIO MENDOZA S.A.C.</p>
+                                        <p>AV. UNIVERSITARIA MZ B LT 1-URB INDUSTRIAL-LOS OLIVOS</p>
+
+                                    </div>
+                                    <div class="col-xs-5 col-sm-5 col-md-6 col-lg-5 col-lg-offset-1 data-black">
+                                        <div class="col-xs-7 col-sm-7 col-md-6 col-lg-8 text-left">
+                                            <p>FECHA DE EMISIÓN:</p>
+                                            <p>FECHA DE VENCIMIENTO:</p>
+                                            <p>MONEDA:</p>
+                                            <p>TIPO DE CAMBIO:</p>
+
+                                        </div>
+                                        <div class="col-xs-5 col-sm-5 col-md-6 col-lg-4">
+                                            <p>24/08/2018</p>
+                                            <p>30/10/2018</p>
+                                            <p>Dólares</p>
+                                            <p>3.25</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="" style="margin-top: 10px;">
+                                <p>Por medio de la presente, tenemos el agrado de cotizarle los siguientes bienes.</p>
+                                <div class="elemento-bienes" style="margin-top: 30px;">
+                                    <lista-bienes></lista-bienes>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="">
+                                <resumen-financiamiento></resumen-financiamiento>
+                            </div>
+                            <p class="nota-text">NOTA: Los precios señalados en esta cotización son en dólares
+                                americanos. El precio en moneda nacional aparece en cumplimiento de la ley 28300, sólo
+                                de manera referencial, al
+                                tipo de cambio vigente al momento de la emisión de esta cotización. Alos pagos que se
+                                realicen en moneda nacional se les apliacará el tipo de cambio vigente en la empresa al
+                                momento que efectivamente se realice el pago.</p>
+                            <div class="">
+                                <h4 style="margin-top: 29px;">
+                                    Cronograma Consolidado:</h4>
+                                <resumen-cronograma></resumen-cronograma>
+
+                            </div>
+                            <p style="margin-top: 13px;">Sin otro particular y esperando que la presente merezca su aprobación, quedamos de
+                                usted.</p>
+
+                            <p style="margin-top: 90px;">Atentamente</p>
+                            <p>Pedro Soto</p>
+                            <p>Oficial de Negocios</p>
+                            <p>Av. Circunvalación Club Glof N° 134 (Torre 2 Piso 16) - Lima - Santiago de Surco
+                            </p>
+                            <p>Teléfono: 710 2300  -  Anexo: 2014</p>
+                            <p>celular: 98371378</p>
+                            <p>Correo electrónico: <i style="color:blue;">psoto@leasingtotal.com.pe</i></p>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <div class="modal-footer">
+
+                </div>
+
+
+
+            </form>
+
+        </div>
+    </div>
+</div>
+<!-- <formulario-email></formulario-email> -->

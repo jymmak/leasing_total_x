@@ -1,0 +1,208 @@
+<div id="informacion">
+  <div class="dropdown-content cf  content-drow">
+    <div class="dropdown-item" [ngClass]="{'active':show && active}">
+
+
+      <div id="dropdown-info" class="dropdown dropdown-options" style=" width: 333px;">
+        <div class="triangulo"></div>
+        <div class="ibox-content">
+
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                aria-selected="true"><strong>Detalle</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                aria-selected="false"><strong>Historial</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+                aria-selected="false"><strong>Documentos</strong></a>
+            </li>
+          </ul>
+          <div class="tab-content  margin-top20" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <div class="row">
+
+                <div class="col-md-12">
+                  <table class="table table-md">
+                    <thead>
+                    </thead>
+                    <tbody class="body" *ngFor="let lstOperacion of lstOperacion">
+                      <tr>
+                        <th scope="row">Estado</th>
+                        <td>{{lstOperacion.estado}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Moneda</th>
+                        <td>{{lstOperacion.moneda}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"> Vaf</th>
+                        <td>{{lstOperacion.vaf}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">C. Inicial %</th>
+                        <td>{{lstOperacion.inicial}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"> TEA %</th>
+                        <td>{{lstOperacion.tea}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Plazo</th>
+                        <td>{{lstOperacion.plazo}}</td>
+                      </tr>
+
+
+                      <tr>
+                        <th scope="row">Mes de Gracia</th>
+                        <td>{{lstOperacion.mesGracia}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Op. Compra</th>
+                        <td>{{lstOperacion.opCompra}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Coloc Neta</th>
+                        <td>{{lstOperacion.colocNeta}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Expediente</th>
+                        <td>{{lstOperacion.expediente}} </td>
+
+                      </tr>
+                      <tr>
+                        <th scope="row">Ejecutivo</th>
+                        <td>{{lstOperacion.ejecutivo}} </td>
+
+                      </tr>
+                      <tr>
+                        <th scope="row"> Garantias</th>
+                        <td>{{lstOperacion.garantias}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Evaluado Por</th>
+                        <td>{{lstOperacion.evaluadoPor}}</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <div class="row">
+
+                <div class="col-md-12">
+                  <table class="table table-md">
+                    <thead>
+                    </thead>
+                    <tbody class="body" *ngFor="let lstBien of lstBien">
+                      <tr>
+                        <th scope="row">Estado</th>
+                        <td>{{lstBien.estado}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Nivel</th>
+                        <td>{{lstBien.nivel}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">SubNivel</th>
+                        <td>{{lstBien.subNivel}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Cantidad</th>
+                        <td>{{lstBien.cantidad}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Valor </th>
+                        <td>{{lstBien.valor}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Clase</th>
+                        <td>{{lstBien.clase}}</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">Marca</th>
+                        <td>{{lstBien.marca}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Modelo</th>
+                        <td>{{lstBien.modelo}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Año</th>
+                        <td>{{lstBien.ano}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Seguro</th>
+                        <td>{{lstBien.seguro}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Gps</th>
+                        <td>{{lstBien.gps}}</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                  
+                  <button type="button" (click)="guardar()" class="btn btn-primary centewr">
+                    Ver Bienes
+
+                  </button>
+                </div>
+
+
+
+              </div>
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+              <table class="table table-md">
+                <thead>
+                </thead>
+                <tbody class="body" *ngFor="let lstCliente of lstCliente">
+                  <tr>
+                    <th scope="row">Cliente</th>
+                    <td>{{lstCliente.cliente}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">RUC</th>
+                    <td>{{lstCliente.ruc}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Tipo</th>
+                    <td>{{lstCliente.tipo}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Calif. Cred.</th>
+                    <td>{{lstCliente.calificacion}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Contacto Pri </th>
+                    <td>{{lstCliente.contacto}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Asignado A </th>
+                    <td>{{lstCliente.asignado}}</td>
+                  </tr>
+
+                </tbody>
+              </table>
+              
+              <button type="button" (click)="guardar()" class="btn btn-primary centewr">
+                Ver Cliente
+
+              </button>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+#dashbo {
+  .ibox {
+    .ibox-title {
+      min-height: 80px;
+
+      h5 {
+        font-size: 0.8em;
+        font-weight: 600;
+        color: #707070;
+      }
+
+      .backdash {
+        margin-right: 16px !important;
+        margin-top: 8px;
+        padding: 2px 14px 3px 7px !important;
+        background: #fff;
+        border: 1px solid #d22919;
+        color: #c52121 !important;
+
+        .mdi-chevron-left {
+          margin-right: 8px;
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .ibox-content {
+        p{
+            font-size: 0.7rem;
+            color: #707070;
+        }
+      .box {
+        padding-right: 0px !important;
+      }
+
+      .btn {
+        border-radius: 50px;
+        background: #d22919;
+        color: #ffffff;
+        padding: 0.2rem;
+        font-size: 0.7rem;
+        border: 0;
+        margin-left: 11px;
+
+        .mdi-menu-down {
+          margin-left: 9px;
+          font-size: 0.9rem;
+        }
+      }
+
+      .btn-dash {
+        width: 25%;
+      }
+
+      .btn-segment {
+        width: 35%;
+      }
+    }
+  }
+}

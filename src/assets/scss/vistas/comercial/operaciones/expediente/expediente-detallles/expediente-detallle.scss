@@ -1,0 +1,271 @@
+#expediente-detallles{
+    .table-responsive {
+        display: block;
+        width: 106%;
+        margin-left: -26px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+
+    .table thead th {
+        vertical-align: bottom;
+       border-bottom: 0px solid #dee2e600 !important;
+    }
+    .ibox {
+         margin-bottom: 0px;
+        .ibox-tools {
+          button {
+            color: #FFFFFF;
+            padding: 0.35rem;
+            margin: 20px;
+            box-shadow: 0 0 3.3px 0 #d22919;
+    
+            .mdi {
+              font-size: 1rem;
+            }
+    
+            span {
+              margin-right: 6px;
+            }
+          }
+        }
+
+        .ibox-content {
+          .table-striped tbody tr:nth-of-type(odd) {
+            // background-color: #ffffff;
+            background-color: rgb(255, 247, 247);
+           
+          }
+    
+          .table th,
+          .table td {
+            color: #707070;
+            // font-size: 66%;
+         //   border-top: 1px solid #fff7f7 !important;
+            text-align: left;
+          }
+        }
+      }
+    
+    .label-info{
+        color: #707070;
+        font-weight: 800;
+        font-size: 12px;
+        margin-left: 24px;
+        font-family: Helvetica, Bold;
+    }
+    .label-info-titel{
+        color: #707070;
+        font-weight: 800;
+        font-size: 12px;
+        font-family: Helvetica, Regular;
+        display: inline-block;
+
+    }
+    .label-info-result{
+        margin-left: 5px;
+        font-size: 12px;
+        font-family: Helvetica, Regular;
+        display: inline-block;
+
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    .detalle-documeto{
+        border-radius: 50px;
+        border: solid 1px #d22919;
+        color: #d22919;
+        background: white;
+        width: 120px;
+        height: 39px;
+        margin-left: 26px;
+        margin-top: -8px;
+        cursor: pointer;
+    }
+
+    .style-titel{
+        margin-top: 15px;
+        font-weight: 700;
+        font-family: Helvetica, Bold;
+        font-size: 16px;
+        color: #707070;
+        display: inline-block;
+        margin-left: 16px;
+        width: 50%;
+        display: inline-block;
+
+    }
+    .style-titelos{
+        margin-top: 10px;
+        font-weight: 700;
+        font-family: Helvetica, Bold;
+        font-size: 12px;
+        color: #707070;
+        display: inline-block;
+        width: 53%;
+        text-align: justify;
+
+    }
+
+    .titel-result{
+        display: inline-block;
+        margin-right: -35px;
+        font-family: Helvetica, Regular;
+        font-size: 25px;
+        width: 50%;
+        height: 65px;
+        
+    }
+    .titel-results{
+        display: inline-block;
+        font-family: Helvetica, Regular;
+        font-size: 12px;
+        margin-left: 54px;
+        color: #707070;
+        display: inline-block;
+    }
+
+    .divSecund{
+        margin: 0px 0px 0px 36px;
+       box-shadow: 0px 3px 6px #EFEFEE;
+    }
+
+   
+
+    .tableClienteDetalle{
+        width: 110%;
+         margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .tableOne{
+      margin-top: 14px;
+      margin-left: 25px;
+       width: 90%;
+        
+    }
+    
+    .tableTwo{
+      margin-top: 14px;
+      margin-left: 25px;
+       width: 90%;
+        
+    }
+    .tableThree{
+      margin-top: 14px;
+      margin-left: 25px;
+       width: 90%;
+        
+    }
+    .tableFor{
+      margin-top: 14px;
+      margin-left: 25px;
+       width: 90%;
+        
+    }
+
+    .tbodys{
+        background: #FFF7F7;
+        font-family: Helvetica, Regular;
+        font-size: 12px;
+    }
+    
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgb(255, 247, 247) !important;
+    }
+    .titel-tableFor{
+        margin-top: 10px;
+        font-weight: 800;
+        color: #707070;
+        font-family: Helvetica, Bold;
+        font-size: 13px;
+        margin-left: 11px;
+    }
+
+    .btn-tableFor{
+        background-color: #D22919;
+        color: #FFF7F7;
+        width: 97px;
+        height: 31px;
+        text-align: center;
+        border-radius: 5px;
+        padding: 7px 4px 4px 4px;
+        margin: 4px 4px 4px 4px;
+    }
+
+    .text-right {
+        text-align: right !important;
+        margin-top: 25px;
+        margin-right: 51px;
+    }
+
+    .btn-cancelar {
+        border-radius: 50px;
+        background: #b9b9b9;
+        font-size: 0.75rem;
+        border: 0;
+        padding: 0.32rem;
+        color: #ffffff;
+        width: 125px;
+        margin-left: 272%;
+        margin-top: -20px;
+      }
+      .secondary.focus {
+        box-shadow: 0 0 0 0.2rem rgba(188, 188, 188, 0.5);
+    }
+
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+        box-shadow: 0px 3px 6px #EFEFEE;
+    }
+
+    .border-car{
+    border: 0px solid rgba(0, 0, 0, 0.125);
+    box-shadow: 0px 3px 6px #efefee00;
+    }
+
+    .box-shadow{
+        box-shadow: 1px 2px 6px #00001638;
+    }
+
+    tbody::before{
+     content: '';
+     display: block;
+    height: 5px;
+    margin-top: -1px;
+
+   }
+
+
+   .table {
+    width: 99%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+}
+
+#tableOne table tr:nth-child(even) {
+    background: #ffffff;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(255, 255, 255);
+}

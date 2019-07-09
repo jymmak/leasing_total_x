@@ -1,0 +1,53 @@
+<div id="navigation">
+    <div class="main-menu">
+        <div style="
+        height: 100px;
+    " (click)="backmodules()">
+            <img class="logo" src="assets/img/logo-aside.png" alt="logo">
+        </div>
+
+        <ul #ElMenu class="metismenu" id="side-menu">
+            <li class="modulos-title pt-3 pb-3">
+                <!-- <div class="modulos-title">
+                    <a> -->
+                <span  class="block m-t-xs">{{lista.nombre}}</span>
+                <!-- </a>
+                </div> -->
+            </li>
+            <!-- <div class="lista"> -->
+            <!-- <ng-template *ngIf="lista"> -->
+                <li class="sub-title" *ngFor="let menu of lista.menu">
+                    <a *ngIf="menu.hijo.length == 0" [routerLink]="['/',lista.ruta,menu.ruta]"><i [class]="menu.icono"></i>
+                        <span>{{menu.nombre}}</span>
+                    </a>
+                    <a *ngIf="menu.hijo.length > 0"><i [class]="menu.icono"></i>
+                        <span>{{menu.nombre}}</span>
+                        <i class="mdi mdi-chevron-right "></i></a>
+
+                    <ul *ngIf="menu.hijo.length > 0">
+                        <li *ngFor="let sub_menu of menu.hijo"> <a [routerLink]="['/',lista.ruta,menu.ruta,sub_menu.ruta]"
+                                class="text-submenu">
+                                <i class="mdi mdi-record " style="font-size: 0.7rem;"></i>&nbsp;
+                                {{sub_menu.nombre}}</a></li>
+
+                    </ul>
+                </li>
+            <!-- </ng-template> -->
+            <!-- <li *ngFor="let menu of lista.menu">
+                        <a [routerLink]="['/',lista.url,menu.url]"><i [class]="menu.icono"></i>
+                            <span>{{menu.nombre}}</span>
+                            <i *ngIf="menu.sub_menu.length > 0" class="mdi mdi-chevron-right "></i>
+                        </a>
+                        <ng-template *ngIf="menu.sub_menu.length > 0">
+                            <ul>
+                                <li *ngFor="let sub_menu of menu.sub_menu"> <a [routerLink]="['/',lista.url,menu.url,sub_menu.url]"
+                                        class="text-submenu">
+                                        <i class="mdi mdi-record " style="font-size: 0.7rem;"></i>&nbsp;
+                                        {{sub_menu.nombre}}</a></li>
+                            </ul>
+                        </ng-template>
+                    </li> -->
+            <!-- </div> -->
+        </ul>
+    </div>
+</div>

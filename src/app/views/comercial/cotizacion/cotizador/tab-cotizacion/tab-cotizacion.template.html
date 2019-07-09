@@ -1,0 +1,81 @@
+<div id="tab-crear" class="mb-4 pr-5 pl-5">
+    <form [formGroup]="formTabCotizacion">
+        <div class="form-group">
+            <div class="row ">
+                <div class="col-md-12">
+                    <div class="row justify-content-between">
+                        <div class="col-md-12 margentabCotizacion">
+                            <div style="margin-left: 13px; font-size: 12px;">N°. Cotización<br>
+                                COT-0025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4 ">
+                <div class="col-md-4">
+                    <p style="margin-bottom: 8px;">Cliente</p>
+                    <p> TRANSPORTES JOSÉ S.A.</p>
+                </div>
+                <div class="col-md-4">
+                    <label>Moneda</label>
+                    <select select2 theme="FondoRosado" (onSelect)="onSelectMoneda($event)" class="margintopselect"
+                         required>
+                         <option value=""></option>
+                        <option *ngFor="let  data of monedas" [value]="data.id">{{data.simbolo}}</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label>Tipo de Operación</label>
+                    <select select2 theme="FondoRosado" (onSelect)="onSelectOperacion($event)" class="margintopselect"
+                         required>
+                         <option value=""></option>
+                        <option *ngFor="let  data of tipoOperaciones" [value]="data.id">{{data.descripcion}}</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label>Lugar de Destino(Notaría)</label>
+                    <select select2 theme="FondoRosado" (onSelect)="onSelectDestino($event)" class="margintopselect"
+                         required>
+                         <option value=""></option>
+                        <option *ngFor="let  lugarDestino of lugarDestino" [value]="lugarDestino.id">{{lugarDestino.text}}</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label>Contacto</label>
+                    <div>
+                        <multi-select-component [selected]="contactosSelecionados" placeholder="Buscar" [data]="contactos"
+                            (selectChange)="selectChangeContacto($event)"></multi-select-component>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <ng-container *ngFor="let dato of contactosSelecionados; let index = index">
+                    <div class="col-md-4" *ngIf="index%2 == 0"></div>
+                    <div class="col-md-4 mb-2">
+                        <div class="pl-2 pr-2" style="border-bottom: 1px solid #eae3e3">
+                            <h6 style="font-size: 11px;max-width: 92%;" class="m-0 pb-2 d-inline-block">
+                                <div class="d-inline-block mr-2">
+                                    {{dato.text}}
+                                </div>
+                                <div class="d-inline-block ">{{dato.email}}</div>
+                            </h6>
+                            <a class="float-right text-primary" (click)="eliminar(dato)"><i class="mdi mdi-close"></i></a>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mt-4 text-right">
+                    <button (click)="atras()" class="btn btn-secondary mr-3">
+                        <span class="mdi mdi-chevron-left"></span>
+                        Atrás
+                    </button>
+                    <button type="button" class="btn btn-primary  mr-3" (click)="guardar()">
+                        Siguiente
+                        <span class="mdi mdi-chevron-right"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

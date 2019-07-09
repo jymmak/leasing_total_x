@@ -1,0 +1,152 @@
+#bienes {
+  color: #707070;
+
+  h5 {
+    color: #4d4d4d !important;
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+  .ibox-text {
+    label {
+      font-size: 0.8em;
+    }
+  }
+  .title {
+    font-size: 0.9em;
+  }
+  .actions {
+  
+    .back {
+      margin-right: 36px !important;
+      padding: 4px 12px 4px 12px !important;
+      border: 1px solid #d22919;
+      color: #d22919;
+    }
+   
+    .next {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 5px 10px 5px 38px;
+      .mdi{
+        margin-left: 18px;
+      }
+      .merge {
+        margin-left: 18px;
+      }
+    }
+  }
+
+  
+  .button_cancelar{
+    margin-right: 16px !important;
+    padding: 4px 12px 4px 12px !important;
+    background: #fff;
+    border: 1px solid #d22919;
+    color: #c52121 !important;
+  }
+
+  .backAtras {
+    margin-right: 16px !important;
+    padding: 4px 12px 4px 12px !important;
+    border: 1px solid #bcbcbc;
+    color: #fff;
+}
+  
+
+ 
+//   .select2-container--default .select2-selection--single {
+//     background: #fff7f7 !important;
+//     border-color: #fdccc9 !important;
+//     color: #fdccc9 !important;
+// }
+
+
+
+.margenbutons{
+    margin-top: 28px;
+}
+
+.margentabCotizacion{
+    margin-top: -24px;
+}
+
+.margintopselect{
+  margin-top: 40px;
+}
+
+.margintopbuttons{
+margin-top: 100px
+}
+
+// .select2-container .select2-selection {
+//   border-radius: 10px;
+//        border: 1px solid #fdccc9;
+//        border-radius: 2em;
+//        /* background: #fdccc9 !important; */
+//       background: #fff7f7 !important;
+//       //border-radius: 10px 10px 0px 0px;
+//   }
+
+//   }
+  // .select2-container--open{
+  //  border-radius: 10px 10px 0px 0px;
+  //  }
+
+  .btnNext{
+      margin-right: 16px !important;
+      padding: 4px 12px 4px 12px !important;
+      background: #de1818;
+      border: 1px solid #d22919;
+      color: #fffefe !important;
+  }
+
+  
+.borderDerecho{
+  border-radius: 44px 0px 0px 44px;
+  color: #000000de;
+  height: 33px;
+  background: #fff7f7;
+  border: 1px solid #fdccc9;
+  width: 120px;
+}
+.borderDerecho-after{
+  border-radius: 44px 0px 0px 44px;
+  color: #fff;
+  height: 33px;
+  background: #d22919;
+  border: 1px solid #d22919;
+  width: 120px;
+}
+
+.borderIzquierdo{
+  // border-radius: 0px 44px 44px 0px;
+  border-radius: 0px 44px 44px 0px;
+  color: #000000de;
+  height: 33px;
+  background: #fff7f7;
+  border: 1px solid #fdccc9;
+  width: 120px;
+}
+.borderIzquierdo-after{
+  // border-radius: 0px 44px 44px 0px;
+  border-radius: 0px 44px 44px 0px;
+  color: #fff;
+  height: 33px;
+  background: #d22919;
+  border: 1px solid #d22919;
+  width: 120px;
+}
+
+.btn-secondary:focus, .btn-secondary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(249, 249, 249, 0);
+}
+
+.btn:focus{
+  box-shadow: 0 0 0 0.2rem rgba(249, 249, 249, 0);
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(249, 249, 249, 0);
+}
+  
+  }

@@ -1,0 +1,136 @@
+#ref-comerciales{
+ .headerAcordeon {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: white;
+    border-bottom: 1px solid white;
+    margin-top: -11px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.07);
+    height: 45px;
+  }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background: #fff7f7 !important;
+        border-bottom: 1px solid #70707036;
+    }
+
+    .cardew {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 0px;
+    }
+
+    .tabBorder{
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.07);
+    }
+    .table {
+        width: 102% !important;
+        margin-bottom: 1rem;
+        background-color: transparent;
+       text-align: center;
+    }
+.subtabSinBorder{
+    box-shadow: 0px 4px -1px rgba(0, 0, 0, 0.07);
+}
+
+.btn-link {
+    font-weight: 400;
+    color: #808080;
+    background-color: transparent;
+}
+
+.btn-link:focus, .btn-link.focus {
+    text-decoration: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+.positions{
+    position: absolute;
+    margin-left: -26px;
+}
+
+.button-panel-info{
+    padding: 0.35rem;
+    box-shadow: 0 0 0 0 #d22919;
+    background: white;
+    color: #d22919 !important;
+    border-radius: 50px;
+    height: 35px;
+    font-size: 13px;
+    width: 144px;
+    border: 1px solid #d22919;
+    margin-left: 17px;
+    cursor: pointer;
+}
+
+.ibox-tools {
+    button{
+        color:#FFFFFF;
+        padding: 0.35rem;
+        margin: 20px;
+        box-shadow: 0 0 3.3px 0 #d22919;
+      .mdi{
+        font-size: 1rem;
+            }
+      span{
+                margin-right: 6px;
+      }
+    }
+  }
+
+  tbody {
+      font-family: Helvetica, Regular !important;
+      font-size: 12px;
+      color: #818181;
+  }
+  
+  thead {
+    font-family: Helvetica, Bold !important;
+    font-size: 12px;
+    color: #818181;
+  }
+
+  .table thead th {
+    vertical-align: bottom;
+    color: #818181;
+    font-size: 0.8rem;
+}
+
+.margin-acordeon{
+    margin-top: 41px;
+     box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.07);
+}
+.margin-title{
+    margin-top: 18px;
+    margin-left: 31px;
+}
+
+.btnSiguiente {
+    border-radius: 50px;
+    background: #d22919;
+    font-size: 0.75rem;
+    border: 0;
+    padding: 0.32rem;
+    color: #ffffff;
+    width: 125px;
+}
+
+.button-panel-after {
+    padding: 0.35rem;
+    box-shadow: 0 0 0 0 #d22919;
+    background: #fff7f7;
+    color: #d22919 !important;
+    border-radius: 50px;
+    height: 35px;
+    font-size: 13px;
+    width: 144px;
+    border: 1px solid #d22919;
+    margin-left: 17px;
+    cursor: pointer;
+    }
+}

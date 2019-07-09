@@ -1,0 +1,21 @@
+#ubicacion {
+  strong {
+    font-weight: 700;
+    font-family: Helvetica, Regular;
+    color: #707070;
+    font-size: 14px;
+    margin: 25px;
+  }
+
+  agm-map {
+    height: 400px;
+    width: 100%;
+
+  }
+
+  .btnSiguiente {
+    margin-right: 30px;
+    padding: 4px 4px;
+    outline: none;
+  }
+}

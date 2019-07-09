@@ -1,0 +1,291 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="formulario-cliente">
+  <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="ibox float-e-margins">
+          <div class="ibox-content" [ngClass]="{'loading-default':loadingConsultaRuc}">
+            <div class="box-consulta  p-4">
+              <h6 class="mt-3 mb-4 font-weight-bold">{{nuevo?'NUEVO':'EDITAR'}} CLIENTE</h6>
+              <form novalidate [formGroup]="formNuevoCliente">
+                <div class="contenido_datos_generales " [hidden]="!(seccion == 'datos_generales')">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label for="basic-url">RUC</label>
+                      <input id="name_ruc" class="btn-rounded  _input pinky" name="buscar" type="text" size="40"
+                        formControlName="ruc" [readonly]="!nuevo" [maxlength]="11">
+                    </div>
+                    <div class="col-md-2">
+                      <button class="btn btn-primary loading-default-btn position-relative top-30" type="button" (click)="consultaRuc()"
+                        [disabled]="!validarBtnBuscarRuc()">
+                        <!-- <i > </i> -->
+                        <div *ngIf="loadingConsultaRuc" class="loader"></div>
+                        <span *ngIf="!loadingConsultaRuc">{{nuevo?'Buscar':'Actualizar'}}</span>
+
+                      </button>
+                    </div>
+                    <div class="col-md-5 mt-2" *ngIf="btneditar && nuevo">
+                      <p>El RUC pertenece a un Cliente ya registrado. Si desea actualizar los datos, presionar
+                        <button (click)="editar()" class="btn btn-primary ml-1 ">
+                          Editar
+                        </button>
+                      </p>
+                    </div>
+
+                  </div>
+                  <div class="row mt-5">
+                    <div class="col-md-4">
+                      <div class="col-md-12">
+                        <label>Razón Social</label>
+                        <input class=" btn-rounded  _input pinky " formControlName="razonSocial" readonly>
+                      </div>
+                      <div class="col-md-12 mt-3 ">
+                        <label>Estado</label>
+                        <input class=" btn-rounded  _input pinky" formControlName="estado" readonly>
+                      </div>
+                      <div class="col-md-12 mt-3">
+                        <label>Tipo de Cliente</label>
+                        <input class=" btn-rounded  _input pinky " value="Prospecto" readonly>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+
+                      <div class="col-md-12">
+                        <label>Condición</label>
+                        <input class=" btn-rounded  _input pinky " formControlName="condicion" readonly>
+                      </div>
+                      <div class="col-md-12 mt-3">
+                        <label>Domicilio Fiscal</label>
+                        <input class=" btn-rounded  _input pinky " formControlName="domicilioFiscal" readonly>
+                      </div>
+                      <div class="col-md-12 mt-3">
+                        <label>Representante Legal</label>
+                        <input class=" btn-rounded  _input pinky " formControlName="representantelegal" readonly>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="col-md-12">
+                        <label>CIIU</label>
+                        <input class=" btn-rounded  _input pinky " formControlName="ciu" readonly>
+                      </div>
+                      <div class="col-md-12 mt-3">
+                        <label>Fecha de Inicio de Actividades</label>
+                        <input class=" btn-rounded  _input pinky " formControlName="fechaInicioActividades" readonly>
+                      </div>
+                      <div class="col-md-12 mt-3">
+                        <label>Actividad Económica</label>
+                        <input class=" btn-rounded  _input pinky " formControlName="actividadEconomica" readonly>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contenido_datos_riesgo" [hidden]="!(seccion == 'datos_riesgo')">
+                  <div class="row mt-5">
+                    <div class="col-md-12  mb-2">
+                      <label for="basic-url">Datos de Riesgo</label>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="col-md-12">
+                        <label>Nombre Comercial</label>
+                        <input class=" btn-rounded  _input pinky " formControlName="nombreComercial">
+                      </div>
+                      <div class="col-md-12 mt-3">
+                        <label>Tipo de Persona</label>
+                        <div class="btn-group btn-group-custom pink">
+                          <button id="estadoNuevo" (click)="checkedTipoPersona(1)" type="button" class="btn" [ngClass]="{'active': formNuevoCliente.controls.tipoPersona.value == 1 }">Nacional</button>
+                          <button id="estadoUsado" (click)="checkedTipoPersona(2)" type="button" class="btn " [ngClass]="{'active': formNuevoCliente.controls.tipoPersona.value == 2 }">Extranjero</button>
+                        </div>
+                      </div>
+                      <div class="col-md-12 mt-3">
+                        <label>Constitución</label>
+                        <div class="btn-group btn-group-custom pink">
+                          <button id="estadoNuevo" (click)="checkedTipoConstitucion(1)" type="button" class="btn"
+                            [ngClass]="{'active': formNuevoCliente.controls.constitucion.value == 1 }">Natural</button>
+                          <button id="estadoUsado" (click)="checkedTipoConstitucion(2)" type="button" class="btn "
+                            [ngClass]="{'active': formNuevoCliente.controls.constitucion.value == 2 }">Jurídica
+                          </button>
+                        </div>
+                      </div>
+                      <div class="col-md-12 mt-3">
+                        <label>Segmento</label>
+                        <div class="btn-group btn-group-custom pink">
+                          <button id="estadoNuevo" (click)="checkedTipoSegmento(1)" type="button" class="btn" [ngClass]="{'active': formNuevoCliente.controls.segmento.value == 1 }">Minorista</button>
+                          <button id="estadoUsado" (click)="checkedTipoSegmento(2)" type="button" class="btn "
+                            [ngClass]="{'active': formNuevoCliente.controls.segmento.value == 2 }">No
+                            Minorista
+                          </button>
+                        </div>
+                      </div>
+                      <div class="col-md-12 mt-3">
+                        <label>N° de Empleados</label>
+                        <input class=" btn-rounded  _input pinky " type="number" formControlName="numEmpleados"
+                          required>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="col-md-12">
+                        <label>Tamaño</label>
+                        <select-defaul-async [search]="false" (selectChange)="selectedEmpresaTamanio($event)"
+                          [selected]="dataSelectedEmpresaTamanio" (searchText)="listarEmpresaTamanio($event)" [data]="tamanios">
+                        </select-defaul-async>
+                      </div>
+                      <div class="col-md-12 mt-3">
+                        <label>Facturación Anual ($)</label>
+                        <input class=" btn-rounded  _input pinky" formControlName="facturacionAnual" required>
+                      </div>
+                      <div class="col-md-12 mt-3">
+                        <label>Provincia</label>
+                        <select-defaul-async [search]="false" [selected]="dataSelectedProvincia" (selectChange)="selectedProvincia($event)"
+                          (searchText)="listarProvincias()" [data]="provincias">
+                        </select-defaul-async>
+                      </div>
+                      <div class="col-md-12 mt-3">
+                        <label>Distrito</label>
+                        <select-defaul-async [search]="false" [selected]="dataSelectedDistrito" (selectChange)="selectedDistritos($event)"
+                          (searchText)="listarDistritos()" [data]="distritos">
+                        </select-defaul-async>
+                      </div>
+                      <div class="col-md-12 mt-3">
+                        <label>Dirección Principal</label>
+                        <input class=" btn-rounded  _input pinky" formControlName="dirPrincipal" required>
+
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="col-md-12">
+                        <label>Canal de Prospecto</label>
+                        <select-defaul-async [search]="false" [selected]="dataSelectedCanal" (selectChange)="selectedCanal($event)"
+                          (searchText)="listarCanal()" [data]="canales">
+                        </select-defaul-async>
+                      </div>
+                      <div class="col-md-12 mt-3">
+                        <label>Referencia de Canal</label>
+                        <select-defaul-async *ngIf="formNuevoCliente.controls.canalProspectoId.value == ''">
+                        </select-defaul-async>
+                        <select-defaul-async *ngIf="formNuevoCliente.controls.canalProspectoId.value == 1" [selected]="dataSelectedEjecutivos"
+                          (selectChange)="selectedEjecutivo($event)" (searchText)="listarEjecutivos($event)" [loading]="loadingReferenciaCanal"
+                          [data]="ejecutivos" (scrolling)="listarEjecutivos($event,true)">
+                        </select-defaul-async>
+                        <select-defaul-async *ngIf="formNuevoCliente.controls.canalProspectoId.value == 2" [selected]="dataSelectedProveedores"
+                          (selectChange)="selectedProveedor($event)" (searchText)="listarProveedores($event)" [loading]="loadingReferenciaCanal"
+                          [data]="proveedores" (scrolling)="listarProveedores($event,true)">
+                        </select-defaul-async>
+                        <select-defaul-async [search]="false" *ngIf="formNuevoCliente.controls.canalProspectoId.value == 3"
+                          [selected]="dataSelectedCompania" (selectChange)="selectedCampania($event)" (searchText)="listarCampanias($event)"
+                          [loading]="loadingReferenciaCanal" [data]="campanias">
+                        </select-defaul-async>
+                      </div>
+                      <div class="col-md-12 mt-3">
+                        <label>Página Web</label>
+                        <input class=" btn-rounded  _input pinky " formControlName="pagWeb" required>
+                      </div>
+                      <div class="col-md-12 mt-3">
+                        <label>Teléfono</label>
+                        <input class=" btn-rounded  _input pinky " formControlName="telefono" required>
+                      </div>
+                      <div class="col-md-12 mt-3">
+                        <label>Email</label>
+                        <input class=" btn-rounded  _input pinky " formControlName="email" required>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contenido_datos_finales pr-5 pl-5" [hidden]="!(seccion == 'datos_finales')">
+                  <div class="row mt-5">
+                    <div class="col-md-4 mt-3">
+                      <label>Código SBS</label>
+                      <input class=" btn-rounded  _input pinky " formControlName="codigoSbs" required>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                      <label>N° Partida R</label>
+                      <input class=" btn-rounded  _input pinky " formControlName="nroPartida" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 mt-3">
+                      <label>Accionistas PEP</label>
+                      <div class="btn-group btn-group-custom pink">
+                        <button id="estadoNuevo" (click)="checkedAccionistasPEP(true)" type="button" class="btn"
+                          [ngClass]="{'active': formNuevoCliente.controls.accionistasPep.value === true }">Si</button>
+                        <button id="estadoUsado" (click)="checkedAccionistasPEP(false)" type="button" class="btn "
+                          [ngClass]="{'active': formNuevoCliente.controls.accionistasPep.value === false }">No</button>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                      <label>Régimen sujeto</label>
+                      <select-defaul-async [search]="false" [selected]="dataSelectedRegimen" (selectChange)="selectedRegimen($event)"
+                        (searchText)="listarEmpresaRegimenes()" [data]="regimenes">
+                      </select-defaul-async>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 mt-3">
+                      <label>Accionistas beneficio final</label>
+                      <div class="btn-group btn-group-custom pink">
+                        <button id="estadoNuevo" (click)="checkedAccionistaBenificioFinal(true)" type="button" class="btn"
+                          [ngClass]="{'active': formNuevoCliente.controls.accionistaBenificioFinal.value === true }">Identificado</button>
+                        <button id="estadoUsado" (click)="checkedAccionistaBenificioFinal(false)" type="button" class="btn "
+                          [ngClass]="{'active': formNuevoCliente.controls.accionistaBenificioFinal.value === false }">No
+                          Identificado</button>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                      <label>Incluido en listas</label>
+                      <multi-select-component [selected]="dataSelectedIncluidoLista" placeholder="" [data]="incluidoListas"
+                        (selectChange)="selectedIncluidoLista($event)"></multi-select-component>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 mt-3">
+                      <label>Sujeto Obligado</label>
+                      <div class="btn-group btn-group-custom pink">
+                        <button id="estadoNuevo" (click)="checkedSujetoObligado(true)" type="button" class="btn"
+                          [ngClass]="{'active': formNuevoCliente.controls.sujetoObligado.value === true }">Si</button>
+                        <button id="estadoUsado" (click)="checkedSujetoObligado(false)" type="button" class="btn "
+                          [ngClass]="{'active': formNuevoCliente.controls.sujetoObligado.value === false }">No</button>
+                      </div>
+                    </div>
+                    <div class="col-md-8 mt-4">
+                      <div class="row">
+                        <ng-container *ngFor="let dato of dataSelectedIncluidoLista; let index = index">
+                          <div class="col-md-6 mb-2">
+                            <div class="pl-2 pr-2" style="border-bottom: 1px solid #eae3e3">
+                              <h6 style="font-size: 11px;max-width: 92%;" class="m-0 pb-2 d-inline-block">
+                                <div class="d-inline-block mr-2">
+                                  {{dato.text}}
+                                </div>
+                              </h6>
+                              <a class="float-right text-primary" (click)="eliminarIncluidoLista(index)"><i class="mdi mdi-close"></i></a>
+                            </div>
+                          </div>
+                        </ng-container>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+              <div class="text-right mr-3 mt-5">
+                <button *ngIf="seccion != 'datos_finales'" [disabled]="!validarBtnSiguiente()" (click)="siguiente()"
+                  class="btn btn-primary btn-siguiente float-right">
+                  Siguiente<span class="mdi mdi-chevron-right ml-3"></span>
+                </button>
+                <button *ngIf="seccion == 'datos_generales'" (click)="cancelarConnsultaRuc()" class="btn btn-secondary mr-3 float-right">
+                  Cancelar
+                </button>
+                <button *ngIf="seccion == 'datos_finales'" (click)="guardar()" class="btn btn-primary float-right loading-default-btn"
+                  [disabled]="!validarBtnGuardar()">
+                  <div *ngIf="loadingConsultaRuc" class="loader"></div>
+                  <span *ngIf="!loadingConsultaRuc">Guardar</span>
+                </button>
+                <button *ngIf="seccion != 'datos_generales'" (click)="atras()" class="btn btn-secondary mr-3 float-right">
+                  <span class="mdi mdi-chevron-left mr-3"></span> Atrás
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

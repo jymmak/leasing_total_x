@@ -1,0 +1,87 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="reclamacion">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrapper wrapper-content animated fadeInUp">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <div class="row">
+                            <div class="col-md-4 mt-3">
+                                <form action="/search" id="searchbox5" class="m-0 mt-3 pl-3">
+                                    <input autocomplete="off" id="search51" name="q" type="text" size="40" placeholder="Buscar"
+                                        (click)="busquedaGeneral()" [(ngModel)]="buscarCotizacion" />
+                                </form>
+                            </div>
+                            <div class="col-md-4 mt-4 pt-1">
+                                <button class="btn button-panel-info  fs-16 mr-1 ml-4">Reporte de Reclamación</button>
+
+                            </div>
+                            <div class="col-md-4 mt-3">
+                                <div class="ibox-tools  pr-0">
+
+                                    <!-- <button class="button-panel-info ">Garantías</button> -->
+                                    <button (click)="Responder(Responder)" type="button" class="btn btn-circle btn-primary mr-1"
+                                        [disabled]="!selectItem.id" data-toggle="tooltip" data-placement="top" title="Responder">
+                                        <i class="mdi mdi mdi-reply"></i>
+                                    </button>
+
+                                    <button (click)="verPdf('pdf')" type="button" class="btn btn-circle btn-primary mr-1"
+                                        [disabled]="!selectItem.id" data-toggle="tooltip" data-placement="bottom" title="Pdf">
+                                        <i class="mdi mdi-file-document"></i>
+                                    </button>
+                                    <button (click)="editar()" type="button" class="btn btn-circle btn-primary mr-3"
+                                        [disabled]="!selectItem.id" data-toggle="tooltip" data-placement="top" title="Editar">
+                                        <i class="mdi  mdi-border-color"></i>
+                                    </button>
+
+                                    <button class="btn btn-primary fs-16" (click)="nuevaReclamacion()"><span class="mdi mdi-plus"></span>Nuevo</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="ibox-content">
+                        <div class="related-news" style="margin-top: -30px;">
+                            <div class="table-responsive">
+                                <table class="table table-striped  table-hover " id="tableCotizacion">
+                                    <thead>
+                                        <tr>
+                                            <th style=" width: 10%;">Fecha Reg.</th>
+                                            <th style=" width: 10%;">N° Reclam</th>
+                                            <th style=" width: 10%;">Reclamante </th>
+                                            <th style=" width: 14%;">Organización </th>
+                                            <th style=" width: 10%;">Tipo </th>
+                                            <th style=" width: 12%;">Motivo</th>
+                                            <th style=" width: 10%;">Fecha Plani </th>
+                                            <th style=" width: 10%;">Estado </th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- <tr *ngFor="let item of lstReclamaciones"   (click)="select(item)" [ngClass]="{'highlighted':item.id==selectItem.id}"> -->
+                                        <tr *ngFor="let item of lstReclamaciones" (click)="selectItem = item" [ngClass]="{'highlighted':item.id==selectItem.id}">
+                                            <td style=" width: 10%;">{{item.fechaReg}}</td>
+                                            <td style=" width: 10%;">{{item.numReclamcion}}</td>
+                                            <td style=" width: 10%;">{{item.reclamante}}</td>
+                                            <td style=" width: 14%;">{{item.organizacion}}</td>
+                                            <td style=" width: 10%;">{{item.tipo}}</td>
+                                            <td style=" width: 12%;">{{item.motivo}}</td>
+                                            <td style=" width: 10%;">{{item.FechaPlani}}</td>
+                                            <td style=" width: 10%;">{{item.estado}}</td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

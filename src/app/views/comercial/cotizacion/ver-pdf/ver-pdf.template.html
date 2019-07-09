@@ -1,0 +1,15 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content  ">
+
+        <div class="ibox">
+          <div class="ibox-content">
+            <enviar-pdf-component (accionGuardar)="guardarCotizacion()" (accionAtras)="accionAtrasPdf()" ></enviar-pdf-component>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <enviar-email-modal (accionGuardar)="emailEnviado()"></enviar-email-modal>
+

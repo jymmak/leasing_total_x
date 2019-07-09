@@ -1,0 +1,54 @@
+#detalle-sucursal {
+
+  .table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    overflow-x: hidden;
+  }
+
+  td {
+
+    font-family: Helvetica, Regular !important;
+    font-size: 12px;
+    width: 113px;
+    color: #707070;
+  
+  }
+
+  th {
+    font-family: Helvetica, Bold !important;
+    font-size: 12px;
+    width: 130px;
+    color: #4D4D4D;
+    padding-left: 75px!important;
+  }
+
+  .table th,
+  .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 0px solid #dee2e6;
+
+  }
+
+  button {
+    outline: none;
+  }
+
+  label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    color: #707070;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-left: 36px;
+    font-size: medium;
+  }
+
+  .ibox-content {
+
+    padding: 15px 0px 20px 0px;
+
+  }
+}

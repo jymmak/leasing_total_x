@@ -1,0 +1,58 @@
+<div class="modal fade" id="formulario-sucursales" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static"
+    data-keyboard="false">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form #formUsuarioComercial="ngForm" (ngSubmit)="guardar()">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Crear Sucursal</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="tabs-container hidden-xs">
+                        <div>
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a class="nav-link" data-toggle="tab" href="#tab-1">Sucursal</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" data-toggle="tab" href="#tab-2"> Contacto</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="tab-content">
+                            <div id="tab-1" class="tab-pane active">
+                                <div class="panel-body">
+                                    <!-- sucursal -->
+                                    <tab-datos></tab-datos>
+                                </div>
+                            </div>
+                            <div id="tab-2" class="tab-pane">
+                                <div class="panel-body">
+                                    <tab-contacto></tab-contacto>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="visible-xs">
+
+
+
+                </div>
+
+                <div class="modal-footer ">
+                   
+                </div>
+
+
+            </form>
+
+        </div>
+    </div>
+</div>

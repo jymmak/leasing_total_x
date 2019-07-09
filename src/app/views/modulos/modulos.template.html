@@ -1,0 +1,166 @@
+<div id="contenedor">
+    <div class="contenedor-fondo">
+
+        <div class="contenedor-mapa-login">
+
+            <div class="contenedor-form-login">
+                <div class="login">
+                    <div class="contenedor-logo">
+                        <img src="assets/img/logo_sticky.png" alt="logo">
+                        <h2>leasing total</h2>
+                    </div>
+                    <div class="contenedor-login">
+                        <div class="profile-picture big-profile-picture">
+                            <img width="150px" alt="user" src="https://colorlib.com/polygon/gentelella/images/img.jpg">
+                        </div>
+                        <h4>Jorge Rosado</h4>
+                        <p>Gerente Comercial - Lima</p>
+
+                    </div>
+                </div>
+
+                <div class="contenedor-bienvenido">
+                    <div class="box-red">
+                        <div class="related-news">
+                            <div class="content-modulos">
+                                <div *ngIf="validaPerfil('comercial')">
+                                    <a class="box-modulos" (click)="modulos(1)">
+                                        <div class="text-center title-modules">
+                                            <span>COMERCIAL
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div *ngIf="validaPerfil()">
+                                    <a class="box-modulos" (click)="modulos(2)">
+                                        <div class="text-center title-modules">
+                                            <span>MARKETING
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div *ngIf="validaPerfil()">
+                                    <a class="box-modulos" (click)="modulos(7)">
+                                        <div class="text-center title-modules">
+                                            <span class="title-modules"> COBRANZAS
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div *ngIf="validaPerfil()">
+                                    <a class="box-modulos" (click)="modulos(8)">
+                                        <div class="text-center title-modules">
+                                            <span> FINANZAS</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div *ngIf="validaPerfil()">
+                                    <a class="box-modulos" (click)="modulos(10)">
+                                        <div class="text-center title-modules">
+                                            <span> RECURSOS HUMANOS
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                               <div *ngIf="validaPerfil()">
+                                <a class="box-modulos" (click)="modulos(3)">
+                                    <div class="text-center title-modules ">
+                                        <span >
+                                            OPERACIONES</span>
+                                    </div>
+                                </a>
+                            </div>
+
+
+                            <div *ngIf="validaPerfil()">
+                                <a class="box-modulos" (click)="modulos(4)">
+                                    <div class="text-center title-modules">
+                                        <span > R.
+                                            ADMISIÓN </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div *ngIf="validaPerfil()">
+                                <a class="box-modulos" (click)="modulos(5)">
+
+                                    <div class="text-center title-modules">
+                                        <span > R. CONTROL
+                                        </span>
+
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div *ngIf="validaPerfil()">
+                                <a class="box-modulos" (click)="modulos(6)">
+                                    <div class="text-center title-modules">
+                                        <span > LEGAL
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+
+
+                            <div *ngIf="validaPerfil()">
+                                <a class="box-modulos" (click)="modulos(9)">
+                                    <div class="text-center title-modules">
+                                        <span >
+                                            CONTABILIDAD </span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div *ngIf="validaPerfil()">
+                                <a class="box-modulos" (click)="modulos(11)">
+                                    <div class="text-center title-modules">
+                                        <span > TESORERÍA
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div *ngIf="validaPerfil()">
+                                <a class="box-modulos" (click)="modulos(12)">
+                                    <div class="text-center title-modules">
+                                        <span >
+                                            ADMINISTRACIÓN </span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div *ngIf="validaPerfil()">
+                                <a class="box-modulos" (click)="modulos(13)">
+                                    <div class="text-center title-modules">
+                                        <span > SISTEMAS</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div *ngIf="validaPerfil()">
+                                <a class="box-modulos" (click)="modulos(14)">
+                                    <div class="text-center title-modules">
+                                        <span>
+                                            MANTENIMIENTO </span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div *ngIf="validaPerfil()">
+                                <a class="box-modulos" (click)="modulos(15)">
+                                    <div class="text-center title-modules">
+                                        <span > SEGURIDAD
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor-mapa">
+                <img src="assets/img/mapa_completo.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>

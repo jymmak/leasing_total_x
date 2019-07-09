@@ -1,0 +1,48 @@
+<div id="cotizador-pdf">
+    <div #elModal class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header pdfmodal">
+                    <h5 class="modal-title" id="exampleModalCenterTitle"><strong style="font-size: 15px;">Enviar por
+                            correo </strong></h5>
+                    <div class="circle">
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="cancelarModal(dato)">
+                        <span aria-hidden="true" class="xflotante">
+                            &#215;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>Contacto</label>
+                            <select id="example-getting-started" select2 theme="FondoRosado" (onSelect)="selectedContactos($event)"
+                                class="margintopselect">
+                                <option value=""></option>
+                                <option *ngFor="let  contacto of contactos" [value]="contacto.id">{{contacto.value}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 " *ngFor="let dato of verSeleccion">
+                            <div class="input-group">
+                                <p class="fontRos">{{dato.value}}</p>
+                                <!-- <input type="text" class="btn-rounded  _input pinky marginInput" type="text" [(ngModel)]="dato.value" 
+                              disabled> -->
+                                <span class="marginInput" (click)="eliminar(dato)"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-md-12 text-right">
+                        <button type="button" class="btn btn-secondary mr-4" data-dismiss="modal" (click)="cancelarModal(dato)">Cancelar</button>
+                        <button type="button" class="btn btn-primary mr-3" (click)="enviar()" [disabled]="verSeleccion.length == 0">
+                            Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

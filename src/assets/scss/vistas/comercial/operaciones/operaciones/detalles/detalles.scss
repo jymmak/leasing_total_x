@@ -1,0 +1,124 @@
+#detalles-operaciones{
+   .btn-primary {
+      color: #fff;
+      background-color: #bcbcbc !important;
+      border-color: #bcbcbc !important;
+   }
+.titel-bannel{
+    color: #707070;
+    font-family: Helvetica, Bold;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.ibox-title {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #ffffff;
+    border-color: #e7eaec;
+    -o-border-image: none;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 2px 0 0;
+    color: inherit;
+    margin-bottom: 0;
+    padding: 5px 90px 8px 17px;
+    min-height: 41px;
+    position: relative;
+    clear: both;
+ }
+
+ .table th, .table td {
+    padding: 0.45rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    padding-left: 31px;
+ }
+ .table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ffffff;
+ }
+ .ibox-content {
+   background-color: #ffffff;
+   color: inherit;
+   padding: 15px 3px 0px 0px;
+   border-color: #e7eaec;
+   -o-border-image: none;
+   border-image: none;
+   border-style: solid solid none;
+   border-width: 0px 0;
+}
+ .tabless{
+   box-shadow: 0px 3px 6px #00000030;
+   width: 100%;
+   /* margin-left: 0px; */
+   border-top: white;
+   border-right: white;
+   border-left: white;
+   position: relative;
+   bottom: 25px;
+ }
+ .tabless-bannel{
+    box-shadow: 0px 3px 6px #00000030;
+    border-top: white;
+    border-right: white;
+    border-left: white;
+ }
+
+ tr.highlighted td {
+    background: #fff7f7;
+    cursor: pointer;
+ }
+
+ .btn-primary {
+   color: #fff;
+   background-color: #d22919;
+   border-color: #d22919;
+   width: 25px;
+ }
+
+ .table-responsive {
+   display: block;
+   width: 100%;
+   margin-left: 3px;
+   overflow-x: auto;
+   -webkit-overflow-scrolling: touch;
+   -ms-overflow-style: -ms-autohiding-scrollbar;
+   position: relative;
+   bottom: 20px;
+ }
+
+ .tbale-bannel{
+   position: relative;
+   bottom: 11px; 
+   
+ } 
+
+ .tableMd{
+   margin-top: -21px;
+ }
+
+
+ .marginVer{
+   color: #fff;
+   background-color: #d22919;
+   border-color: #d22919;
+   width: 25px;
+   position: relative;
+   left: 3px;
+ }
+
+
+ .centewr{
+   background-color: #d22919 !important; 
+   border-color: #d22919 !important;
+   width: 66px;
+   padding-left: 24px;
+ }
+
+ table tr:nth-child(even) {
+  background: #fff7f7;
+}
+}

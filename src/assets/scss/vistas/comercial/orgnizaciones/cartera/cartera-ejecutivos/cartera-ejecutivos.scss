@@ -1,0 +1,43 @@
+#cartera-ejecutivos {
+  h5 {
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  label {
+    text-align: center;
+  }
+
+  .form-control {
+    color: #495057;
+    border: 1px solid #fdccc9;
+    background-color: #fff7f7;
+    border-radius: 50px;
+  }
+
+  ._input:focus {
+    outline: none;
+  }
+
+  .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0);
+  }
+
+  input[type=date]::-webkit-inner-spin-button,
+  input[type=date]::-webkit-outer-spin-button {
+    -webkit-appearance: textfield;
+    margin: 0;
+  }
+
+  input[type=date] {
+    -moz-appearance: textfield;
+  }
+
+  .titletex {
+    float: right;
+  }
+
+
+
+}

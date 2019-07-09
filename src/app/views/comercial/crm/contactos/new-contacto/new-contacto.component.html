@@ -1,0 +1,107 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrapper wrapper-content animated fadeInUp">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5 class="margin-bottom40 font-weight-bold mt-4 mr-2" style="font-size: 14px; color: #707070;">
+                            CREAR CONTACTO</h5>
+                        <div class="ibox-tools mt-3 pr-3">
+
+
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="related-news" style="margin-top: -30px;">
+                            <div class="row m-3">
+                                <div class="col-md-4 pr-5">
+
+
+                                    <div class="col-md-12">
+                                        <label> Nombres</label>
+                                        <input class=" btn-rounded  _input pinky" [(ngModel)]="nombres" required>
+                                    </div>
+
+
+                                    <div class="col-md-12 mt-3">
+                                        <label> Cargo</label>
+                                        <input class=" btn-rounded  _input pinky" [(ngModel)]="cargo" required>
+                                    </div>
+
+
+                                    <div class="col-md-12 mt-3">
+                                        <label> Correo Electronico</label>
+                                        <input class=" btn-rounded  _input pinky" [(ngModel)]="email" required>
+                                    </div>
+
+                                    <div class="col-md-12 mt-5">
+                                        <div class="mdi mdi-plus text-danger"> Agregar otro Contacto </div>
+                                        </div>
+
+
+
+                                </div>
+                                <div class="col-md-4 pl-5">
+
+                                    <div class="col-md-12">
+                                        <label> Apellido</label>
+                                        <input class=" btn-rounded  _input pinky" [(ngModel)]="apellido" required>
+                                    </div>
+
+
+                                    <div class="col-md-12 mt-3">
+                                        <label> Celular</label>
+                                        <input class=" btn-rounded  _input pinky" [(ngModel)]="celular" required>
+                                    </div>
+
+
+                                    <div class="col-md-12 mt-3">
+                                        <label> Celular 2</label>
+                                        <input class=" btn-rounded  _input pinky" [(ngModel)]="celular2" required>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4 pl-5">
+
+                                    <div class="col-md-12">
+                                        <label> Teléfono</label>
+                                        <input class=" btn-rounded  _input pinky" [(ngModel)]="telefono" required>
+                                    </div>
+
+
+                                    <div class="col-md-12 mt-3">
+                                        <label> Fecha de Nacimeinto</label>
+                                        <input class=" btn-rounded  _input pinky" [(ngModel)]="cargo" required>
+                                    </div>
+
+
+                                    <div class="col-md-12 mt-3">
+                                        <label>Canal Favorito</label>
+                                        <select select2 theme="FondoRosado" required>
+                                            <option *ngFor="let  item of canal" [value]="item.id">{{item.text}}</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="actions text-right mt-5">
+
+                                <button (click)="atras()" class="btn btn-secondary mr-3">
+
+                                    Cancelar
+                                </button>
+
+                                <button (click)="guardar()" class="btn btn-primary">
+                                    Guardar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

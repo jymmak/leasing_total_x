@@ -1,0 +1,210 @@
+#control-operaciones{
+    .ibox {
+        .ibox-tools {
+          //top: 34px;
+          right: 15px;
+          margin-right: 44px;
+      
+          button {
+            color: #FFFFFF;
+            padding: 0.35rem;
+            margin: 20px;
+            box-shadow: 0 0 3.3px 0 #d22919;
+    
+            .mdi {
+              font-size: 1rem;
+            }
+    
+            span {
+              margin-right: 6px;
+            }
+          }
+        }
+
+
+    
+        // .ibox-content {
+        //   .table-striped tbody tr:nth-of-type(odd) {
+
+        //     background-color: rgba(255, 254, 254, 0);
+        //   }
+    
+        //   .table th,
+        //   .table td {
+        //     color: #707070;
+        //     border-top: 1px solid #fff7f7 !important;
+        //   }
+        // }
+      }
+ 
+
+   .banel-titel{
+    font-weight: 700;
+    font-family: Helvetica, Bold;
+    color: #707070;
+    font-size: 15px;
+ } 
+ .bannel-titel2{
+    margin-right: 25px;
+
+ }
+
+ .select{
+    position: relative;
+    left: 296px;
+    top: 15px;
+ }
+ .titel-th{
+    color: #707070;
+    font-family: Helvetica, Bold;
+    font-size: 13px;
+ }
+
+ .table {
+    width: 99%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+ 
+ thead {
+    width: calc(100% - 0em);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.07);
+    font-family: Helvetica, Bold !important;
+    font-size: 12px;
+  }
+
+  .card-header {
+    margin-bottom: 0;
+    padding: 0px;
+    background-color: white;
+    border-bottom: 1px solid white;
+   
+  }
+ .btn-link {
+  font-weight: 400;
+  color: #ffffff;
+  background-color: transparent;
+  margin-left: -32px;
+  margin-top: -3px;
+  width: 106%;
+  }
+
+  .card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    margin-top: -37px;
+    margin-left: 7px;
+    width: 100%;
+ }
+
+ .table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 450px;
+    -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+ }
+
+ .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 0.25rem;
+ } 
+
+ .table2{
+  background-color: #ffffff6b;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  width: 200px;
+  height: 70px;
+  position: absolute;
+  right: 16px;
+  top: 142px;
+  width: 17%;
+  padding: 8px;
+  height: 67%;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.22);
+ }
+
+ .sucursal-titel{
+  color: #707070;
+  font-family: Helvetica, Regular;
+  font-size: 16px;
+  margin-left: 26px;
+ }
+
+ .tab-header{
+  position: relative;
+    top: 29px;
+    width: 105%;
+    border: solid 2px white;
+    left: -8px;
+ }
+
+//  .relatedNews{
+//   margin-top: -59px;
+//  }
+
+ .mdi-chevron-down{
+  font-size: 18PX;
+  position: relative;
+  top: 5PX;
+  margin-left: 9PX;
+ }
+ ::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #f1eaea;
+  border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 7px;
+  -webkit-box-shadow: inset 0 0 66px #aaa;
+}
+
+ .card2{
+  margin-top: -37px;
+ }
+
+ .scrrol{
+  position: relative;
+    top: -50px;
+ }
+
+ .topContent{
+  margin-top: -7px;
+ }
+
+ .btn-embudo{
+  color: #d22919 !important;
+  margin: 20px;
+  background: white;
+  box-shadow: 0 0 3.3px 0 #ffffff !important;
+  border-color: #d94b3d;
+ }
+
+ .mt-45{
+  margin-top: -23px;
+ }
+
+ .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgb(255, 247, 247);
+}
+
+table tr:nth-child(even) {
+  background: #ffffff;
+}
+
+
+}

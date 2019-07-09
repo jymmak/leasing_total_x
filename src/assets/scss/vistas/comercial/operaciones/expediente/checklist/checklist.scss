@@ -1,0 +1,493 @@
+#checklist{
+
+    .ibox {
+        .ibox-tools {
+          top: 34px;
+          right: 15px;
+          margin-right: 44px;
+      
+          button {
+            color: #FFFFFF;
+            padding: 0.35rem;
+            margin: 20px;
+            box-shadow: 0 0 3.3px 0 #d22919;
+            margin-top: -9px;
+            .mdi {
+              font-size: 1rem;
+            }
+    
+            span {
+              margin-right: 6px;
+            }
+          }
+        }
+    
+        .ibox-content {
+          .table-striped tbody tr:nth-of-type(odd) {
+
+            background-color: rgba(255, 254, 254, 0);
+          }
+    
+          .table th,
+          .table td {
+            color: #707070;
+            border-top: 1px solid #fff7f7 !important;
+          }
+        }
+      }
+    
+    
+    
+      .mdi-binoculars {
+       
+      color: #FFFFFF;
+      position: relative;
+      top: 2px;
+       font-size: 20px;
+      right: 3px;
+
+
+      }
+    
+      .mdi-format-list-bulleted {
+        color: #FFFFFF;
+        position: relative;
+        top: 1px;
+        font-size: 20px;
+        right: 4px;
+      }
+    
+      .mdi-file-document {
+        color: #FFFFFF;
+        position: relative;
+        top: 1px;
+        font-size: 20px;
+        right: 4px;
+      }
+    
+    
+      .circulobotonsdelete {
+    
+        width: 33px;
+        height: 33px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: #BCBCBC;
+        display: inline-block;
+        text-align: center;
+      }
+    
+    
+      .circulobotonsdeleteInfo {
+    
+        width: 33px;
+        height: 33px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: #BCBCBC;
+        display: inline-block;
+        text-align: center;
+        top: -4px;
+      }
+    
+      .circulobotons_habilitadosiInfo {
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        background: #D22919;
+        display: inline-block;
+        text-align: center;
+        top: -4px;
+      }
+    
+      .circulobotons_habilitados {
+    
+        width: 33px;
+        height: 33px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: #D22919;
+        display: inline-block;
+        text-align: center;
+      }
+    
+      .circulobotons_habilitadosInfo {
+    
+        width: 33px;
+        height: 33px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: #D22919;
+        display: inline-block;
+        text-align: center;
+        top: -4px;
+      }
+    
+    
+      .tooltip {
+        position: relative;
+        display: inline-block;
+    
+        opacity: inherit;
+      }
+    
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 63px;
+        background-color: #fff;
+        color: #D22919;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 162%;
+        left: 11%;
+        opacity: 9px;
+        transition: opacity 0.3s;
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+        border-radius: 14px;
+        position: absolute;
+        bottom: 8px;
+        font-size: 14px;
+      }
+    
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+    
+      .tooltipBotton {
+        position: relative;
+        display: inline-block;
+    
+        opacity: inherit;
+      }
+    
+      .tooltipBotton .tooltiptextBotton {
+        visibility: hidden;
+        width: 76px;
+        background-color: #fff;
+        color: #D22919;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 162%;
+        left: 11%;
+        opacity: 9px;
+        transition: opacity 0.3s;
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+        border-radius: 14px;
+        position: absolute;
+        bottom: -69px;
+        font-size: 14px;
+      }
+    
+      .tooltipBotton:hover .tooltiptextBotton {
+        visibility: visible;
+        opacity: 1;
+      }
+    
+      td {
+        cursor: pointer;
+      }
+    
+      // scroll de la tabla
+      tbody {
+        display: block;
+        height: 450px;
+        overflow: auto;
+        margin-top: 5px;
+        font-family: Helvetica, Regular !important;
+        font-size: 12px;
+      }
+    
+      thead,
+      tbody tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        text-align: center;
+      }
+    
+      thead {
+        width: calc(100% - 0em);
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.07);
+        font-family: Helvetica, Bold !important;
+        font-size: 12px;
+      }
+    
+      ::-webkit-scrollbar {
+        width: 7px;
+      }
+    
+      ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px #ffffff;
+        border-radius: 7px;
+      }
+    
+      ::-webkit-scrollbar-thumb {
+        border-radius: 7px;
+        -webkit-box-shadow: inset 0 0 66px #b9b9b9;
+      }
+    
+      .iconsborder {
+        padding-left: 0px !important;
+        padding-right: 11px !important;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        margin-top: 0px !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        margin-bottom: 0px !important;
+        height: 0px !important;
+        width: 0px !important;
+        border-left-width: 0px;
+        border-top-width: 0px !important;
+        border-right-width: 0px !important;
+        border-bottom-width: 0px !important;
+        z-index: auto;
+      }
+    
+      .buttonAceptarModal {
+        border-radius: 50px;
+        background: #d22919;
+        font-size: 0.75rem;
+        border: 0;
+        padding: 0.32rem;
+        color: #ffffff;
+        width: 125px;
+      }
+    
+      .modal-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        border-top: 0px solid #e9ecef;
+      }
+    
+      button {
+        outline: none;
+      }
+
+      .label-titel-exp{
+        margin-top: 16px;
+        font-size: 14px;
+        color: #707070;
+        font-weight: 800;
+        font-family: Helvetica, Bold;
+      }
+      .checklist{
+        border-radius: 50px;
+        border: solid 1px #d22919;
+        color: #d22919 !important;
+        background: white;
+        width: 150px;
+        height: 39px;
+        margin-left: 26px;
+        margin-top: -8px;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .documentos-label{
+        margin-top: 5px;
+        text-align: center;
+        font-weight: 800;
+        color: #707070;
+        font-family: Helvetica, Bold;
+        font-size: 16px;
+     }
+
+     .titel-body{
+        margin-top: 5px;
+        text-align: left;
+        font-weight: 800;
+        color: #707070;
+        font-family: Helvetica, Bold;
+        font-size: 14px;
+        margin-left: 29px;
+     }
+
+     .table {
+        width: 97%;
+        margin-bottom: 1rem;
+        background-color: transparent;
+        margin-left: 19px;
+        margin-top: 5px;
+    }
+
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: initial;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    } 
+
+    .tr-tex{
+        width: 10%;
+        text-align: center;
+    }
+    .custom-control {
+      position: relative;
+      display: block;
+      min-height: 1.5rem;
+      padding-left: 1.5rem;
+      text-align: center;
+      margin-left: -112px;
+  }
+
+  .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #08AAFF;
+}
+
+.custom-control-label::before {
+  position: absolute;
+  top: 0.25rem;
+  left: -1.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  content: "";
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #ffffff;
+  border: solid 2px;
+}
+
+table tr:nth-child(odd) {
+  background: #fff7f7;
+}
+
+.checkHead{
+  background: white !important;
+}
+
+ .margin-documents{
+  border-top: solid 1px;
+   width: 99%;
+   color: #E5E5E5
+ }
+
+//  input[type=checkbox] {
+//   position: relative;
+//   cursor: pointer;
+// }
+// input[type=checkbox]:before {
+//   content: "";
+//   display: block;
+//   position: absolute;
+//   width: 16px;
+//   height: 16px;
+//   top: 0;
+//   left: 0;
+//   border: 2px solid #555555;
+//   border-radius: 3px;
+//   background-color: white;
+// }
+// input[type=checkbox]:checked:after {
+//   content: "";
+//   display: block;
+//   width: 5px;
+//   height: 10px;
+//   border: solid black;
+//   border-width: 0 2px 2px 0;
+//   -webkit-transform: rotate(45deg);
+//   -ms-transform: rotate(45deg);
+//   transform: rotate(45deg);
+//   position: absolute;
+//   top: 2px;
+//   left: 6px;
+// }
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  background-color: #fff;
+  border-radius: 4px;
+  border: solid 1px #000000;
+}
+.input:checked {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  background-color: #fff;
+  border-radius: 4px;
+  border: solid 1px red;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+  border: solid 1px #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 11px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+}

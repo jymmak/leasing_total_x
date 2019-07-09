@@ -1,0 +1,91 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="buscar-ubicacion">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+        <div class="ibox">
+          <div class="ibox-content">
+            <div class="row mt-4 ">
+
+              <div class="col-md-3">
+                <!-- <label>RECORRIDO DEL DIA</label> -->
+
+                <div class="mt-2 pl-4 pr-4 ">
+                  <label>Entidades</label>
+                  <select select2 [theme]="'FondoSinBorder'" (onSelect)="seleccionarEntidades($event)" style="border: 1px solid #ffffff;">
+                    <option></option>
+                    <option *ngFor="let data of tipos" [value]="data.id">{{data.text}}</option>
+                  </select>
+                </div>
+                <div class="mt-2 pl-4 pr-4">
+                  <label>Departamento</label>
+                  <select select2 [theme]="'FondoSinBorder'" (onSelect)="seleccionarDepartamento($event)">
+                    <option></option>
+                    <option *ngFor="let data of tipos" [value]="data.id">{{data.text}}</option>
+                  </select>
+                </div>
+                <div class="mt-2 pl-4 pr-4">
+                  <label>Provincia</label>
+                  <select select2 [theme]="'FondoSinBorder'" (onSelect)="seleccionarProvincia($event)">
+                    <option></option>
+                    <option *ngFor="let data of tipos" [value]="data.id">{{data.text}}</option>
+                  </select>
+                </div>
+                <div class="mt-2 pl-4 pr-4">
+                  <label>Ciudad</label>
+                  <select select2 [theme]="'FondoSinBorder'" (onSelect)="seleccionarCiudad($event)">
+                    <option></option>
+                    <option *ngFor="let data of tipos" [value]="data.id">{{data.text}}</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mt-3 pl-0">
+                  <form action="/search" novalidate="" style="text-align: center;" class="ng-untouched ng-pristine ng-valid">
+                    <input id="SearchCliente" autocomplete="off" [(ngModel)]="cliente" (keyup)="buscarCliente(cliente)"
+                      name="q" placeholder="Cliente:" size="40" type="text"></form>
+                </div>
+                <div class="col-md-4 mt-2 pl-0">
+                  <form action="/search" novalidate="" style="text-align: center;" class="ng-untouched ng-pristine ng-valid">
+                    <input id="searchProvedor" autocomplete="off" [(ngModel)]="provedor" (keyup)="buscarProveedor(provedor)"
+                      name="q" placeholder="Provedor:" size="40" type="text"></form>
+                </div>
+                <div class="col-md-4 mt-2 pl-0">
+                  <form action="/search" novalidate="" style="text-align: center;" class="ng-untouched ng-pristine ng-valid">
+                    <input id="searchEjecutivo" autocomplete="off" [(ngModel)]="ejecutivo" (keyup)="buscarEjecutivo(ejecutivo)"
+                      name="q" placeholder="Ejecutivo:" size="40" type="text"></form>
+                </div>
+                <div class="mt-4">
+                  <span class="d-block">Leyenda</span>
+                  <div class="mdi mdi-flag-outline mt-2 icon-background d-inline-block"></div>Ubicación Inidividual
+                  <div class="mdi mdi-flag-outline mt-2  d-inline-block"> Concentración</div>
+                </div>
+
+              </div>
+              <div class="col-md-9 ml-map ">
+
+                <div class="col-md-4 d-inline-block  ml-5 actions text-right ">
+                  <button type="button" class="btnSiguiente" (click)="buscarUbicacion()"> Recorrido del Dia</button>
+                </div>
+                <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [scrollwheel]="false">
+                  <agm-marker *ngFor="let m of markers; let i = index" (markerClick)="clickedMarker(m.label, i)"
+                    [latitude]="m.lat" [longitude]="m.lng" [label]="m.label" [markerDraggable]="m.draggable" (dragEnd)="markerDragEnd(m, $event)">
+
+                    <agm-info-window>
+                      <strong>InfoWindow content</strong>
+                    </agm-info-window>
+                    <agm-polyline *ngFor="let polyline of markers;let i = index;" [strokeColor]="polyline.color">
+                      <agm-polyline-point *ngFor="let point of polyline.path" [latitude]="point.latitude" [longitude]="point.longitude">
+                      </agm-polyline-point>
+                    </agm-polyline>
+                  </agm-marker>
+                </agm-map>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

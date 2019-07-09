@@ -1,0 +1,197 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="reclamacion">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrapper wrapper-content animated fadeInUp">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5 *ngIf="titel" class="margin-bottom40 font-weight-bold mt-4 mr-2" style="font-size: 14px; color: #707070;">
+                            CREAR RECLAMACIÓN</h5>
+                        <div class="ibox-tools mt-3 pr-3">
+
+
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="related-news" style="margin-top: -30px;">
+                            <div class="row m-5" *ngIf="reclamacion1">
+                                <div class="col-md-4 pr-5">
+
+
+                                    <div class="col-md-12">
+                                        <label>Asunto</label>
+                                        <input class=" btn-rounded  _input pinky" [(ngModel)]="asunto" required>
+                                    </div>
+
+
+                                    <div class="col-md-12 mt-3">
+                                        <label> Organización</label>
+                                        <input class=" btn-rounded  _input pinky" [(ngModel)]="organizacion" required>
+                                    </div>
+
+
+                                    <div class="col-md-12 mt-3">
+                                        <label> Dirección</label>
+                                        <input class=" btn-rounded  _input pinky" [(ngModel)]="direccion" required>
+                                    </div>
+
+
+
+
+                                </div>
+                                <div class="col-md-4 pl-5">
+
+                                    <div class="col-md-12">
+                                        <label> DNI/CE</label>
+                                        <input class=" btn-rounded  _input pinky" [(ngModel)]="docuemntoIdentidad"
+                                            required>
+                                    </div>
+
+
+                                    <div class="col-md-12 mt-3">
+                                        <label> Teléfono</label>
+                                        <input class=" btn-rounded  _input pinky" [(ngModel)]="telefono" required>
+                                    </div>
+
+
+                                    <div class="col-md-12 mt-3">
+                                        <label>Correo Electronico</label>
+                                        <input class=" btn-rounded  _input pinky" [(ngModel)]="email" required>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4 pl-5">
+
+
+                                </div>
+                                <div class="col-md-12 actions text-right mt-5">
+
+                                    <button (click)="atras()" class="btn btn-secondary mr-3">
+
+                                        Cancelar
+                                    </button>
+
+                                    <button (click)="siguiente()" class="btn btn-primary">
+                                        siguiente
+                                        <span class="mdi mdi-chevron-right"></span>
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div class="row m-5" *ngIf="reclamacion2">
+
+                                <div class="col-md-8">
+                                    <label class="mt-5">N° Reclamación: {{numReclamacion}}</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="col-md-12 mt-3">
+                                        <label>Tipo</label>
+                                        <select select2 theme="FondoRosado" required>
+                                            <option *ngFor="let  item of canal" [value]="item.id">{{item.text}}</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-12 pl-0 pr-0">
+
+                                    <div class="col-md-12 mt-3">
+                                        <label> Asunto</label>
+                                        <input class=" btn-rounded  _input pinky " [(ngModel)]="asunto" required>
+                                    </div>
+
+
+                                    <div class="col-md-12 mt-3 ">
+                                        <label> Descripción</label>
+                                        <textarea class=" btn-rounded  _input pinky  rounded" style=" height: 100px;"
+                                            [(ngModel)]="descriccion" required></textarea>
+                                    </div>
+
+
+
+
+                                </div>
+
+
+
+                                <div class="col-md-6 mt-3">
+                                    <label>Motivo </label>
+                                    <select select2 theme="FondoRosado" required>
+                                        <option *ngFor="let  item of canal" [value]="item.id">{{item.text}}</option>
+                                    </select>
+
+                                </div>
+                                <div class="col-md-6 mt-3">
+                                    <label>Origen </label>
+                                    <select select2 theme="FondoRosado" required>
+                                        <option *ngFor="let  item of canal" [value]="item.id">{{item.text}}</option>
+                                    </select>
+
+                                </div>
+
+
+                                <div class="col-md-6 mt-4">
+                                    <label> Pedido:</label>
+                                    <div class="col-md-12">
+                                        <label class="container ">
+                                            <input type="checkbox" checked="checked" name="economico" [(ngModel)]="economico">
+                                            <h6>Economico</h6>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="container ">
+                                            <input type="checkbox" checked="checked" name="noEconomico" [(ngModel)]="noEconomico">
+                                            <h6> No Economico</h6>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+
+
+                                </div>
+                                <div class="col-md-6 mt-4">
+                                    <div class="col-md-12 ">
+                                        <label> Detalles del Pedido</label>
+                                        <textarea class=" btn-rounded  _input pinky rounded" [(ngModel)]="origen"
+                                            required style=" height:75px;"></textarea>
+
+                                    </div>
+                                </div>
+
+
+                                <div class=" col-md-12 actions text-right mt-5">
+
+                                    <button (click)="reclamacionOne()" class="btn btn-secondary mr-3">
+
+                                        Cancelar
+                                    </button>
+
+                                    <button (click)="guardar()" class="btn btn-primary">
+                                        Guardar
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row m-5" *ngIf="pdf">
+
+                                <div class="col-md-12 m-0 p-0">
+                                    <pdf-viewer [src]="src" [original-size]="false" [autoresize]="true"></pdf-viewer>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 text-right m-0 p-0" *ngIf="btnPdf">
+                <button type="button" (click)="atras()" class="btn btn-secondary mr-3">
+                    <span class="mdi mdi-chevron-left"></span>
+                    Atrás
+                </button>
+                <button type="button" (click)="enviarPdf()" class="btn btn-primary mr-3">
+                    Guardar
+                </button>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,92 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="sucursal-contacto">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+        <div class="ibox">
+          <div class="ibox-title p-3 pb-4 pt-4">
+            <div class="row">
+              <div class="col-md-3">
+                <input id="search51" name="q" type="text" size="40" [(ngModel)]="buscar" placeholder="Buscar RUC, Razón Social"
+                  (ngModelChange)="listarProveedores()" autocomplete="off" />
+              </div>
+
+              <div class="col-md-9 text-right">
+
+
+                <button (click)="editarContacto()" type="button" class="btn btn-circle btn-primary mr-1" [disabled]="!selectItem.id"
+                  data-toggle="tooltip" data-placement="top" title="Editar">
+                  <i class="mdi mdi-pencil"></i>
+                </button>
+
+                <button (click)="eliminar()" type="button" class="btn btn-circle btn-primary mr-1" [disabled]="!selectItem.id"
+                  data-dismiss="modal" data-toggle="modal" data-target="#modalConfirmar" data-placement="top" title="Eliminar">
+                  <i class="mdi  mdi-delete"></i>
+                </button>
+
+                <button class="btn btn-primary fs-16" (click)="nuevoContacto()"><span class="mdi mdi-plus"></span>Nuevo</button>
+
+
+                <!-- <div class="circulobotonsdelete" style="margin-right: 5px;" id="comboIcons" [ngClass]="{'btn-activo':selectItem.id}">
+                  <button class="mdi mdi-pencil tooltip   iconsborder " [disabled]="!selectItem.id" (click)="editarSucursalContact()">
+                    <span class="tooltiptext">Editar</span>
+                  </button>
+                </div>
+                <div class="circulobotonsdelete" style="margin-right: 5px;" id="comboIcons" [ngClass]="{'btn-activo':selectItem.id}">
+                  <button (click)="detalleContacto()" class="mdi mdi-format-list-bulleted  tooltipBotton  iconsborder "
+                    [disabled]="!selectItem.id"><span class="tooltiptextBotton">Detalle</span></button>
+                </div>
+                <div class="circulobotonsdelete" style="margin-right: 5px;" id="comboIcons" [ngClass]="{'btn-activo':selectItem.id}">
+                  <button data-dismiss="modal" data-toggle="modal" data-target="#modalConfirmar" class="mdi mdi-delete tooltip  iconsborder "
+                    [disabled]="!selectItem.id"> <span class="tooltiptext">Eliminar</span></button>
+                </div> -->
+                <!-- 
+                <button class="button long button_ln-gradient btn-rounded btn-outline" (click)="nuevoCliente()"><span
+                    class="mdi mdi-plus"></span>Nuevo</button> -->
+
+              </div>
+            </div>
+          </div>
+          <div class="ibox-content">
+            <div class=" tableScroll" infiniteScroll (scrolled)="listarContactos(true)">
+              <table class="table table-striped  table-hover " id="tableCliente">
+                <thead>
+                  <tr>
+
+                    <th>No.</th>
+                    <th>Nombres</th>
+                    <th>Apellidos </th>
+                    <th>Contacto</th>
+                    <th>Cargo</th>
+                    <th> Celular</th>
+                    <th>Email</th>
+                    <th> Cumpleaños</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of Contacto; let index = index" (click)="select(item)" [ngClass]="{'highlighted':item.id==selectItem.id}">
+
+                    <td class="text-uppercase">{{item.id}}</td>
+                    <td class="text-uppercase">{{item.nombre}}</td>
+                    <td  class="text-uppercase">{{item.apellido}}</td>
+                    <td  class="text-uppercase">{{item.principal}}</td>
+                    <td  class="text-uppercase">{{item.cargo}}</td>
+                    <td  class="text-uppercase">{{item.celular}}</td>
+                    <td  class="text-uppercase">{{item.email}}</td>
+                    <td  class="text-uppercase">{{item.fnacimineto}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <div class="actions text-right margin-top20">
+        <button type="button" class="btn-rounded button button-cg " (click)="atras()" data-dismiss="modal">
+          <span class="mdi mdi-chevron-left"></span>Atrás</button>
+      </div>
+    </div>
+ 
+  </div>
+</div>

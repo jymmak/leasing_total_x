@@ -1,0 +1,135 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="ref-comerciales">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="ibox">
+          <div class="ibox-title" style=" box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.07);">
+              <div style="margin-top: 20px;">
+                  <button id="antecedentes" class="button-panel-info" (click)="antecedentes()" >Antecendentes</button>
+                  <button id="socios" class="button-panel-info"  (click)="socios()" >Socios
+                    y Accionistas</button>
+                  <button id="principales" class="button-panel-info" (click)="Principales()" >Principales
+                    Activos</button>
+                  <button id="Comerciales" class="button-panel-info"  (click)="comerciales()">Ref.
+                    Comerciales</button>
+                </div>
+
+            <div class="ibox-tools">
+              <button class="button long button_ln-gradient btn-rounded btn-outline" (click)="nuevoCliente()"><span
+                  class="mdi mdi-plus"></span>Nuevo</button>
+            </div>
+            <div class="margin-title"><strong>Princiaples Comerciales</strong></div>
+          </div>
+          <div class="ibox-content">
+            <div class="related-news ">
+              <div class="accordion" id="accordionExample">
+                <div class="cardew" style="box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.07);">
+                  <div class="headerAcordeon" id="headingOne">
+                    <h5 class="mb-0 subtabSinBorder">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                        <div class="mdi mdi-chevron-down positions"></div>Principales Provedores
+                      </button>
+                    </h5>
+                  </div>
+
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="margin-top: -15px;">
+                      <table class="table table-striped  table-hover  table-borderless tables tabBorder" id="tableCliente">
+                        <thead>
+                          <tr>
+
+                            <th>Empresa</th>
+                            <th>Producto/Servicio</th>
+                            <th>Teléfono</th>
+                            <th>Contacto</th>
+                            <th>Compras al Año</th>
+                            <th>Saldo por Pagar</th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let datos of listaPrincipalesProvedores">
+
+
+                            <td>{{datos.empresa}}</td>
+                            <td>{{datos.producto}}</td>
+                            <td>{{datos.telefono}}</td>
+                            <td>{{datos.contacto}}</td>
+                            <td>{{datos.moneda}}/. {{datos.comprasAnual}}</td>
+                            <td>{{datos.moneda}}/. {{datos.saldoporPagar}}</td>
+
+                          </tr>
+
+                        </tbody>
+
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="accordion" id="accordionExample2">
+                  <div class="cardew margin-acordeon">
+                    <div class="headerAcordeon" id="headingTwo">
+                      <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                          aria-expanded="true" aria-controls="collapseTwo">
+                          <div class="mdi mdi-chevron-down positions"></div>Principales Clientes
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample2">
+                      <div class="card-body" style="margin-top: -15px;">
+                        <table class="table table-striped  table-hover  table-borderless tables tabBorder" id="tableCliente">
+                          <thead>
+                            <tr>
+
+                              <th>Empresa</th>
+                              <th>Producto/Servicio</th>
+                              <th>Teléfono</th>
+                              <th>Titular Gerente Contacto</th>
+                              <th>Compras al Año</th>
+                              <th>Saldo por Pagar</th>
+
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let data of listaPrincipalesClientes">
+
+
+                              <td>{{data.empresa}}</td>
+                              <td>{{data.producto}}</td>
+                              <td>{{data.telefono}}</td>
+                              <td>{{data.contacto}}</td>
+                              <td>{{data.moneda}}/. {{data.comprasAnual}}</td>
+                              <td>{{data.moneda}}/. {{data.saldoporPagar}}</td>
+
+                            </tr>
+
+                          </tbody>
+
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-right margin-right20">
+                  <button class="btn-rounded button button-cg  margin-right20 " type="button">
+                    <span class="mdi mdi-chevron-left"></span> Atrás </button>
+                  <button class="btnSiguiente" id="btnnext" type="button"> Siguiente
+                    <span class="mdi mdi-chevron-right"></span>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div> 

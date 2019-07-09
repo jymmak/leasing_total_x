@@ -1,0 +1,18 @@
+
+<div class="pdf-container">
+  <div class="row">
+    <div class="col-md-12 m-0 p-0">
+      <pdf-viewer [src]="src" [original-size]="false" [autoresize]="true"></pdf-viewer>
+    </div>
+    <div class="col-md-12 text-right m-0 p-0">
+      <button type="button" (click)="atras()" class="btn btn-secondary mr-3">
+        <span class="mdi mdi-chevron-left"></span>
+        Atrás
+      </button>
+      <button type="button" (click)="enviar()" class="btn btn-primary mr-3">
+        Enviar
+        <!-- <span class="mdi mdi-chevron-right"></span> -->
+      </button>
+    </div>
+  </div>
+</div>

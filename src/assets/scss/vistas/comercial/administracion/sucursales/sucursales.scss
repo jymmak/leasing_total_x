@@ -1,0 +1,38 @@
+#sucursales{
+ .href-direccion{
+  color: #22b3ff;
+  text-decoration: underline;
+  border: none;
+  background: #ffffff00;
+  width: 100%;
+  cursor: pointer;
+ }
+
+ 
+ agm-map {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  top: 20px
+ 
+  }
+ .close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 1.1 !important;
+}
+.xflotante {
+  margin-left: 12px;
+  margin-right: -65px;
+  height: 21px;
+  width: 21px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: -23px;
+}
+}

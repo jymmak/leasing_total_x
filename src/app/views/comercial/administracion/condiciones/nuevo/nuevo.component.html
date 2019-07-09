@@ -1,0 +1,104 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="condiciones">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrapper wrapper-content animated fadeInUp">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5 class="margin-bottom40 font-weight-bold mt-4 mr-2" style="font-size: 14px; color: #707070;"> CREAR CONDICIONES DE FINANCIAMIENTO</h5>
+                        <div class="ibox-tools mt-3 pr-3">
+
+
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="related-news" style="margin-top: -30px;">
+                            <div class="row m-3">
+                                <div class="col-md-6 pr-5">
+                                    <div class="col-md-10">
+                                        <label>Sucursal</label>
+                                        <select select2 theme="FondoRosado"  required>
+                                            <option *ngFor="let  surcursar of surcursar" [value]="surcursar.id">{{surcursar.text}}</option>
+                                        </select>
+                                    </div>
+                                    <div class="mt-5">
+                                    <div class="col-md-6 d-inline-block">
+                                            <div class="col-md-12">
+                                                    <label> TEA mín</label>
+                                                    <input class=" btn-rounded  _input pinky" [(ngModel)]="teamin"  required >
+                                                </div>
+                                    </div>
+                                    <div class="col-md-6 d-inline-block">
+                                        <div class="col-md-12">
+                                            <label> TEA max</label>
+                                            <input class=" btn-rounded  _input pinky" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 d-inline-block mt-4">
+                                            <div class="col-md-12">
+                                                    <label> Inicial min</label>
+                                                    <input class=" btn-rounded  _input pinky" required>
+                                                </div>
+                                    </div>
+                                    <div class="col-md-6 d-inline-block mt-4">
+                                            <div class="col-md-12">
+                                                    <label>Inicial max</label>
+                                                    <input class=" btn-rounded  _input pinky" required>
+                                                </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-md-6 pl-5">
+                                    <div class="col-md-10 mt-5 pt-5"> </div>
+                                    <div class="mt-3">
+                                    <div class="col-md-6 d-inline-block">
+
+                                        <div class="col-md-12">
+                                            <label>Plazo mín</label>
+                                            <input class=" btn-rounded  _input pinky" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 d-inline-block">
+
+                                        <div class="col-md-12">
+                                            <label>Plazo max</label>
+                                            <input class=" btn-rounded  _input pinky" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 d-inline-block mt-4">
+
+                                        <div class="col-md-12">
+                                            <label>p. García min</label>
+                                            <input class=" btn-rounded  _input pinky" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 d-inline-block mt-4">
+
+                                        <div class="col-md-12">
+                                            <label>p. García max</label>
+                                            <input class=" btn-rounded  _input pinky" required>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="actions text-right mt-5">
+                                   
+                                    <button (click)="atras()" class="btn btn-secondary mr-3">
+                                      
+                                        Cancelar
+                                    </button>
+                                
+                                    <button  (click)="guardar()" class="btn btn-primary">
+                                        Guardar
+                                    </button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

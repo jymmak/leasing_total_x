@@ -1,0 +1,139 @@
+body,
+* {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+// body{
+//     height: 100vh;
+//     overflow: hidden;
+// }
+
+// @import '~compass-mixins/lib/compass/css3';
+@import "fuentes/materialdesign/materialdesignicons.scss";
+@import "variables.scss";
+@import "util.scss";
+@import "mixins/mixins.scss";
+
+@import "comun/navigation/navigation.scss";
+@import "comun/layouts/layouts.scss";
+@import "comun/topnavbar/topnavbar.scss";
+@import "comun/cabecera/cabecera.scss";
+@import "comun/calendario-principal/calendario-principal.scss";
+@import "comun/calendario-agenda/calendario-agenda.scss";
+@import "comun/boton-up/boton-up.scss";
+@import "comun/componente-select/componente-select.scss";
+@import "comun/spinner/spinner-inicio.scss";
+
+/* plugin */
+@import './plugins/plugins.scss';
+@import "comun/comun.scss";
+/* vistas */
+@import "vistas/login/login.scss";
+@import "vistas/modulos/modulos.scss";
+
+
+/* Cotización*/
+@import "vistas/comercial/cotizacion/consulta-ruc/consulta-ruc.scss";
+@import "vistas/comercial/cotizacion/cotizacion.scss";
+@import "vistas/comercial/cotizacion/cotizador/cotizador.scss";
+@import "vistas/comercial/cotizacion/cotizador/tab-crear/tab-crear.scss";
+@import "vistas/comercial/cotizacion/cotizador/bienes-tabla/bienes-tabla.scss";
+@import "vistas/comercial/cotizacion/cotizador/bienes/bienes.scss";
+@import "vistas/comercial/cotizacion/cotizador/bienes-1/bienes-1.scss";
+@import "vistas/comercial/cotizacion/cotizador/tab-gastos/tab-gastos.scss";
+@import "vistas/comercial/cotizacion/cotizador/tab-financiamiento/tab-financiamiento.scss";
+@import "vistas/comercial/cotizacion/busqueda-avanzada/busqueda-avanzada.scss";
+@import "vistas/comercial/cotizacion/cotizador/cronograma/cronograma.scss";
+@import "vistas/comercial/cotizacion/cotizador/cotizador-pdf/cotizador-pdf.scss";
+@import "vistas/comercial/cotizacion/cotizacion-express/cotizacion-esprex.scss";
+
+/* Organizaciones*/
+@import "vistas/comercial/orgnizaciones/cliente/clientes.scss";
+@import "vistas/comercial/orgnizaciones/cliente/formulario-cliente/formulario-cliente.scss";
+@import "vistas/comercial/orgnizaciones/cliente/contacto/contacto.scss";
+@import "vistas/comercial/orgnizaciones/cliente/contacto/formulario-contacto/formulario-contacto.scss";
+@import "vistas/comercial/orgnizaciones/cliente/biblioteca-anexo/biblioteca-anexo.scss";
+@import "vistas/comercial/orgnizaciones/cliente/info-neg/info-neg.scss";
+@import "vistas/comercial/orgnizaciones/cliente/info-neg/ref-comerciales/ref-comerciales.scss";
+@import "vistas/comercial/orgnizaciones/cliente/info-neg/principales-activos/principales-activos.scss";
+@import "vistas/comercial/orgnizaciones/cliente/info-neg/socios-accionistas/socios-accionistas.scss";
+@import "vistas/comercial/orgnizaciones/cliente/detalle/detalle.scss";
+@import "vistas/comercial/orgnizaciones/cliente/info/info.scss";
+@import "vistas/comercial/orgnizaciones/proveedores/proveedores.scss";
+@import "vistas/comercial/orgnizaciones/proveedores/ubicacion/ubicacion.scss";
+@import "vistas/comercial/orgnizaciones/proveedores/sucursales/sucursales.scss";
+@import "vistas/comercial/orgnizaciones/proveedores/sucursales/sucursal-contacto/sucursal-contacto.scss";
+@import "vistas/comercial/orgnizaciones/proveedores/sucursales/sucursal-contacto/nuevo-contacto/nuevo-contacto.scss";
+@import "vistas/comercial/orgnizaciones/proveedores/sucursales/sucursal-contacto/nuevo-sucursal/nuevo-sucursal.scss";
+@import "vistas/comercial/orgnizaciones/proveedores/sucursales/sucursal-contacto/nuevo-sucursal/sucursal-map/sucursal-map.scss";
+@import "vistas/comercial/orgnizaciones/proveedores/sucursales/sucursal-contacto/detalle-sucursal/detalle-sucursal.scss";
+@import "vistas/comercial/orgnizaciones/proveedores/formulario-proveedores/formulario-proveedores.scss";
+@import "vistas/comercial/orgnizaciones/cartera/cartera.scss";
+@import "vistas/comercial/orgnizaciones/cartera/asignar-proveedores/asignar-proveedores.scss";
+@import "vistas/comercial/orgnizaciones/cartera/asignar-clientes/asignar-clientes.scss";
+@import "vistas/comercial/orgnizaciones/cartera/cartera-ejecutivos/cartera-ejecutivos.scss";
+
+
+/* Plan Comercial*/
+
+@import "vistas/comercial/plan-comercial/automotriz/automotriz.scss";
+@import "vistas/comercial/plan-comercial/automotriz/dashboard/dashboard.scss";
+
+
+
+/* Fuerza Ventas*/
+@import "vistas/comercial/fuerza-ventas/organigrama/organigrama.scss";
+@import "vistas/comercial/fuerza-ventas/ejecutivos/ejecutivos.scss";
+@import "vistas/comercial/fuerza-ventas/desemp/desemp.scss";
+@import "vistas/comercial/fuerza-ventas/ejecutivos/asignar/asignar.scss";
+
+/* Administración*/
+@import "vistas/comercial/administracion/mant-ejecutivos/mant-ejecutivos.scss";
+@import "vistas/comercial/administracion/mant-ejecutivos/editar-ejec/editar-ejec.scss";
+@import "vistas/comercial/administracion/condiciones/condiciones.scss";
+@import "vistas/comercial/administracion/sucursales/sucursales.scss";
+@import "vistas/comercial/administracion/checklist/checklistt.scss";
+
+
+/* operaciones*/
+@import "vistas/comercial/operaciones/expediente/expediente.scss";
+@import "vistas/comercial/operaciones/expediente/treking-expediente/treking-expediente.scss";
+@import "vistas/comercial/operaciones/expediente/expediente-detallles/expediente-detallle.scss";
+@import "vistas/comercial/operaciones/control-expediente/control-expediente.scss";
+@import "vistas/comercial/operaciones/expediente/expediente-detallles/detalle-two/detalle-two.scss";
+@import "vistas/comercial/operaciones/expediente/documentos-expediente/documentos-expediente.scss";
+@import "vistas/comercial/operaciones/expediente/documentos-expediente/pdf-docuementos-exp/pdf-docuementos-exp.scss";
+@import "vistas/comercial/operaciones/expediente/checklist/checklist.scss";
+@import "vistas/comercial/operaciones/operaciones/operaciones.scss";
+@import "vistas/comercial/operaciones/operaciones/informacion/informacion.scss";
+@import "vistas/comercial/operaciones/operaciones/detalles/detalles.scss";
+@import "vistas/comercial/operaciones/proyeccion-cierre/proyeccion-cierre.scss";
+@import "vistas/comercial/operaciones/control-operaciones/control-operaciones.scss";
+@import "vistas/comercial/operaciones/control-operaciones/embudo/embudo.scss";
+@import "vistas/comercial/operaciones/expediente/expediente-detallles/detalle/detalle.scss";
+
+/* agenda*/
+@import "vistas/comercial/agenda/agenda.scss";
+@import "vistas/comercial/agenda/agregar-actividad/agregar-actividad.scss";
+@import "vistas/comercial/agenda/lista-tareas/lista-tareas.scss";
+@import "vistas/comercial/agenda/registro/registro.scss";
+
+// mapa
+@import "vistas/comercial/mapa/mapa.scss";
+@import "vistas/comercial/mapa/buscar-ubicacion/buscar-ubicacion.scss";
+
+
+// dashboard
+@import "vistas/comercial/dashboard/dashboard.scss";
+
+
+// crm
+@import "vistas/comercial/crm/contactos/contactos.scss";
+@import "vistas/comercial/crm/reclamacion/reclamacion.scss";
+@import "vistas/comercial/crm/reclamacion/pdf/pdf.scss";
+
+
+//reportes
+@import "vistas/comercial/reportes/reportes.scss";

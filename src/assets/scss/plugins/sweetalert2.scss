@@ -1,0 +1,64 @@
+@import '~sweetalert2/dist/sweetalert2.min.css';
+.swal2-popup{
+    width: 23em !important;
+    .swal2-title{
+        font-size: 1rem !important;
+    }
+    .swal2-styled{
+        padding: 0.32rem 2rem  !important;
+        margin: 0.3125em 0.8rem !important;
+        &.swal2-confirm{
+            background-color: $primary !important;
+            border-radius: 50px  !important;
+            font-size: 0.75em  !important;
+        }
+        &.swal2-cancel{
+            background-color: $secondary !important;
+            border-radius: 50px  !important;
+            font-size: 0.75em  !important;
+        }
+        &:focus{
+            box-shadow: 0 0 0 !important;
+        }
+
+    }
+
+} 
+.swal2-alert-success{
+        background-image: url('assets/img/CuadroOperaciónExitosa.png') !important;
+        background-repeat: no-repeat !important;
+        width: 255px !important;
+        height: 200px !important;
+        background-color: transparent !important;
+        background-position: center !important;
+        &.swal2-popup{
+            .swal2-styled{
+                padding: 0.32rem 2.1rem  !important;                
+                &.swal2-confirm{
+                    background-color: transparent !important;
+                    border: 1px solid #FFFFFF !important;
+                    border-left-color: #FFFFFF !important;
+                    border-right-color: #FFFFFF !important;
+                    margin: 0 !important;
+               }
+
+            }
+
+        }
+        .swal2-header{
+            position: relative;
+            bottom: 55px;
+            .swal2-title{
+                text-align: center;
+                color: #ffffff;
+                font-size: 1.1rem !important;
+                font-weight: 500 !important;
+            }
+        }
+        .swal2-actions{
+            position: relative;
+            top: 55px;
+            margin: 0 !important;
+
+        }
+    }

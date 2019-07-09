@@ -1,0 +1,187 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="socios-accionistas">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="ibox">
+          <div class="ibox-title">
+              <div style="margin-top: 20px;">
+                  <button id="antecedentes" class="button-panel-info" (click)="antecedentes()" >Antecendentes</button>
+                  <button id="socios" class="button-panel-info"  (click)="socios()" >Socios
+                    y Accionistas</button>
+                  <button id="principales" class="button-panel-info" (click)="Principales()" >Principales
+                    Activos</button>
+                  <button id="Comerciales" class="button-panel-info"  (click)="comerciales()">Ref.
+                    Comerciales</button>
+                </div>
+
+            <div class="ibox-tools">
+              <button class="button long button_ln-gradient btn-rounded btn-outline" (click)="nuevoCliente()"><span
+                  class="mdi mdi-plus"></span>Nuevo</button>
+            </div>
+            <div class="margin-title">
+              <table class="table table-striped  table-hover  table-borderless tables tabBorder tableFather" id="tableCliente">
+                <thead>
+                  <tr>
+
+                    <th style="width:8%">Item</th>
+                    <th style="width:15%">Nombre</th>
+                    <th style="width:15%">Cargo</th>
+                    <th style="width:15%"> % Accionado</th>
+
+
+                  </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+
+              </table>
+            </div>
+          </div>
+          <div class="ibox-content">
+            <div class="related-news scrrol">
+              <div class="table-responsive">
+                <div class="row" *ngFor="let nomb of lstSocios">
+                  <div class="col-sm-2" style="box-shadow:  0px 2px 0px rgba(0, 0, 0, 0.07);; height: 43px;">
+                    <div class="mdi mdi-chevron-down positions"></div>
+
+                  </div>
+                  <div class="col-sm-10" style=" margin-left: -72px;">
+
+
+                    <table class="table table-striped   table-hover  table-borderless tables  tblecildren" id="tableCliente">
+                      <thead class="margbottom">
+                        <tr style="font-weight: 500 !important;">
+                          <th style="width: 8%">{{nomb.item}}</th>
+                          <th style="width:35%">{{nomb.nombre}}</th>
+                          <th style="width:25%">{{nomb.cargo}} </th>
+                          <th style="width:25%"> {{nomb.accionado}}%</th>
+
+
+
+                        </tr>
+                      </thead>
+                      <tfoot *ngFor="let datos of lstAccionesMensajes">
+                          <tr>
+                              <th colspan="5" class="table-active sizeTfoot"  scope="col">{{datos.mensajes}}</th>
+                            </tr>
+                        </tfoot>
+                      <tbody>
+                        <tr *ngFor="let datos of lstAcciones">
+
+                          <td style="width: 8%"></td>
+                          <td style="width:35%">{{datos.cuenta}}</td>
+                          <td style="width:25%">{{datos.nra}}</td>
+                          <td style="width:35%">{{datos.cuenta2}} </td>
+                          <td style="width:25%">{{datos.nra2}}</td>
+                        </tr>
+
+                      </tbody>
+
+                    
+
+                    </table>
+                    <!-- <div class="cardew" style="box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.07);">
+                    <div class="headerAcordeon" id="headingOne">
+                      <h5 class="mb-0 subtabSinBorder">
+                        <button *ngFor="let nomb of lstSocios" class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                          aria-expanded="true" aria-controls="collapseOne">
+                          <div class="row">
+                            <div class="col-sm-2">
+
+                            </div>
+                            <div class="col-sm-10">
+                            <div> {{nomb.item}} {{nomb.nombre}} {{nomb.cargo}} {{nomb.accionado}}%</div>   
+                            </div>
+                          </div>
+                          <div class="mdi mdi-chevron-down positions"></div>
+                           
+                        
+                        </button>
+                      </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body" style="margin-top: -15px;">
+                        <table class="table table-striped  table-hover  table-borderless tables tabBorder" id="tableCliente">
+                          <thead>
+                            <tr *ngFor="let nomb of lstSocios">
+                            
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                               
+
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let datos of lstAcciones">
+
+
+                              <td>{{datos.cuenta}}</td>
+                              <td>{{datos.nra}}</td>
+                              <td>{{datos.cuenta2}} {{datos.nra2}}</td>
+                             
+                            </tr>
+
+                          </tbody>
+
+                        </table>
+                      </div>
+                    </div>
+                  </div> -->
+
+
+
+                  </div>
+                </div>
+
+                <div class="text-right margin-right20">
+                  <button class="btn-rounded button button-cg  margin-right20 " type="button">
+                 Cancelar </button>
+                  <button class="btnSiguiente" id="btnnext" type="button"> Guardar
+                 
+                  </button>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- <div class="modal fade" id="modalConfirmar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content" style="border-radius: 16px;">
+        <div class="modal-body">
+          <div class="row">
+
+            <strong style="margin-left: 97px;">¿estás seguro que desea eliminar al cliente?</strong>
+          </div>
+        </div>
+        <div class="modal-footer borderFoter">
+          <div class="col-md-4 col-md-offset-2">
+            <button type="button" class="btn-rounded button button-cg " (click)="confirmarGuardarContacto()"
+              data-dismiss="modal">Cancelar</button>
+          </div>
+
+          <div class="col-md-4 col-md-offset-2" style="padding-top: 2px;">
+            <button type="button" class="buttonAceptarModal" (click)="eliminarCliente(item)" data-dismiss="modal">
+              Aceptar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  </div>
+  <!-- 
+<formulario-buscar (buscar)="busquedaAvanzada($event)"></formulario-buscar> -->
+  <!-- <formulario-email></formulario-email> -->

@@ -1,0 +1,231 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="organigrama">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="ibox">
+          <div class="ibox-title">
+
+            <div class="title">
+              EQUIPOS COMERCIALES
+            </div>
+
+          </div>
+          <div class="ibox-content mt-45">
+            <div class="related-news related">
+              <div id="organigrama" name="organigrama" class="organigrama" *ngFor="let datos of lstEquiposComerciales">
+                <ul id="ul1" name="ul1">
+                  <li>
+                    <div class="row a">
+
+                      <div class="col-md-3">
+                        <div class="col-md-8">
+                          <img alt="" src="/assets/img/pers2.jpg" class="grtComercial">
+                        </div>
+                      </div>
+                      <div class="col-md-9" style=" margin-top: 12px;">
+                        <div class=" col-sm-12 lstOrganigrama" style="text-transform: uppercase;">{{datos.GerenteComercial}}</div>
+                      </div>
+                      <div class="col-sm-12  lstOrganigrama">{{datos.cargo}}</div>
+                    </div>
+                    <ul>
+                      <li>
+                        <ul>
+                          <li>
+                            <div class="row sub-g">
+                              <div class=" lst-Orga-Sub">
+                                <div class="col-md-3">
+                                  <div class="col-md-8">
+                                    <img alt="" src="/assets/img/pers2.jpg" class="grtComercial">
+                                  </div>
+                                </div>
+                                <div class="col-md-9" style=" margin-top: 12px;">
+                                  <div class=" col-sm-12 lstOrganigrama" style="text-transform: uppercase;">{{datos.GerenteComercial}}</div>
+                                </div>
+                                <div class="col-sm-12 mt-cargo">{{datos.cargo}}</div>
+                                <div class="col-sm-12 mt-dist">{{datos.distrito}} {{datos.norte}}</div>
+                              </div>
+                            </div>
+
+
+  
+
+
+                            <ul>
+                               
+
+                              <div class="row lst-Orga-Oficial">
+                                <div class="col-md-3">
+                                  <div class="col-md-8">
+                                    <img alt="" src="/assets/img/pers2.jpg" class="grtComercial">
+                                  </div>
+                                </div>
+                                <div class="col-md-9" style=" margin-top: 12px;">
+                                  <div class=" col-sm-12 lstOrganigrama" style="text-transform: uppercase;">{{datos.GerenteComercial}}</div>
+                                </div>
+                                <div class="col-sm-12  lstOrganigrama">{{datos.cargo}}</div>
+                              </div>
+
+                            </ul>
+                            <ul>
+                              <div class="row lst-Orga-Oficial">
+                                <div class="col-md-3">
+                                  <div class="col-md-8">
+                                    <img alt="" src="/assets/img/pers2.jpg" class="grtComercial">
+                                  </div>
+                                </div>
+                                <div class="col-md-9" style=" margin-top: 12px;">
+                                  <div class=" col-sm-12 lstOrganigrama" style="text-transform: uppercase;">{{datos.GerenteComercial}}</div>
+                                </div>
+                                <div class="col-sm-12  lstOrganigrama">{{datos.cargo}}</div>
+                              </div>
+
+                            </ul>
+                            <ul>
+                              <div class="row lst-Orga-Oficial">
+                                <div class="col-md-3">
+                                  <div class="col-md-8">
+                                    <img alt="" src="/assets/img/pers2.jpg" class="grtComercial">
+                                  </div>
+                                </div>
+                                <div class="col-md-9" style=" margin-top: 12px;">
+                                  <div class=" col-sm-12 lstOrganigrama" style="text-transform: uppercase;">{{datos.GerenteComercial}}</div>
+                                </div>
+                                <div class="col-sm-12  lstOrganigrama">{{datos.cargo}}</div>
+                              </div>
+
+                            </ul>
+                          </li>
+                          <li>
+                            <div class="row sub-g">
+                              <div class=" lst-Orga-Sub">
+                                <div class="col-md-3">
+                                  <div class="col-md-8">
+                                    <img alt="" src="/assets/img/pers2.jpg" class="grtComercial">
+                                  </div>
+                                </div>
+                                <div class="col-md-9" style=" margin-top: 12px;">
+                                  <div class=" col-sm-12 lstOrganigrama" style="text-transform: uppercase;">{{datos.GerenteComercial}}</div>
+                                </div>
+                                <div class="col-sm-12 mt-cargo">{{datos.cargo}}</div>
+                                <div class="col-sm-12 mt-dist">{{datos.distrito}} {{datos.norte}}</div>
+                              </div>
+
+
+                            </div>
+                            <ul>
+                              <div class="row lst-Orga-Oficial">
+                                <div class="col-md-3">
+                                  <div class="col-md-8">
+                                    <img alt="" src="/assets/img/pers2.jpg" class="grtComercial">
+                                  </div>
+                                </div>
+                                <div class="col-md-9" style=" margin-top: 12px;">
+                                  <div class=" col-sm-12 lstOrganigrama" style="text-transform: uppercase;">{{datos.GerenteComercial}}</div>
+                                </div>
+                                <div class="col-sm-12  lstOrganigrama">{{datos.cargo}}</div>
+                              </div>
+                            </ul>
+                            <ul>
+                              <div class="row lst-Orga-Oficial">
+                                <div class="col-md-3">
+                                  <div class="col-md-8">
+                                    <img alt="" src="/assets/img/pers2.jpg" class="grtComercial">
+                                  </div>
+                                </div>
+                                <div class="col-md-9" style=" margin-top: 12px;">
+                                  <div class=" col-sm-12 lstOrganigrama" style="text-transform: uppercase;">{{datos.GerenteComercial}}</div>
+                                </div>
+                                <div class="col-sm-12  lstOrganigrama">{{datos.cargo}}</div>
+                              </div>
+                            </ul>
+                            <ul>
+                              <div class="row lst-Orga-Oficial">
+                                <div class="col-md-3">
+                                  <div class="col-md-8">
+                                    <img alt="" src="/assets/img/pers2.jpg" class="grtComercial">
+                                  </div>
+                                </div>
+                                <div class="col-md-9" style=" margin-top: 12px;">
+                                  <div class=" col-sm-12 lstOrganigrama" style="text-transform: uppercase;">{{datos.GerenteComercial}}</div>
+                                </div>
+                                <div class="col-sm-12  lstOrganigrama">{{datos.cargo}}</div>
+                              </div>
+                            </ul>
+                          </li>
+                          <li>
+
+                            <!-- cargo -->
+                            <div class="row sub-g">
+                              <div class=" lst-Orga-Sub">
+                                <div class="col-md-3">
+                                  <div class="col-md-8">
+                                    <img alt="" src="/assets/img/pers2.jpg" class="grtComercial">
+                                  </div>
+                                </div>
+                                <div class="col-md-9" style=" margin-top: 12px;">
+                                  <div class=" col-sm-12 lstOrganigrama" style="text-transform: uppercase;">{{datos.GerenteComercial}}</div>
+                                </div>
+                                <div class="col-sm-12 mt-cargo">{{datos.cargo}}</div>
+                                <div class="col-sm-12 mt-dist">{{datos.distrito}} {{datos.norte}}</div>
+                              </div>
+
+
+                            </div>
+
+                            <!--  / cargo -->
+                            <ul>
+                              <div class="row lst-Orga-Oficial">
+                                <div class="col-md-3">
+                                  <div class="col-md-8">
+                                    <img alt="" src="/assets/img/pers2.jpg" class="grtComercial">
+                                  </div>
+                                </div>
+                                <div class="col-md-9" style=" margin-top: 12px;">
+                                  <div class=" col-sm-12 lstOrganigrama" style="text-transform: uppercase;">{{datos.GerenteComercial}}</div>
+                                </div>
+                                <div class="col-sm-12  lstOrganigrama">{{datos.cargo}}</div>
+                              </div>
+                            </ul>
+                            <ul>
+                              <div class="row lst-Orga-Oficial">
+                                <div class="col-md-3">
+                                  <div class="col-md-8">
+                                    <img alt="" src="/assets/img/pers2.jpg" class="grtComercial">
+                                  </div>
+                                </div>
+                                <div class="col-md-9" style=" margin-top: 12px;">
+                                  <div class=" col-sm-12 lstOrganigrama" style="text-transform: uppercase;">{{datos.GerenteComercial}}</div>
+                                </div>
+                                <div class="col-sm-12  lstOrganigrama">{{datos.cargo}}</div>
+                              </div>
+                            </ul>
+                            <ul>
+                              <div class="row lst-Orga-Oficial">
+                                <div class="col-md-3">
+                                  <div class="col-md-8">
+                                    <img alt="" src="/assets/img/pers2.jpg" class="grtComercial">
+                                  </div>
+                                </div>
+                                <div class="col-md-9" style=" margin-top: 12px;">
+                                  <div class=" col-sm-12 lstOrganigrama" style="text-transform: uppercase;">{{datos.GerenteComercial}}</div>
+                                </div>
+                                <div class="col-sm-12  lstOrganigrama">{{datos.cargo}}</div>
+                              </div>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

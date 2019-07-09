@@ -1,0 +1,100 @@
+<cabecera-basico [links]="links"></cabecera-basico>
+<div id="dashboard">
+    <div class="row">
+        <div class="col-sm-11">
+            <div class="wrapper wrapper-content animated fadeInUp">
+                <div class="ibox">
+                    <div class="ibox-content" style="width: 140%;">
+                        <div class="row mt-4">
+                            <!-- <div class="col-md-2 p-1 bd-highlight d-inline-block ml-4 titel-label"> COLOCACIONES DEL
+                                        MES</div> -->
+                            <h6 id="exampleModalLabel" class="font-weight-bold ml-4"> COLOCACIONES DEL
+                                MES</h6>
+                            <div class="col-md-6">
+                                <div class="col-md-4 d-inline-block pr-0 pl-5"> <select select2 [theme]="selectEstados"
+                                        (onSelect)="seleccionarProvincia($event)" class="select2">
+                                        <option>Mes</option>
+                                        <option *ngFor="let data of mes" [value]="data.id">{{data.text}}</option>
+                                    </select>
+                                </div>
+                                <div class=" col-md-4 d-inline-block pr-1 pl-4">
+                                    <select select2 [theme]="selectEstados" (onSelect)="seleccionarProvincia($event)"
+                                        class="select2">
+                                        <option>Semana</option>
+                                        <option *ngFor="let data of semana" [value]="data.id">{{data.text}}</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 d-inline-block">
+                                    <select select2 [theme]="selectEstados" (onSelect)="seleccionarProvincia($event)"
+                                        class="select2">
+                                        <option>Día</option>
+                                        <option *ngFor="let data of dia" [value]="data.id">{{data.text}}</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-8 col-sm-8 col-sm-offset-8 col-md-8 col-lg-8 grafico-uno mt-2">
+
+                                <grafico-uno></grafico-uno>
+
+                                <div class="row mt-4">
+
+
+                                    <div class="col-xs-6 col-sm-6 col-sm-offset-6 col-md-6 col-lg-6">
+                                        <label class="pl-5 pb-3 ml-5  text-center">Embudo de Ventas</label>
+                                        <grafico-dos></grafico-dos>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-sm-offset-6 col-md-6 col-lg-6">
+                                        <label class="pl-5 pb-3 ml-5 text-center">Embudo de Operaciones</label>
+                                        <grafico-tres></grafico-tres>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <div class="col-xs-4 col-sm-4 col-sm-offset-4 col-md-4 col-lg-4 mt-5">
+                                <div class="ibox-content">
+                                    <h6 id="exampleModalLabel" class="font-weight-bold ">Colocaciones por
+                                        ejecutivos</h6>
+                                    <!-- <div class="mt-2 titel-table"> Colocaciones por ejecutivos</div> -->
+                                    <div class=" tableScroll" infiniteScroll (scrolled)="listarClientes(true)">
+                                    <table class="table table-striped  table-hover " id="tableCliente">
+                                        <thead>
+                                            <tr>
+
+                                                <th>Item</th>
+                                                <th>Open</th>
+                                                <th>Op. Cerradas </th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of lstColocacionesEjecutivos" (click)="select(item)">
+
+                                                <td>{{item.item}}</td>
+                                                <td>{{item.nombre}}</td>
+                                                <td>{{item.opCerradas}}</td>
+
+                                            </tr>
+
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,176 @@
+<div class="padding20 padding-left20 padding-right20 ">
+    <h5 class="margin-bottom40 font-weight-bold">AGREGAR BIEN</h5>
+    <div class="padding-left20">
+        <form novalidate [formGroup]="formNuevoBien">
+            <div class="contenido_datos_generales" [hidden]="!(seccion == 'datos_generales')">
+                <p class="text-navy margin-bottom30 title text-left text-primary ">DATOS GENERALES</p>
+                <div class="ibox-text  margin-top20">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label>Nivel</label>
+                            <select select2 [theme]="'FondoRosado'" (onSelect)="seleccionarNivel($event)">
+                                <option value=""></option>
+                                <option *ngFor="let data of niveles" [value]="data.id">{{data.descripcion}}</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Subnivel</label>
+                            <select select2 [theme]="'FondoRosado'" (onSelect)="seleccionarSubNivel($event)">
+                                <option value=""></option>
+                                <option *ngFor="let data of subNiveles" [value]="data.id">{{data.descripcion}}</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Tipo</label>
+                            <select select2 [theme]="'FondoRosado'" (onSelect)="seleccionarTipo($event)">
+                                <option value=""></option>
+                                <option *ngFor="let data of tipos" [value]="data.id">{{data.descripcion}}</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4 mt-3">
+                            <label>Clase</label>
+                            <select select2 [theme]="'FondoRosado'">
+                                <option value=""></option>
+                                <option *ngFor="let data of clases" [value]="data.id">{{data.value}}</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4 mt-3" [hidden]="!mostarMarcaModelo()">
+                            <label>Marca</label>
+                            <select-defaul-async (searchText)="listarBienMarcas($event)" [loading]="loadingMarca"
+                                [data]="marcas" (scrolling)="listarBienMarcas($event,true)"></select-defaul-async>
+                        </div>
+                        <div class="col-sm-4 mt-3" [hidden]="!mostarMarcaModelo()">
+                            <label>Modelo</label>
+                            <input class=" btn-rounded  _input pinky ">
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+
+
+                        <div class="col-sm-4 mt-3">
+                            <label>Año</label>
+                            <select select2 [theme]="'FondoRosado'" [data]="yyyy"></select>
+                        </div>
+                        <div class="col-sm-4 mt-3">
+                            <label>Cantidad</label>
+                            <input class=" btn-rounded  _input pinky" formControlName="cantidad">
+                        </div>
+                        <div class="col-sm-4 mt-3">
+                            <label>Valor Bruto</label>
+                            <input class=" btn-rounded  _input pinky ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contenido_datos_uso" [hidden]="!(seccion == 'datos_uso')">
+                <div class="ibox-text  margin-top20">
+                    <p class="text-navy margin-bottom30 title text-left text-primary">DATOS DE USO</p>
+                    <div class="ibox-text margin-top20">
+                        <div class="row">
+                            <div class="col-sm-4 mb-4">
+                                <label>Uso</label>
+                                <select select2 [theme]="'FondoRosado'" [data]="uso"></select>
+                            </div>
+                            <div class="col-sm-4 mb-4">
+                                <label>Sector Destino</label>
+                                <select select2 theme="FondoRosado" class="" required>
+                                    <option *ngFor="let  sector of sector" [value]="sector.id">{{sector.text}}</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4 mb-4">
+                                <label>Lugar de Operación</label>
+                                <select select2 theme="FondoRosado" class="" required>
+                                    <option *ngFor="let  lugar of lugar" [value]="lugar.id">{{lugar.text}}</option>
+                                </select>
+
+                            </div>
+                            <div class="col-sm-4 ">
+                                <label>Nivel de Riesgo </label>
+                                <div class="btn-group btn-group-custom pink">
+                                    <button id="estadoNuevo" (click)="nivelRiesgo = true" type="button" class="btn"
+                                        [ngClass]="{'active':nivelRiesgo}">Alto riesgo</button>
+                                    <button id="estadoUsado" (click)="nivelRiesgo = false" type="button" class="btn "
+                                        [ngClass]="{'active':!nivelRiesgo}">Bajo Riesgo</button>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Condición</label>
+                                <div class="btn-group btn-group-custom pink">
+                                    <button id="estadoNuevo" (click)="condicionNuevo = true" type="button" class="btn"
+                                        [ngClass]="{'active':condicionNuevo}">Nuevo</button>
+                                    <button id="estadoUsado" (click)="condicionNuevo = false" type="button" class="btn "
+                                        [ngClass]="{'active':!condicionNuevo}">Usado</button>
+                                </div>
+                            </div>
+                            <div [hidden]="condicionNuevo" class="col-sm-4">
+                                <label>Monto de Tasación</label>
+                                <input class=" btn-rounded  _input pinky" required>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12 mt-4">
+                                <p class="text-left text-primary">RELACIONADO</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Proveedor</label>
+                                <select select2 theme="FondoRosado" class="" required>
+                                    <option *ngFor="let  proveedor of proveedor" [value]="proveedor.id">{{proveedor.text}}</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Sucursal</label>
+                                <select select2 theme="FondoRosado" class="" required>
+                                    <option *ngFor="let  surcursar of surcursar" [value]="surcursar.id">{{surcursar.text}}</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-12 mt-4">
+                                <p class="text-left text-primary">INCLUYE</p>
+                            </div>
+                            <div class="col-sm-4 ">
+                                <label>Seguro</label>
+                                <div class="btn-group btn-group-custom pink" role="group" aria-label="Basic example border ">
+                                    <button id="seguro1" (click)="seguroIncluido = true" type="button" class="btn"
+                                        [ngClass]="{'active':seguroIncluido}">Incluido
+                                    </button>
+                                    <button id="seguro2" (click)="seguroIncluido = false" type="button" class="btn"
+                                        [ngClass]="{'active':!seguroIncluido}">
+                                        No
+                                        Incluido</button>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-4">
+                                <label>GPS</label>
+                                <div class="btn-group btn-group-custom pink" role="group" aria-label="Basic example border ">
+                                    <button id="gps1" (click)="gpsIncluido = true" type="button" class="btn" [ngClass]="{'active':gpsIncluido}">Incluido</button>
+                                    <button id="gps2" (click)="gpsIncluido = false" type="button" class="btn" [ngClass]="{'active':!gpsIncluido}">
+                                        No Incluido</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actions text-right mt-5">
+                <button (click)="cancelar()" class="btn btn-outline-primary mr-3">
+                    Cancelar
+                </button>
+                <button *ngIf="seccion == 'datos_uso'" (click)="atras()" class="btn btn-secondary mr-3">
+                    <span class="mdi mdi-chevron-left"></span>
+                    Atrás
+                </button>
+                <button *ngIf="seccion == 'datos_generales'" (click)="siguiente()" class="btn btn-primary">
+                    Siguiente
+                    <span class="mdi mdi-chevron-right"></span>
+                </button>
+                <button *ngIf="seccion == 'datos_uso'" (click)="guardar()" class="btn btn-primary">
+                    Guardar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,121 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="formulario-proveedores">
+
+  <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+          <div class="ibox-contents">
+            <div class="padding20 padding-left20 padding-right20 ">
+              <!-- <h5 class="margin-bottom40 ">NUEVO PROVEEDOR</h5> -->
+              <h5 id="exampleModalLabel">{{titulo}}</h5>
+
+              <div class="padding-left20">
+                <div class="ibox-text margin-top20">
+                  <form [formGroup]="formformularioProveedor">
+                    <div class="form-group">
+                      <div class="row ">
+                        <div class="col-sm-4">
+                          <div class="col-sm-12">
+                            <label>RUC</label>
+                            <input autocomplete="off" (input)="comercialNombre(nombreComercial)" class=" btn-rounded  _input pinky margin-bottom30 "
+                              formControlName="ruc" [maxlength]="11" required>
+                          </div>
+                          <div class="col-sm-12">
+                            <label>Tipo de Proveedor</label>
+                            <input autocomplete="off" class=" btn-rounded  _input pinky margin-bottom30 "
+                              formControlName="tipoPro" value="Dealer " placeholder="Dealer" readonly>
+
+                          </div>
+                          <div class="col-sm-12">
+                            <label>Teléfono fijo</label>
+                            <input autocomplete="off" [EnteroPositivo] (valueEntero)="validarTelefono($event)" class=" btn-rounded  _input pinky margin-bottom30 "
+                              formControlName="telefono">
+
+                          </div>
+
+                          <div class="col-sm-12">
+                            <label>Banco</label>
+                            <input autocomplete="off" class=" btn-rounded  _input pinky "
+                              formControlName="banco" required>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="col-sm-12 mb-4">
+                            <label>Nombre Comercial </label>
+                            <input (valueEntero)="comercialNombre(nombreComercial)" (input)="comercialNombre(nombreComercial)"
+                              [(ngModel)]="nombreComercial" autocomplete="off" class=" btn-rounded  _input pinky  "
+                              formControlName="nom_comercial" required>
+                              <div  class="text-danger mdi mdi-alert-circle" style="margin-bottom: -13px" *ngIf="alertCircle"> </div>
+                          </div>
+
+                          <div class="col-sm-12">
+                            <label>Provincia</label>
+                            <select select2 theme="FondoRosado" (onSelect)="capturarProvincia($event)" class="margintopselect"
+                              formControlName="idprovincia" required>
+                              <option></option>
+                              <option *ngFor="let  item of provincias" [value]="item.id">{{item.text}}</option>
+                            </select>
+                          </div>
+
+                          <div class="col-sm-12 pt-1 mt-4">
+                            <label>Distrito</label>
+                            <select select2 theme="FondoRosado" (onSelect)="capturaRDistrito($event)" class="margintopselect"
+                              formControlName="iddistrito" required>
+                              <option *ngFor="let  distrito of distrito" [value]="distrito.id">{{distrito.text}}</option>
+                            </select>
+                          </div>
+
+                          <div class="col-sm-12" style="margin-top: 30px;">
+                            <label>Cuenta</label>
+                            <input autocomplete="off" class=" btn-rounded  _input pinky margin-bottom30 "
+                              (ngModelChange)="obetenerCuenta()" formControlName="cuenta" required>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="col-sm-12">
+                            <label>Razón Social</label>
+                            <input autocomplete="off" class=" btn-rounded  _input pinky margin-bottom30 "
+                              formControlName="razon_social" required>
+                          </div>
+                          <div class="col-sm-12">
+                            <label>Dirección</label>
+                            <input autocomplete="off" class=" btn-rounded  _input pinky margin-bottom30 "
+                              formControlName="direcccion">
+                          </div>
+
+                          <div class="col-sm-12">
+                            <label>Tipo de bien</label>
+                            <select select2 theme="FondoRosado" (onSelect)="capturarBien($event)" class="margintopselect"
+                              formControlName="idtipo" required>
+                              <option *ngFor="let  producto of idtipo" [value]="producto.id">{{producto.text}}</option>
+                            </select>
+                          </div>
+
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </form>
+                  <div class="actions text-right topbuttons">
+                    <button class="btn-rounded button7 button long gray prev  backAtras" (click)="cancelarprovedor()">Cancelar</button>
+
+                    <button id="btnnext" type="button" class="btn btn-primary" (click)="guardar()" [disabled]="!formformularioProveedor.valid">
+                      Guardar
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

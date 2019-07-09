@@ -1,0 +1,253 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="proyeccion-cierre" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="ibox">
+          <div class="ibox-title" style="box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);">
+
+            <div class="row">
+              <div class="col-md-12 ml-5">
+                <!-- <div class="ibox-tools"> -->
+                <div class="banel-titel  ml-5">
+                  <label class="bannel-titel2  ml-5">Resumen Actual: </label>
+                  <label class="bannel-titel2  ml-5">Hoy: {{listaBannel.fecha}} </label>
+                  <label class="bannel-titel2">Estimado Asegurable:
+                    {{listaBannel.estimadoAsegurable}}
+                  </label>
+                  <label class="bannel-titel2">N° Operación: {{listaBannel.Operacion}} </label>
+                </div>
+
+
+                <!-- </div> -->
+
+              </div>
+              <div class="col-md-12  mt-2">
+                <div class="row">
+                  <div class="col-md-3">
+
+                    <div id="fechaEmision">
+                      <input id="datepicker" [(ngModel)]="fechaEmicion" type="text" class="datepicker-here icon-calendario btn-rounded  _input pinky margin-bottom30 "
+                        data-language='es' data-min-view="months" data-view="months" data-date-format="MM yyyy"
+                        autocomplete="off" required />
+                    </div>
+                  </div>
+                  <div class="col-md-2 ml-auto">
+                    <select select2 theme="FondoRosado" (onSelect)="selectedContactos($event)">
+                      <option *ngFor="let  item of percentage" [value]="item.id">{{item.text}}</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                    <select select2 theme="FondoRosado" (onSelect)="selectedContactos($event)">
+
+                      <option *ngFor="let  item of percentage" [value]="item.id">{{item.text}}</option>
+                    </select>
+                  </div>
+                </div>
+
+
+
+              </div>
+              <div class="col-md-12 mt-40">
+
+                <table class="table table-striped  table-hover  tab-header" id="tableCliente">
+                  <thead>
+                    <tr>
+                      <th style="width:8%;"></th>
+                      <th style="width:8%;"><label class="titel-th">N° Op</label></th>
+                      <th style="width:10%;">Cerradas</th>
+                      <th style="width:8%;"><label class="titel-th">N° Op</label></th>
+                      <th style="width:10%;">En Cierre </th>
+                      <th style="width:8%;"><label class="titel-th">N° Op</label></th>
+                      <th class="font-f" style="width:12%;">Por Aprovar</th>
+                      <th style="width:8%;"><label class="titel-th">N° Op</label></th>
+                      <th class="font-f" style="width:12%;"> En Evaluación </th>
+                      <th style="width:8%;" *ngIf="proyeccion"><label class="titel-th">N°
+                          Op</label></th>
+                      <th class="font-f" style="width:12%;" *ngIf="proyeccion"> Proyeccion Cierre </th>
+
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+          <div class="ibox-content">
+            <div class="related-news relatedNews">
+              <div class="table-responsive pt-5 topContent">
+                <div class="row">
+                  <div class="col-md-12 scrrol">
+                    <table class="table table-striped  table-hover " id="tableCliente">
+                      <tbody>
+                        <tr style="    background: #fff7f7;" *ngFor="let item of Expediente" (click)="select(item)"
+                          [ngClass]="{'highlighted':item.id==selectItem.id}">
+
+                          <td style="width:10%;">{{item.total}}</td>
+                          <td style="width:10%;">{{item.nOp1}}</td>
+                          <td style="width:10%;">{{item.cerradas}}</td>
+                          <td style="width:10%;">{{item.nOp2}}</td>
+                          <td style="width:8%;">{{item.nOp3}}</td>
+                          <td style="width:12%;">{{item.porAprovar}}</td>
+                          <td style="width:8%;">{{item.nOp4}}</td>
+                          <td style="width:12%;">{{item.enEvaluacion}}</td>
+                          <td style="width:8%;" *ngIf="proyeccion">{{item.nOp5}}</td>
+                          <td style="width:12%;" *ngIf="proyeccion">{{item.proyeccionCierre}}</td>
+
+
+
+
+                        </tr>
+                      </tbody>
+
+                    </table>
+                    <div>
+                      <label class="sucursal-titel"> Sucursales</label>
+
+                      <div id="accordion">
+                        <div class="card">
+                          <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                <table class="table table-striped  table-hover " id="tableCliente">
+                                  <thead *ngFor="let item of lstSucursalesHeaderOne">
+                                    <tr>
+                                      <th style="width:2%;"><span class="mdi mdi-chevron-down"></span></th>
+                                      <th style="width:12%;">{{item.sucursales}}</th>
+                                      <th style="width:5%;">{{item.nOp1}} </th>
+                                      <th style="width:12%;"> {{item.cerradas}}</th>
+                                      <th style="width:5%;">{{item.nOp2}} </th>
+                                      <th style="width:12%;">{{item.enCierre}}</th>
+                                      <th style="width:5%;">{{item.nOp3}}</th>
+                                      <th style="width:12%;"> {{item.porAprovar}}</th>
+                                      <th style="width:5%;">{{item.nOp4}} </th>
+                                      <th style="width:12%;">
+                                        {{item.enEvaluacion}}</th>
+                                      <th style="width:5%;" *ngIf="proyeccion">{{item.nOp5}}
+                                      </th>
+                                      <th style="width:12%;" *ngIf="proyeccion">
+                                        {{item.proyeccionCierre}}</th>
+
+                                    </tr>
+                                  </thead>
+                                </table>
+                              </button>
+                            </h5>
+                          </div>
+
+                          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                              <table class="table table-striped  table-hover">
+                                <tbody>
+                                  <tr *ngFor="let item of lstSucursalesOne" (click)="select(item)" [ngClass]="{'highlighted':item.id==selectItem.id}">
+
+                                    <td style="width:2%;"></td>
+                                    <td style="width:12%;">{{item.lima}}</td>
+                                    <td style="width:5%;">{{item.nOp1}}</td>
+                                    <td style="width:12%;">{{item.cerradas}}</td>
+                                    <td style="width:5%;">{{item.nOp2}}</td>
+                                    <td style="width:12%;">{{item.enCierre}}</td>
+                                    <td style="width:5%;">{{item.nOp3}}</td>
+                                    <td style="width:12%;">{{item.porAprovar}}</td>
+                                    <td style="width:5%;">{{item.nOp4}}</td>
+                                    <td style="width:10%;">{{item.enEvaluacion}}</td>
+                                    <td style="width:5%;" *ngIf="proyeccion">{{item.nOp5}}</td>
+                                    <td style="width:10%;" *ngIf="proyeccion">{{item.proyeccionCierre}}</td>
+
+
+
+                                  </tr>
+
+                                </tbody>
+
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card card2">
+                          <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link" data-toggle="collapse" data-target="#collapse2"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                <table class="table table-striped  table-hover " id="tableCliente">
+                                  <thead *ngFor="let item of lstSucursalesHeader">
+                                    <tr>
+                                      <th style="width:5%;"><span class="mdi mdi-chevron-down"></span></th>
+                                      <th style="width:12%;">{{item.sucursales}}</th>
+                                      <th style="width:5%;">{{item.nOp1}} </th>
+                                      <th style="width:12%;"> {{item.cerradas}}</th>
+                                      <th style="width:5%;">{{item.nOp2}} </th>
+                                      <th style="width:12%;">{{item.enCierre}}</th>
+                                      <th style="width:5%;">{{item.nOp3}}</th>
+                                      <th style="width:12%;"> {{item.porAprovar}}</th>
+                                      <th style="width:5%;">{{item.nOp4}} </th>
+                                      <th style="width:12%;">
+                                        {{item.enEvaluacion}}</th>
+                                      <th style="width:5%;" *ngIf="proyeccion">{{item.nOp5}}
+                                      </th>
+                                      <th style="width:12%;" *ngIf="proyeccion">
+                                        {{item.proyeccionCierre}}</th>
+
+                                    </tr>
+                                  </thead>
+                                </table>
+                              </button>
+                            </h5>
+                          </div>
+
+                          <div id="collapse2" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                              <table class="table table-striped  table-hover">
+                                <tbody>
+                                  <tr style=" background: #fff7f7;" *ngFor="let item of lstSucursalesTwo" (click)="select(item)"
+                                    [ngClass]="{'highlighted':item.id==selectItem.id}">
+
+
+                                    <td style="width:4%;"></td>
+                                    <td style="width:12%;">{{item.lima}}</td>
+                                    <td style="width:5%;">{{item.nOp1}}</td>
+                                    <td style="width:12%;">{{item.cerradas}}</td>
+                                    <td style="width:5%;">{{item.nOp2}}</td>
+                                    <td style="width:12%;">{{item.enCierre}}</td>
+                                    <td style="width:5%;">{{item.nOp3}}</td>
+                                    <td style="width:12%;">{{item.porAprovar}}</td>
+                                    <td style="width:5%;">{{item.nOp4}}</td>
+                                    <td style="width:12%;">{{item.enEvaluacion}}</td>
+                                    <td style="width:5%;" *ngIf="proyeccion">{{item.nOp5}}</td>
+                                    <td style="width:12%;" *ngIf="proyeccion">{{item.proyeccionCierre}}</td>
+
+                                  </tr>
+
+                                </tbody>
+
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-md-4 table2" *ngIf="proyeccion">
+
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,19 @@
+<div class="multi-select">
+    <i class="mdi mdi-magnify icon-left" [ngClass]="{'buscar':search}"></i>
+    <input  [hidden]="showOption" #inputSelectInput  [(ngModel)]="value" class="input-select" type="text" readonly >
+    <input [hidden]="!showOption" #inputSelect [(ngModel)]="value" class="input-select" type="text" [readonly]="!search" [placeholder]="placeholder">
+    <i class="mdi mdi-play icon-right" (click)="closeSelect()"></i>
+    <div class="list-option">
+        <div *ngFor="let row of dataFinal" class="option-content">
+            <label class="container">{{row.text}}
+                <input type="checkbox" [(ngModel)]="row.selected" (ngModelChange)="selectOption($event,row)">
+                <div class="checkmark"></div>
+            </label>
+        </div>
+        <div *ngIf="dataFinal.length == 0" class="option-content">
+            <label class="container">Sin resultados
+
+            </label>
+        </div>
+    </div>
+</div>

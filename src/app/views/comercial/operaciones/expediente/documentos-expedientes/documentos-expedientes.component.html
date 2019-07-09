@@ -1,0 +1,96 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="documentos-expedientes" class="container-fluid">
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="ibox">
+
+          <div class="ibox-title">
+
+            <label class="label-titel-exp"> Expediente {{numExpediente}}</label>
+
+
+            <div class="ibox-tools">
+
+                <!-- <div  (click)="PdfDocumentosExpediente($event)"  class="circulobotonsdelete" style="margin-right: 5px;  display: inline-block;" id="comboIcons"
+                [ngClass]="{'btn-activo':selectItem.id}">
+                <button class="mdi mdi-file-document tooltip iconsborder " disabled="disabled"
+                  [disabled]="!selectItem.id"><span class="tooltiptext">
+                    Pdf</span></button>
+              </div> -->
+
+              <button  (click)="PdfDocumentosExpediente($event)"  [disabled]="!selectItem.id"  id="comboIcons"   [ngClass]="{'btn-activo':selectItem.id}" type="button" class="btn btn-circle btn-primary mr-1 mdi mdi-file-document  tooltip" [disabled]="!selectItem.id" data-toggle="tooltip"
+              data-placement="bottom" >
+              <span class="tooltiptext">Pdf</span>
+            </button>
+
+               <div style="display: contents;">
+                <button type="button" class="checklist" (click)="checklist(item)">
+                  checklist</button>
+              </div>
+
+
+            </div>
+          
+            <div class="documentos-label">Documentos</div>
+
+
+          </div>
+
+          <div class="ibox-content">
+            <div class="related-news" style=" margin-top: -22px;">
+              <div class="table-responsive">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <table class="table table-striped  table-hover  tableCliente" id="tableCliente">
+                      <thead>
+                        <tr>
+
+                          <th style="width:50%;">Nombre</th>
+                          <th style="width:15%;">Ultimo Act.</th>
+                          <th style="width:25%;">actualizado Por </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let item of lstDocumentos" (click)="select(item)" [ngClass]="{'highlighted':item.id==selectItem.id}">
+
+                          <td style="width:50%;"><span class="mdi mdi-folder"></span>{{item.id}}. {{item.nombre}}</td>
+                          <td style="width:15%;">{{item.ultimaAct}}</td>
+                          <td style="width:25%;">{{item.actualizadoPor}}</td>
+                        </tr>
+
+                      </tbody>
+
+                    </table>
+                  </div>
+                  <div class="card col-sm-4  box-shadow" *ngFor="let item of lstSelectDoc">
+                      <div class=" card tr-label"><span class="mdi mdi-folder"></span>{{item.id}}.
+                        {{item.nombre}}
+                      <th class="label-nomb-header">Historial</th></div>
+                      <div id="timeline" >
+                          <ul class="progress-tracker progress-tracker--text progress-tracker--vertical progress-tracker--spaced">
+                            <li class="progress-step is-complete " *ngFor="let item of lstDocumentosDetallados">
+                              <span class="progress-marker"></span>
+                              <span class="progress-text ">
+                                <p class="text-navy progress-content space">
+                                  <label class="tr-label-tableTwo">Fecha de actualización</label>
+                                  <label class="d-block">{{item.ultimaAct}}</label>
+                                  <label class="d-block"> Modificado Por:</label>
+                                  <label class="d-block">{{item.actualizadoPor}}</label>
+                                </p>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

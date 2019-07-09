@@ -1,0 +1,162 @@
+#cotizador-hgghghspdf{
+
+ 
+  .circulo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #63cc55;
+    box-shadow: 1px 2px 65px #39b628;
+    margin-left: 105px;
+    margin-top: 12px;
+ }
+   .circulo2 {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: #279c19;
+        position: absolute;
+        bottom: 27px;
+        margin-left: 10px;
+   }
+   .circulo3 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff7f7;
+    position: absolute;
+    bottom: 10px;
+    margin-left: 10px;
+}
+.check{
+    color: #40cc2e;
+    font-size: 52px; 
+    position: absolute;
+     bottom: -25px; 
+     margin-left: 7px;
+     transform: rotate(15deg);
+}
+//content: "✔"
+      // #2aa81b
+       .modal-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 1rem;
+        border-bottom: 1px solid #e9ecef;
+        border-top-left-radius: 0.3rem;
+        border-top-right-radius: 0.3rem;
+        background-color: #fff7f7;
+    }
+    .margin{
+        margin-top: 25px
+    }
+    ._input {
+        padding: 5px 5px 0px 17px;
+        text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+        -webkit-transition: all 0.7s ease 0s;
+        border: 1px solid #fdccc9;
+        width: 68%;
+    }
+
+    .marginInput::after{
+        content: "x";
+        position: absolute;
+        top: 3px;
+        right: 24px !important;
+        font-size: 14px;
+        color: #040404;
+        cursor: pointer
+    }
+
+    .classheader {
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 0;
+        background-color: rgba(0, 0, 0, 0.03);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        background: #fff7f7;
+    }
+
+.buton{
+    margin-right: 8px; 
+    margin-top: -12px;
+}
+
+ .buttonVolver{ 
+   padding: 0.32rem 2.5rem;
+   color: #ffffff;
+   font-weight: lighter;
+    border-radius: 50px;
+    font-size: 12px;
+    background-color: #40cc2e;
+     border-color: #c2eebd;
+   }
+
+   .Cancelarbtn2{
+    padding: 0.32rem 2.5rem;
+    color: #ffffff;
+    font-weight: lighter;
+    border-radius: 50px;
+    font-size: 12px; 
+    background-color: #b9b9b9;
+    border-color: #b9b9b9;
+   }
+
+   .btn:focus, .btn.focus {
+    outline: 0;
+     box-shadow: 0 0 0 0.2rem #fff !important; 
+}
+
+
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    background: #fff7f7 !important;
+    border: 2px;
+}
+.circle{
+   bottom: auto;
+    margin-left: 20px;
+    /* width: 16px; */
+    /* height: 24px; */
+    border-radius: 50%;
+    background: #fff;
+    position: absolute; 
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 1.1 !important;
+}
+
+
+.modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem;
+    border-top: 1px solid #e9ecef;
+    border: 2px;
+}
+
+.pinkys{
+    background-color: #fff7f7 !important;
+    margin-top: 1px ;
+    margin-bottom: 1rem;
+    width: 201px;
+    height: 31px;
+    text-align: center;
+    border-radius: 17px;
+}
+}
+

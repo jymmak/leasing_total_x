@@ -1,0 +1,83 @@
+<div id="tab-financiamiento">
+    <form [formGroup]="tabfinanControl">
+        <div class="form-group">
+            <div class="row " style="margin: 25px; margin-top: 48px;">
+                <!-- <div style="margin-top: 20px;" style="padding-left: 80%;">
+                    <button id="garantias" class="button-panel-info " (click)="garantias()">Garantías</button>
+                </div> -->
+                <div class="col-md-12 text-left">
+                    <h5>CONDICIONES</h5>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Fecha de inicio</label>
+                    <input id="datepicker" class="icon-calendario btn-rounded  _input pinky " width="276"
+                        formControlName="fechaIni" autocomplete="off" [(ngModel)]="fechaIni">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>TEA (%)</label>
+                    <input class=" btn-rounded  _input pinky " [(ngModel)]="tea" width="276" formControlName="tea"
+                        required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Plazo</label>
+                    <select select2 theme="FondoRosado" (onSelect)="capturarplazo($event)" class="margintopselect"
+                        formControlName="plazo" required>
+                        <option *ngFor="let  plazo of plazo" [value]="plazo.id">{{plazo.text}}</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Inicial (%)</label>
+                    <select select2 theme="FondoRosado" (onSelect)="capturarInicial($event)" class="" formControlName="inicial"
+                        required>
+                        <option *ngFor="let  inicial of inicial" [value]="inicial.id">{{inicial.text}}</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Periodo de Gracia</label>
+                    <select select2 theme="FondoRosado" (onSelect)="capturarPeriodo($event)" class="" formControlName="periodo"
+                        required>
+                        <option *ngFor="let  periodo of periodo" [value]="periodo.id">{{periodo.text}}</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Opción de Compra</label>
+                    <input class=" btn-rounded  _input pinky">
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Tipo de Cuota</label>
+                            <div class="btn-group btn-group-custom pink" role="group" aria-label="Basic example border ">
+                                <button (click)="tipoCuota = true" type="button" class="btn" [ngClass]="{'active':tipoCuota}">Fija</button>
+                                <button (click)="tipoCuota = false" type="button" class="btn" [ngClass]="{'active':!tipoCuota}">Variable</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4" [hidden]="tipoCuota">
+                            <label>Cuota Variable</label>
+                            <input class=" btn-rounded  _input pinky  " [(ngModel)]="cuotaVariable" formControlName="cuota">
+                        </div>
+                        <div class="col-md-4" [hidden]="tipoCuota">
+                            <label>Meses para Cuota Variable</label>
+                            <div id="mesesCrearBien">
+                                <multi-select-component [search]="false" [value]="textMeses" placeholder="Meses para Cuota Variable"
+                                    [selected]="mesesSelecionados" [data]="myOptions" (selectChange)="selectChangeMeses($event)"></multi-select-component>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row"> -->
+                <div class="col-md-12 mt-4 text-right">
+                    <button type="button" (click)="atras()" class="btn btn-secondary mr-3">
+                        <span class="mdi mdi-chevron-left float-left"></span>
+                        Atrás
+                    </button>
+                    <button type="button" (click)="guardar()" class="btn btn-primary">
+                        Siguiente
+                        <span class="mdi mdi-chevron-right"></span>
+                    </button>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

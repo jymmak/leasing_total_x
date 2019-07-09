@@ -1,0 +1,29 @@
+#cabecera-de-pagina,#cabecera-agenda {
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.07);
+
+  .white-bg {
+    background-color: #ffffff;
+  }
+  .page-heading {
+    .breadcrumbb {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0.17rem 1rem;
+      margin-bottom: 0.5em;
+      list-style: none;
+      border-radius: 0.25rem;
+      font-size: 0.8em;
+      li {
+        color: #707070;
+        margin-top: 8px;
+
+        a {
+          color: #707070;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

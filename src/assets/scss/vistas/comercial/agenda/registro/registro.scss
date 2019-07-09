@@ -1,0 +1,168 @@
+#registro {
+    color: $color-secondary-1 !important;
+    .borde {
+        border-radius: 25px;
+    }
+    .ibox {
+        .ibox-title {
+            padding: 14px 60px 15px 15px;
+            min-height: 0 !important;
+        }
+        .ibox-content {
+            .table-striped tbody tr:nth-of-type(odd) {
+                // background-color: #ffffff;
+                background-color: rgba(255, 254, 254, 0);
+            }
+            .table th,
+            .table td {
+                color: #707070;
+                font-size: 12px;
+                border-top: 1px solid #fff7f7 !important;
+                text-align: left;
+            }
+        }
+    }
+    td {
+        cursor: pointer;
+    } // scroll de la tabla
+    tbody {
+        display: block;
+        overflow: auto;
+        margin-top: 5px;
+    }
+    thead,
+    tbody tr {
+        display: table;
+        table-layout: fixed;
+        text-align: center;
+    }
+    thead {
+        border: hidden;
+    }
+    ::-webkit-scrollbar {
+        width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px #ffffff;
+        border-radius: 7px;
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 7px;
+        -webkit-box-shadow: inset 0 0 66px #b9b9b9;
+    }
+    .modal-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 1rem;
+        border-bottom: hidden !important;
+        border-top-left-radius: 0.3rem;
+        border-top-right-radius: 0.3rem;
+    }
+    .xflotante {
+        margin-left: 11px;
+        margin-right: -65px;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%; // background: #fff;
+        position: absolute;
+        top: -18px;
+    }
+    .fileinput-button {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+    }
+    @media (min-width: 576px) {
+        .modal-dialog {
+            max-width: 700px;
+            margin: 1.75rem auto;
+        }
+    }
+    .mdi-close {
+        color: $red-primary;
+    }
+    ._input {
+        padding: 3px 5px 3px 17px;
+        text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+        -webkit-transition: all 0.7s ease 0s;
+        border: 1px solid #fdccc9;
+        width: 100%;
+        margin: 5px;
+    }
+    .close:not(:disabled):not(.disabled) {
+        cursor: pointer;
+        outline: none;
+    }
+    .close {
+        float: right;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1;
+        color: #000;
+        text-shadow: 0 1px 0 #fff;
+        opacity: unset;
+    }
+    ngb-carousel {
+        img {
+            width: 80% !important;
+            height: 300px !important;
+            margin-left: 65px;
+        }
+        .carousel-control-prev-icon {
+            background-image: url(/assets/img/left-arrow.png) !important;
+        }
+        .carousel-control-next-icon {
+            background-image: url(/assets/img/right-arrow.png) !important;
+        }
+        .col {
+            padding: 5px 0 !important;
+        }
+        .container {
+            width: 80% !important;
+            font-size: 14px !important;
+        }
+        .carousel-indicators {
+            display: none;
+        }
+    }
+    .box {
+        height: 60px;
+    }
+    #exampleModalFoto {
+        margin: 0 auto;
+        .modal-content {
+            width: 50%;
+            margin: 0 auto;
+        }
+        .boxI {
+            cursor: pointer;
+            width: 13%;
+            position: relative;
+            overflow: hidden;
+
+            input[type="file"] {
+                position: absolute;
+                top: 0;
+                right: 0;
+                min-width: 100%;
+                min-height: 100%;
+                font-size: 100px;
+                text-align: right;
+                filter: alpha(opacity=0);
+                opacity: 0;
+                outline: none;
+                background: white;
+                cursor: inherit;
+                display: block;
+            }
+        }
+        .modal-footer {
+            border: none;
+        }
+        #con {
+            max-width: 405px;
+            max-height: 300px;
+        }
+    }
+}

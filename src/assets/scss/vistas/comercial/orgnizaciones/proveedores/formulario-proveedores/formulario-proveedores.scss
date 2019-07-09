@@ -1,0 +1,163 @@
+#formulario-proveedores {
+  color: #707070;
+
+  .ibox-contents {
+    background-color: #ffffff;
+    color: inherit;
+    padding: 32px 13px 50px 13px;
+    border-color: #e7eaec;
+    -o-border-image: none;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0;
+  }
+
+  h5 {
+    font-weight: 600;
+    font-family: Helvetica, Bold;
+    font-size: 15px;
+    color: #707070;
+  }
+
+  .ibox-text {
+    label {
+      font-size: 0.8em;
+    }
+  }
+
+  .title {
+    font-size: 0.9em;
+  }
+  .modal-footer {
+    justify-content: center;
+    border-top: none !important;
+  }
+  .buttonAtras {
+    margin-right: 16px !important;
+    padding: 4px 12px 4px 12px !important;
+    background: #fff;
+    border: 1px solid #d22919;
+    color: #c52121 !important;
+  }
+
+  .actions {
+    .backAtras {
+      margin-right: 16px !important;
+      padding: 4px 12px 4px 12px !important;
+      border: 1px solid #bcbcbc;
+      color: #d22919;
+    }
+
+    .prev {
+      padding: 5.2px 53px 5.2px 8px;
+      margin-right: 12px;
+      text-decoration: none;
+      color: #ffffff;
+
+      .mdi {
+        margin-right: 28px;
+      }
+    }
+
+    .next {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 5px 10px 5px 38px;
+
+      .mdi {
+        margin-left: 18px;
+      }
+
+      .mdi-chevron-left {
+        margin-right: 28px;
+        margin-left: -35px;
+      }
+    }
+  }
+
+  .topbuttons {
+    position: absolute;
+    top: 85%;
+    right: 50px;
+  }
+
+  .margintopselect {
+    margin-top: 40px;
+  }
+
+  .borderFoter {
+    border-top: 1px;
+    margin-right: 154px;
+  }
+
+  .modal-footer> :not(:last-child) {
+    margin-right: 2.25rem;
+  }
+
+  .btnNext {
+    margin-right: 16px !important;
+    padding: 4px 12px 4px 12px !important;
+    background: #de1818;
+    border: 1px solid #d22919;
+    color: #fffefe !important;
+  }
+
+
+  .borderDerecho {
+    border-radius: 44px 0px 0px 44px;
+    color: #000000de;
+    height: 33px;
+  }
+
+  .borderIzquierdo {
+    border-radius: 0px 44px 44px 0px;
+    color: #000000de;
+    height: 33px;
+  }
+
+  .boderbuttongropu {
+    width: 100%;
+  }
+
+  .pinky {
+    background-color: #fff7f7;
+    border: 1px solid #fdccc9;
+  }
+
+  button {
+    outline: none;
+  }
+
+  .boderbuttongropu {
+    width: 100%;
+  }
+
+
+  .btn-secondary:not(:disabled):not(.disabled).active,
+  .btn-secondary:not(:disabled):not(.disabled):active,
+  .show>.btn-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: red;
+    border-color: red;
+  }
+
+  .btn-secondary:hover {
+    color: #fff;
+    background-color: red;
+    border-color: red;
+
+  }
+
+  .btn.focus,
+  .btn:focus {
+    color: #fff;
+    background-color: red;
+    border-color: red;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem red;
+  }
+
+  .select2-container .select2-selection--single {
+    height: 31px !important;
+  }
+}

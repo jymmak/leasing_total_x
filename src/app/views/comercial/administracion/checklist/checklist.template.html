@@ -1,0 +1,156 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+
+<div id="checklistt" class="container-fluid">
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="wrapper wrapper-content animated fadeInUp ">
+
+        <div class="ibox">
+          <div class="ibox-title">
+            <h1 class="fs-15 font-weight-bold pb-4  pt-4 pl-4">DETALLE DE CHECKLIST COMERCIAL</h1>
+
+            <div class="ibox-tools pt-4 pr-4">
+
+              <button (click)="editarDetalle()" class="btn btn-primary" *ngIf="static">
+                Editar
+              </button>
+              <div class="pr-5" *ngIf="editar">
+                <div>
+                  <button (click)="agregar()" type="button" class="btn btn-circle btn-primary mr-1 d-inline-block mdi mdi-plus"></button><span
+                    class="fs-12">Agregar otra Sección</span>
+                </div>
+
+              </div>
+            </div>
+
+
+            <div class="row pt-2  pl-4 justify-content-between" *ngIf="static">
+              <div class="col-md-7">
+                <h1 class="fs-13 font-weight-bold">Título: {{documentosFinancieros}}</h1>
+
+              </div>
+              <div class="col-md-5">
+                <h1 class="fs-13 font-weight-bold ml-4">Título: {{documentosLegales}}</h1>
+              </div>
+            </div>
+
+
+            <div class="row pt-2 pl-4 justify-content-between" *ngIf="editar">
+              <div class="col-md-5">
+
+                <h1 class="fs-13 font-weight-bold">
+                  <div class="row">
+                    <div class="col-md-2  text-right">Título:</div>
+                    <div class="col-md-8">
+                      <div class=" d-inline-block btn-rounded  _input pinky">{{documentosFinancieros}}</div>
+
+                    </div>
+                  </div>
+
+                </h1>
+
+              </div>
+              <div class="col-5 col-offset-md-2">
+                <h1 class="fs-13 font-weight-bold ml-3">
+                  <div class="row">
+                    <div class="col-md-2 text-right">Título:</div>
+                    <div class="col-md-8">
+                      <div class=" d-inline-block btn-rounded  _input pinky"> {{documentosLegales}}</div>
+                    </div>
+                  </div>
+
+                </h1>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="ibox-content">
+            <div class="related-news pt-3" style=" margin-top: -22px;">
+              <table class="table table-striped  table-hover " id="tableChecklist">
+                <thead>
+                  <tr>
+                    <th style="width:2%;"></th>
+                    <th style="width:11%;">Documentos</th>
+                    <th style="width:9%;">Prioridad</th>
+                    <th style="width:11%;"> </th>
+                    <th style="width:11%;">Documentos </th>
+                    <th style="width:9%;">Prioridad </th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of Expediente" (click)="select(item)" [ngClass]="{'highlighted':item.id==selectItem.id}">
+                    <td style="width:2%;"></td>
+                    <td style="width:11%;" *ngIf="static">{{item.exped}}</td>
+                    <td style="width:11%;" *ngIf="editar">
+
+                      <div class=" d-inline-block btn-rounded  _input pinky"> {{item.exped}}</div>
+                    </td>
+                    <td style="width:9%;" *ngIf="static">{{item.priori}}</td>
+                    <td style="width:9%;" *ngIf="editar">
+                      <elemt-switch-component></elemt-switch-component>
+                    </td>
+                    <td style="width:11%;"></td>
+                    <td style="width:11%;" *ngIf="static">{{item.expedLegal}}</td>
+                    <td style="width:11%;" *ngIf="editar">
+
+                      <div class=" d-inline-block btn-rounded  _input pinky"> {{item.expedLegal}}</div>
+
+                    </td>
+                    <td style="width:9%;" *ngIf="static">{{item.prioriLegal}}</td>
+                    <td style="width:9%;" *ngIf="editar">
+                      <elemt-switch-component></elemt-switch-component>
+                    </td>
+                  </tr>
+
+                </tbody>
+
+
+              </table>
+            </div>
+
+
+            <div class="col-md-11" *ngIf="editar">
+              <div class="row pt-2 justify-content-between">
+                <div class="col-md-4 ml-3">
+                  <div>
+                    <button (click)="agregar()" type="button" class="btn btn-circle btn-primary mr-1 d-inline-block mdi mdi-plus"></button><span
+                      class="fs-12">Agregar otro Documento</span>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div>
+                    <button (click)="agregar()" type="button" class="btn btn-circle btn-primary mr-1 d-inline-block mdi mdi-plus"></button><span
+                      class="fs-12">Agregar otro Documento</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="actions text-right pr-5 py-5" *ngIf="editar">
+
+              <button (click)="cancelar()" type="button" class="btn btn-secondary mr-3">
+                Cancelar
+              </button>
+              <button (click)="guardar()" class="btn btn-primary">
+                Guardar
+              </button>
+            </div>
+
+
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>

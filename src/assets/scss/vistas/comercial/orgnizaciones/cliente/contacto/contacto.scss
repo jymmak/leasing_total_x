@@ -1,0 +1,235 @@
+#contacto {
+  .ibox {
+    .ibox-tools {
+      button {
+        color: #FFFFFF;
+        padding: 0.35rem;
+        margin: 20px;
+        box-shadow: 0 0 3.3px 0 #d22919;
+
+        .mdi {
+          font-size: 1rem;
+        }
+
+        span {
+          margin-right: 6px;
+        }
+      }
+    }
+
+    .ibox-content {
+      .table-striped tbody tr:nth-of-type(odd) {
+        // background-color: #ffffff;
+
+        background-color: rgba(255, 254, 254, 0);
+      }
+
+      .table th,
+      .table td {
+        color: #707070;
+        font-size: 12px;
+        border-top: 1px solid #fff7f7 !important;
+        text-align: left;
+      }
+    }
+  }
+
+  .mdi-border-color {
+    color: #FFFFFF;
+    position: relative;
+    top: 5px;
+    font-size: 20px;
+    right: 4px;
+  }
+
+  .mdi-eye {
+    color: #FFFFFF;
+    position: relative;
+    top: 1px;
+    font-size: 20px;
+    right: 4px;
+  }
+
+  .mdi-file-document {
+    color: #FFFFFF;
+    position: relative;
+    top: 1px;
+    font-size: 20px;
+    right: 4px;
+  }
+
+  .mdi-delete {
+    color: #FFFFFF;
+    position: relative;
+    top: 1px;
+    font-size: 20px;
+    right: 4px;
+  }
+
+  .mdi-pencil {
+    color: #FFFFFF;
+    position: relative;
+    top: 1px;
+    font-size: 20px;
+    right: 4px;
+  }
+
+  .mdi-format-list-bulleted {
+    color: #FFFFFF;
+    position: relative;
+    top: 1px;
+    font-size: 20px;
+    right: 4px;
+  }
+
+  .circulobotonsdelete {
+
+    width: 33px;
+    height: 33px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #BCBCBC;
+    display: inline-block;
+    text-align: center;
+  }
+
+
+  .circulobotons_habilitados {
+
+    width: 33px;
+    height: 33px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #D22919;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+
+    opacity: inherit;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 62px;
+    background-color: #fff;
+    /* color: #555; */
+    color: #D22919;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 162%;
+    left: 11%;
+    opacity: 9px;
+    transition: opacity 0.3s;
+    /* border: 1px solid #D22919; */
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    border-radius: 14px;
+
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  td {
+    cursor: pointer;
+  }
+
+  // scroll de la tabla
+  tbody {
+    display: block;
+    height: 450px;
+    overflow: auto;
+    margin-top: 5px
+  }
+
+  thead,
+  tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+  }
+
+  thead {
+    width: calc(100% - 0em);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.07);
+  }
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #ffffff;
+    border-radius: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+    -webkit-box-shadow: inset 0 0 66px #b9b9b9;
+  }
+
+  .iconsborder {
+    padding-left: 0px !important;
+    padding-right: 11px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+    height: 0px !important;
+    width: 0px !important;
+    border-left-width: 0px;
+    border-top-width: 0px !important;
+    border-right-width: 0px !important;
+    border-bottom-width: 0px !important;
+  }
+
+  .modal-footer {
+    justify-content: center !important;
+  }
+
+  button {
+    outline: none;
+  }
+
+  .btn-cancelar {
+    border-radius: 50px;
+    background: #b9b9b9;
+    font-size: 0.75rem;
+    border: 0;
+    padding: 0.32rem;
+    color: #ffffff;
+    width: 125px;
+    margin-left: 272%;
+    margin-top: -20px;
+  }
+
+  .buttonAceptarModal {
+    border-radius: 50px;
+    background: #d22919;
+    font-size: 0.75rem;
+    border: 0;
+    padding: 0.32rem;
+    color: #ffffff;
+    width: 125px;
+  }
+
+  .modal-footer {
+    justify-content: center;
+    border-top: none !important;
+  }
+}

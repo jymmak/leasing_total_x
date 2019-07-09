@@ -1,0 +1,240 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="agregar-actividad">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="ibox">
+          <div class="ibox-title">
+            <div class="mt-3">
+              <input class="asunto" required autocomplete="off" type="text" name="asunto" placeholder="Asunto">
+            </div>
+
+            <div class="ibox-tools mt-3" *ngIf="nuevo">
+
+              <button type="button" class="btn btn-secondary mr-3">
+                Cancelar
+              </button>
+              <button (click)="guardarActividad($event)" class="btn btn-primary">
+                Guardar
+              </button>
+            </div>
+
+
+            <div class="ibox-tools mt-3" *ngIf="editar">
+
+              <div class="colrs-add d-inline-block" (click)="cancelarActividad()"><span class="mdi mdi-close"></span>Cancelar
+                evento</div>
+
+              <button class="button-panel-info mr-2" id="resultados" (click)="registro()">Resultados</button>
+              <button (click)="editarActividad()" class="btn btn-primary">
+                Editar
+              </button>
+
+            </div>
+
+
+
+          </div>
+
+          <div class="ibox-content">
+            <form #formAgregarActividad="ngForm" [formGroup]="agendaForm">
+              <div class="form-group">
+                <div class="row mt-3">
+                  <div class="col-md-4">
+                    <div class=" col-md-12">
+                      <label>Inicia</label>
+                      <input id="datepicker" class="icon-calendario btn-rounded  _input pinky " formControlName="fechaInicio"
+                        autocomplete="off">
+                    </div>
+                    <div class=" col-md-12 mt-3">
+                      <label>Termina</label>
+                      <input id="datepicker2" class="icon-calendario btn-rounded  _input pinky " formControlName="fechaFin"
+                        autocomplete="off">
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-4">
+
+                    <div class="row">
+                      <div class="col-md-5">
+                        <label>Hora</label>
+                        <input id="clockpicker" class="icon-reloj btn-rounded  _input pinky " formControlName="horaIni"
+                          autocomplete="off">
+                      </div>
+                      <div class="col-md-7 fs-12" *ngFor="let item of listaPuntos; let index = index">
+                        <div class="row  mt-4 ml-1">
+                          <div class="col-7">
+                            <div class="custom-checkbox">
+                              <input type="checkbox" class=" custom-control-input" id="customCheck1" name="selected">
+                              <label class="custom-control-label" for="customCheck1">Todo el día</label>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div class="custom-checkbox">
+                              <input type="checkbox" class=" custom-control-input" [checked]="item.selected"
+                                (ngModelChange)="selectedItem($event,item,index)" id="selected{{index}}" name="selected">
+                              <label class="custom-control-label" for="customCheck">{{item.punto2}}</label>
+                            </div>
+
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+                      <div class="col-md-5">
+                        <label>Hora</label>
+                        <input id="clockpicker2" class="icon-reloj btn-rounded  _input pinky " formControlName="horaFin"
+                          autocomplete="off">
+                      </div>
+                      <div class="col-md-7 ">
+                        <div class="row  mt-4 ml-1">
+                          <div class="col-7">
+
+                          </div>
+                          <div class="col-4">
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                  <div class="col-md-4">
+                    <div class=" col-md-12">
+                      <label>Categoría</label>
+                      <select select2 theme="FondoRosado" class="margintopselect" (onSelect)="seleccionarCategoria($event)">
+                        <option value=""></option>
+                        <option *ngFor="let  listaCategoria  of listaCategoria " [value]="listaCategoria.id">{{listaCategoria
+                          .text}}</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-5">
+                  <div class="col-md-4">
+                    <div class=" col-md-12 ">
+                      <label>Asignado a</label>
+                      <select select2 theme="FondoRosado" class="margintopselect" (onSelect)="seleccionarAsignacion($event)">
+                        <option value=""></option>
+                        <option *ngFor="let  listaAsignacion of listaAsignacion" [value]="listaAsignacion.id">{{listaAsignacion.text}}</option>
+                      </select>
+                    </div>
+                    <div class=" col-md-12 mt-3">
+                      <label>Cliente/Proveedor</label>
+                      <input id="clienteProveedor" class="icon-search btn-rounded  _input pinky " formControlName="clienteProveedor"
+                        autocomplete="off">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class=" col-md-12">
+                      <label>Prioridad</label>
+                      <select select2 theme="FondoRosado" class="margintopselect" (onSelect)="seleccionarPrioridad($event)">
+                        <option value=""></option>
+                        <option *ngFor="let  listaPrioridad of listaPrioridad" [value]="listaPrioridad.id">{{listaPrioridad.text}}</option>
+                      </select>
+                    </div>
+                    <div class=" col-md-12 mt-3">
+                      <label>Contacto</label>
+                      <input id="contacto" class="icon-search btn-rounded  _input pinky " formControlName="contacto"
+                        autocomplete="off">
+                    </div>
+
+
+                  </div>
+                  <div class="col-md-4">
+                    <div class=" col-md-12">
+                      <label>Tipo de Empresa</label>
+                      <select select2 theme="FondoRosado" class="margintopselect" (onSelect)="seleccionarEmpresa($event)">
+                        <option value=""></option>
+                        <option *ngFor="let  listaEmpresa of listaEmpresa" [value]="listaEmpresa.id">{{listaEmpresa.text}}</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-5">
+                  <div class=" col-md-12">
+                    <label class="ml-3">Notas</label>
+                    <div class="form-group ">
+                      <textarea class="form-control " id="text-coment" rows="2" placeholder=""></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mt-5">
+                  <div class="col-md-4">
+                    <div class=" col-md-12">
+                      <label>Dirección de Origen</label>
+                      <input (click)="verDireccion()" id="origen" class="icon-placeholder btn-rounded  _input pinky "
+                        formControlName="origen" autocomplete="off">
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class=" col-md-12">
+                      <label>Dirección de Destino</label>
+                      <input (click)="verDireccion()" id="destino" class="icon-placeholder btn-rounded  _input pinky "
+                        formControlName="destino" autocomplete="off">
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="row">
+                      <div class="col-md-6"> <label>Tipo de Transporte</label>
+                        <select select2 theme="FondoRosado" class="margintopselect" (onSelect)="seleccionarTransporte($event)">
+                          <option value=""></option>
+                          <option *ngFor="let  listaTransporte of listaTransporte" [value]="listaTransporte.id">{{listaTransporte.text}}</option>
+                        </select></div>
+                      <div class="col-md-5"> <label>Costo</label>
+                        <input id="costo" class=" btn-rounded  _input pinky " formControlName="costo" placeholder="$"
+                          autocomplete="off">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header pdfmodal">
+          <h5 class="modal-title fs-13 px-3" id="exampleModalCenterTitle"><strong>AGREGAR DIRECCIÓN</strong></h5>
+          <div class="circle">
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="cancelarModal(dato)">
+            <span aria-hidden="true" class="xflotante">
+              &#215;</span>
+          </button>
+        </div>
+        <div class="modal-body  px-5">
+
+          <div class="row pb-4">
+            <div class="col-md-10">
+              <label>Dirección:</label>
+              <input class="btn-rounded  _input pinky ">
+            </div>
+          </div>
+
+          <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" style="height: 350px;">
+            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+          </agm-map>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

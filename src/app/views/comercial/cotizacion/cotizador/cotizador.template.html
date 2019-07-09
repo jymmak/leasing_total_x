@@ -1,0 +1,65 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="cotizador">
+  <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+          <div class="ibox-content">
+            <div class="contenido_cotizacion" [hidden]="!(seccion == 'cotizar')">
+              <div>
+                <div class="sizeCambio">Tipo de Cambio: $ 3.245</div>
+                <div #progressbar class="progressbar">
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                      <div class="bar__container">
+                        <div class="container">
+                          <ul class=" marginbarra progressbar_header">
+                            <li class=" sice active">COTIZACION</li>
+                            <li class="sice">BIENES </li>
+                            <li class="sice">FINANCIAMIENTO</li>
+                            <li class="sice">GASTOS</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <section id="cards" class="progressbar_container">
+                    <div class="seccion_container active">
+                      <tab-cotizacion-componet (accionGuardar)="guardarTabCotizacion($event)" (accionAtras)="accionAtrasTabCotizacion()"></tab-cotizacion-componet>
+                    </div>
+                    <div class="seccion_container ">
+                      <tab-bienes-component (accionAgregar)="agregarBien($event)" [bienes]="bienes" (accionGuardar)="guardarTabBienes()"
+                        (accionAtras)="after()"></tab-bienes-component>
+                    </div>
+                    <div class="seccion_container">
+                      <tab-financiamiento (accionAgregarGrantias)="agregarGrantias()" (accionGuardar)="guardarTabFinanciamiento($event)" (accionAtras)="after()"></tab-financiamiento>
+                    </div>
+                    <div class="seccion_container">
+                      <tab-gastos (accionGuardar)="guardarTabgastos($event)" (accionAtras)="after()" (accionVercronograma)="verCronograma()"></tab-gastos>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="contenido_consulta_ruc" *ngIf="seccion == 'consulta_ruc'">
+              <consulta-ruc-component (accionGuardar)="accionGuardarConsultaRuc()" ></consulta-ruc-component>
+            </div>
+            <div  class="contenido_agregar_bien" *ngIf="seccion == 'agregar_bien'">
+              <tab-bienes-nuevo-component (AccionCancelar)="cancelarBien($event)" (AccionGuardar)="guardarBien($event)"></tab-bienes-nuevo-component>
+            </div>
+            <div class="contenido_cronograma" *ngIf="seccion == 'contenido_cronograma'">
+              <cronograma-component (accionAtras)="accionAtrasCronograma()" ></cronograma-component>
+            </div>
+            <div class="contenido_grantias" *ngIf="seccion == 'contenido_grantias'">
+              <garantias-component (accionAgregar)="agregarGrantia()"  (accionCancelar)="cancelarGrantia()" (accionAtras)="accionAtrasGrantia()"></garantias-component>
+            </div>
+            <div class="contenido_pdf" *ngIf="seccion == 'ver_pdf'">
+              <enviar-pdf-component (accionGuardar)="guardarCotizacion()" (accionAtras)="accionAtrasPdf()"></enviar-pdf-component>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<enviar-email-modal (accionGuardar)="emailEnviado()"></enviar-email-modal>

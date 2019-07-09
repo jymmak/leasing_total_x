@@ -1,0 +1,68 @@
+<div id="contenedor">
+  <div class="contenedor-fondo">
+
+    <div class="contenedor-mapa-login">
+
+      <div class="contenedor-form-login">
+        <div class="login">
+          <div class="contenedor-logo">
+            <img src="assets/img/logo_sticky.png" alt="logo">
+            <h2>leasing total</h2>
+          </div>
+          <div class="contenedor-login">
+            <form novalidate [formGroup]="formLogin" (ngSubmit)="login()">
+              <div class="contenedor-title-login">
+                <h1>
+                  INICIO DE SESIÓN
+                </h1>
+              </div>
+              <div class="contenedor-cuerpo-login">
+                <div class="contenedor-input">
+                  <input class="email" required autocomplete="off" type="email" name="email" formControlName="email" placeholder="Email">
+                </div>
+                <div class="contenedor-input">
+                  <input class="pass" required autocomplete="off" type="password" name="password" formControlName="password" placeholder="Contraseña">
+                </div>
+                <div>
+                  <p  class="msj">{{msjLogin}}</p>
+                </div>
+                <div class="contenedor-boton">
+                  <div class="box-next">
+                    <a href="">
+                      <u>¿No puedes entrar?</u>
+                    </a>
+                  </div>
+                  <div class="box-boton">
+                    <button id="btnAplicar" type="submit"  [disabled]="!formLogin.valid">Ingresar</button>
+                  </div>
+                </div>
+                <div class="box-forgot">
+                  <a href="">
+                    <u>¿Olvidaste tu contraseña?</u>
+                  </a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="contenedor-bienvenido">
+          <div class="box-red">
+            <div class="text-red">
+              <h1>Bienvenido!</h1>
+              <p>Brindar soluciones de arrendamiento financiero, satisfaciendo las necesidades de creciemiento de los
+                clientes de acuerdo con la demanda de bienes brindando un servicio Ágil, simple y Eficiente. </p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="contenedor-mapa">
+        <img src="assets/img/mapa_completo.png" alt="">
+      </div>
+
+    </div>
+  </div>
+
+</div>

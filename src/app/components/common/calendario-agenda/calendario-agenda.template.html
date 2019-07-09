@@ -1,0 +1,46 @@
+<div id="calendario-agenda">
+
+  <!-- calendar -->
+
+  <calendario-right></calendario-right>
+
+  <div class="pt-3 mx-5">
+    <h1 class="fs-18">Categorías</h1>
+    <div *ngFor="let item of listaAgenda; let index = index">
+      <div>
+        <i [class]="item.icono"></i>
+        <span class="ml-3 fs-12">{{item.categoria}}</span>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div>
+    <h1 class="fs-18 ml-5 mb-0">Ejecutivos</h1>
+    <table class="table pl-2">
+      <thead>
+      </thead>
+      <tbody infiniteScroll (scrolled)="scrolled()">
+
+        <tr *ngFor="let item of listaEjecutivos; let index = index">
+
+          <td style="width:8%;">
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input d-inline-block" [checked]="item.selected" (ngModelChange)="selectedItem($event,item,index)"
+                id="selected{{index}}" name="selected">
+              <label class="custom-control-label" for="customRadio">
+              </label>
+
+            </div>
+            <div class="ml-4 mr-3" style="display: inline;">
+              <img alt="" [src]="item.imageUrl" alt="">
+            </div>
+            <label class="orderlista fs-12">
+              {{item.nombre}}</label>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

@@ -1,0 +1,26 @@
+#wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+#page-wrapper {
+  margin-left: 184px;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+}
+span:focus{
+  outline: none
+}
+
+
+table tr:nth-child(even) {
+  background: #fff7f7
+}
+table tr:nth-child(odd) {
+  background: #FFF
+}
+
+// .gray-bg,
+// .bg-muted {
+
+// }

@@ -1,0 +1,45 @@
+#contenedor {
+  .contenedor-login {
+    .profile-picture {
+      border-radius: 100%;
+      overflow: hidden;
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+    }
+    .big-profile-picture {
+      margin: 0 auto;
+      border: 3px solid #dbdbdb;
+      width: 130px;
+      height: 130px;
+    }
+    h4 {
+      color: #666666;
+      margin: 20px 0;
+    }
+    p {
+      color: #666666;
+      margin-bottom: 40px;
+    }
+  }
+  .content-modulos {
+    padding: 43px 0;
+    a {
+      font-size: x-large;
+      cursor: pointer;
+    }
+    a:hover {
+      font-weight: 900;
+    }
+    .title-modules {
+      margin: 20px 0;
+    }
+  }
+  .related-news {
+    height: 430px !important;
+  }
+  .slimScrollBar {
+    background-color: #ffffff !important;
+    opacity: 1!important;
+  }
+}

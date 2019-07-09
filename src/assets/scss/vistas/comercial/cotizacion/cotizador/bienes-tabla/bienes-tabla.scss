@@ -1,0 +1,118 @@
+#bienes-tabla {
+  // button {
+  //   padding: 0.43em 1.4em !important;
+  //   color: #ffffff;
+  //   margin-left: 25px;
+  // }
+  table {
+    margin-bottom: 25px;
+    margin-top: 25px;
+    td {
+      font-size: 0.8em;
+    }
+  }
+  th {
+    border-top: none !important;
+  }
+  .price {
+    text-align: right;
+    font-size: 0.9em;
+    margin-right: 30px;
+  }
+
+  .circulobotonsdelete{
+   
+      width: 33px;
+      height: 33px;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      background: #d22919;
+      display: inline-block;
+      text-align: center;
+  }
+  .circulobotons{
+   
+    width: 33px;
+    height: 33px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #d22919;
+    text-align: center;
+    display: inline-block;
+
+}
+.circulobotonsbloock{
+   
+  width: 33px;
+  height: 33px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #d22919;
+  text-align: center;
+  display: inline-block;
+
+}
+
+  // .mdi-book{
+  //   color: #FFFFFF;
+  //   position: relative;
+  //   top: 3px;
+  //   font-size: 20px;
+  //   right: 1px;
+  // }
+
+  // .mdi-create{
+  //   color: #FFFFFF;
+  //   position: relative;
+  //   top: 5px;
+  //   font-size: 20px;
+  //   right: 4px;
+  // }
+  // .mdi-delete{
+  //   color: #FFFFFF;
+  //   position: relative;
+  //   top: 2px;
+  //   font-size: 20px;
+  //   right: 0px;
+  // }
+
+  // .mdi-border-color{
+  //   color: #FFFFFF;
+  //   position: relative;
+  //   top: 5px;
+  //   font-size: 20px;
+  //   right: 1px;
+  // }
+
+
+  svg {
+    overflow: hidden;
+    vertical-align: middle;
+    position: relative;
+    color: white !important;
+    top: 2px;
+}
+
+.margintcss{
+  margin-top: 47px;
+  margin-right: 86px;
+} 
+
+.table-responsive {
+  display: block;
+  width: 89%;
+  overflow-x: auto;
+  margin-left: 41px;
+}
+
+
+tr{
+  font-family: Helvetica, Bold !important;
+  font-size: 16px;
+}
+
+
+}

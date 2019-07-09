@@ -1,0 +1,61 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="mapa">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+        <div class="ibox">
+          <div class="ibox-title">
+            <div class="row mt-4">
+
+              <div class="col-md-4 d-inline-block ">
+                <label class="titel-label">RECORRIDO DEL DÍA</label>
+              </div>
+              <div class="col-md-4 d-inline-block">
+                <select select2 [theme]="'FondoRosado'" (onSelect)="seleccionarTipo($event)">
+
+                  <option *ngFor="let data of tipos" [value]="data.id">{{data.text}}</option>
+                </select>
+              </div>
+              <div class="col-md-4 d-inline-block actions text-right ">
+                <button type="button" class="btnSiguiente" (click)="recorridoDia()"> Buscar Ubicación</button>
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+          <div class="ibox-content">
+            <div class="related-news">
+
+              <div class=" col-md-12 ml-map">
+
+                <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [scrollwheel]="false">
+                  <agm-marker *ngFor="let m of markers; let i = index" (markerClick)="clickedMarker(m.label, i)"
+                    [latitude]="m.lat" [longitude]="m.lng" [label]="m.label" [markerDraggable]="m.draggable" (dragEnd)="markerDragEnd(m, $event)"
+                    [iconUrl]="'/assets/iconos/origen.png'">
+
+                    <agm-info-window >
+                      <p ng-non-bindable><strong>{{m.title}}</strong><br />
+                        latitud {{ m.lat | number:'2.2-4' }}, longitud {{ m.lng | number:'2.2-4' }}
+                     
+                      
+                      </p>
+                    </agm-info-window>
+                  </agm-marker>
+                  <agm-polyline [editable]="true" [strokeColor]="'red'">
+                    <agm-polyline-point *ngFor="let data of polyline" [latitude]="data.lat" [longitude]="data.lng">
+                    </agm-polyline-point>
+                  </agm-polyline>
+                </agm-map>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

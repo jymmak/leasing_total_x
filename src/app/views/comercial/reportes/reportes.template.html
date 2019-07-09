@@ -1,0 +1,47 @@
+
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="reportes">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrapper wrapper-content animated fadeInUp">
+                <div class="ibox">
+                    <div class="ibox-title" style="box-shadow: 0px 3px 6px #0000002e;">
+                        <div class="row">
+
+
+                            <div class="col-md-4 offset-sm-4 d-inline-block mt-5">
+
+                                <label>Reporte</label>
+                                <select select2 theme="FondoRosado" required>
+                                    <option></option>
+                                    <option *ngFor="let  item of Reportes" [value]="item.id">{{item.text}}</option>
+                                </select>
+                            </div>
+
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="ibox-content">
+                        <div class="related-news">
+
+                            <div class=" col-md-12 mt-5 pt-5 offset-sm-2">Seleccionar un reporte para visualizar los
+                                parámetros para generar la tabla de
+                                reportes</div>
+                            <div class=" col-md-12 mt-5 pt-5 ">
+                                <div class="actions text-right mt-5">
+                                    <button (click)="Ejecutar()" class="btn btn-primary">
+                                        Ejecutar
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

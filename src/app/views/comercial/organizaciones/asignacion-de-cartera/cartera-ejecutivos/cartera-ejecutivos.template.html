@@ -1,0 +1,65 @@
+<div id="cartera-ejecutivos">
+  <div class=" marginNavs">
+
+    <div class="row justify-content-center">
+      <div class="col-1 mt-1">
+        {{proveedoresEjecutivos}}
+      </div>
+      <div class="col-4 ml-1">
+        <select-ejec></select-ejec>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-4">
+      <h5>Proveedores Asignados</h5>
+      <table class="table">
+        <thead>
+        </thead>
+        <tbody class="body">
+
+          <tr *ngFor="let item of listaProveedores">
+            <td style="width:8%;">
+              <label class="orderlista">
+                {{item.proveedor}}</label>
+
+            </td>
+          </tr>
+
+
+        </tbody>
+      </table>
+
+
+    </div>
+
+
+    <div class="col-md-4">
+      <label class="padding50"> Selecciona a un ejecutivo para vizualizar su cartera de Proveedores y Clientes.</label>
+
+    </div>
+
+    <div class="col-md-4">
+      <h5>Clientes Asignados</h5>
+      <table class="table">
+        <thead>
+        </thead>
+        <tbody class="body">
+
+          <tr *ngFor="let item of listaClientes">
+            <td style="width:8%;">
+              <label class="orderlista">
+                {{item.proveedor}}</label>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+
+  </div>

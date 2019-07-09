@@ -1,0 +1,191 @@
+#organigrama {
+  .related-news {
+    height: 430px !important;
+  }
+
+   //organigrama
+   .organigrama * {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .organigrama ul {
+    padding-top: 20px;
+    position: relative;
+  }
+  
+  .organigrama li {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    padding: 20px 5px 0px 5px;
+    position: relative;
+  }
+  
+  .organigrama li::before,
+  .organigrama li::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 50%;
+    border-top: 1px solid #707070;
+    width: 50%;
+    height: 20px;
+  }
+  
+  .organigrama li::after {
+    right: auto;
+    left: 50%;
+    border-left: 1px solid #707070;
+  }
+  
+  .organigrama li:only-child::before,
+  .organigrama li:only-child::after {
+    display: none;
+  }
+  
+  .organigrama li:only-child {
+    padding-top: 0;
+  }
+  
+  .organigrama li:first-child::before,
+  .organigrama li:last-child::after {
+    border: 0 none;
+  }
+  
+  .organigrama li:last-child::before {
+    border-right: 1px solid #707070;
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+    border-radius: 0 5px 0 0;
+  }
+  
+  .organigrama li:first-child::after {
+    border-radius: 5px 0 0 0;
+    -webkit-border-radius: 5px 0 0 0;
+    -moz-border-radius: 5px 0 0 0;
+  }
+  
+  .organigrama ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid #707070;
+    width: 0;
+    height: 20px;
+  }
+  
+  .organigrama li .a {
+    border: 1px solid #D22919;
+    padding: 1em 0.75em;
+    background-color: #D22919;
+    display: inline-flex;
+    border-radius: 8px !important;
+    width: 155px;
+    padding: 8px 8px 8px 8px;
+  }
+  
+  // .organigrama li .a:hover {
+  //   border: 1px solid #fff;
+  //   color: #fff;
+  //   background-color: #D22919;
+  //   display: inline-block;
+  // }
+  
+  .organigrama>ul>li>.a {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  
+  .organigrama>ul>li>ul>li>.a {
+    width: 15%;
+  }
+  
+  // .organigrama li {
+  //   float: left;
+  //   text-align: center;
+  //   list-style-type: none;
+  //   padding: 20px 5px 0px 5px;
+  //   position: relative;
+  // }
+
+ .lstOrganigrama{
+  font-family: Helvetica, Regular;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+ }
+ 
+ .grtComercial{
+  position: relative !important;
+  height: 30px;
+  border-radius: 100%;
+  width: 30px;
+  margin-top: 9px;
+
+ }
+
+ .lst-Orga-Sub{
+  border: 1px solid #FC6719;
+  padding: 1em 0.75em;
+  background-color: #FC6719;
+  display: inline-flex;
+  border-radius: 8px !important;
+  width: 155px;
+  padding: 8px 8px 8px 8px;
+ }
+ .lst-Orga-Oficial{
+  border: 1px solid #F6A704;
+  padding: 1em 0.75em;
+  background-color: #F6A704;
+  display: inline-flex;
+  border-radius: 8px !important;
+  width: 155px;
+  padding: 8px 8px 8px 8px;
+ }
+
+ .title{
+  color: #707070;
+  font-size: 14px;
+  font-family: Helvetica, Regular;
+ }
+
+ .relate{
+  margin-top: -72px;
+  margin-left: 34px;
+ }
+  .mt-45{
+  margin-top: -73px;
+  }
+
+  .sub-g{
+    border: 1px solid #ffffff;
+    padding: 1em 0.75em;
+    background-color: #ffffff;
+    display: inline-flex;
+    border-radius: 8px !important;
+    width: 268px;
+    padding: 0px 8px 21px 59px;
+  }
+
+  .mt-cargo{
+    font-family: Helvetica, Regular;
+    font-size: 12px;
+    color: #fff;
+    margin-left: -120px;
+    margin-left: -121px;
+    margin-top: 25px;
+  }
+
+  .mt-dist{
+    margin-left: -121px;
+    font-family: Helvetica, Regular;
+    font-size: 12px;
+    color: #fff;
+    margin-left: -120px;
+    margin-top: 40px;
+    margin-left: -121px;
+    text-align: inherit;
+  }
+ }

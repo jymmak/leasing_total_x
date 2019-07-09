@@ -1,0 +1,80 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="formulario-contacto">
+  <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+          <div class="ibox-content">
+            <div class="box-consulta">
+              <h5 id="exampleModalLabel">{{nuevo?'CREAR CONTACTOS':'EDITAR CONTACTO'}}</h5>
+              <form [formGroup]="formformularioContacto">
+                <div class="row" style="padding: 27px 26px 16px 45px">
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4" style=" margin-top: 40px;">
+                      <div class="col-sm-12">
+                        <label>Nombres</label>
+                        <input class=" btn-rounded  _input pinky margin-bottom30 " formControlName="nombres" required>
+                      </div>
+                      <div class="col-sm-12">
+                        <label>Cargo</label>
+                        <input class=" btn-rounded  _input pinky margin-bottom30 " formControlName="cargo" required>
+                      </div>
+                      <div class="col-sm-12">
+                        <label>Correo Electronico</label>
+                        <input class=" btn-rounded  _input pinky margin-bottom30 " formControlName="email" required>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4" style=" margin-top: 40px;">
+                      <div class="col-sm-12">
+                        <label>Apellido</label>
+                        <input formControlName="apellido" class=" btn-rounded  _input pinky margin-bottom30 "
+                          formControlName="apellido" required>
+                      </div>
+                      <div class="col-sm-12">
+                        <label> Celular</label>
+                        <input formControlName="celular" class=" btn-rounded  _input pinky margin-bottom30 "
+                          formControlName="celular" required>
+                      </div>
+                      <div class="col-sm-12">
+                        <label>Celular 2</label>
+                        <input formControlName="celular2" class=" btn-rounded  _input pinky margin-bottom30 "
+                          formControlName="celular2">
+                      </div>
+
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4" style=" margin-top: 40px;">
+                      <div class="col-sm-12">
+                        <label>Telefono</label>
+                        <input formControlName="telefono" class=" btn-rounded  _input pinky margin-bottom30 "
+                          formControlName="telefono">
+                      </div>
+                      <div class="col-sm-12">
+                        <label>Fecha de naciemto</label>
+                        <input #fechaInicio id="datepicker" (onSelect)="selectedFechaNacimiento($event)" datepicker
+                          class="icon-calendario btn-rounded  _input pinky margin-bottom30" width="276">
+                      </div>
+                      <div class="col-sm-12">
+                        <label>Canal Favorito </label>
+                        <select-defaul-async [search]="false" [selected]="dataSelectedCanalFavorito" (selectChange)="selectedCanalFavorito($event)"
+                          [data]="canalFavoritos">
+                        </select-defaul-async>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="text-right margin-right20">
+                <button (click)="cancelarAddContacto()" type="button" class="btn-rounded button button-cg  margin-right20">
+                  Cancelar
+                </button>
+                <button id="btnnext" type="button" class="btn btn-primary" (click)="guardar()" [disabled]="!formformularioContacto.valid">
+                  Guardar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

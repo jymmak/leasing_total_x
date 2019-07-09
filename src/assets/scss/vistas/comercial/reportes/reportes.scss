@@ -1,0 +1,41 @@
+#reportes{
+ .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgb(255, 247, 247);
+ }
+
+ .form-control {
+  display: block;
+  width: 227px;
+  height: 30px;
+  padding: 0.32rem 2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff7f7;
+  background-clip: padding-box;
+  border: 1px solid #fdccc9;
+  border-radius: 50px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  padding-left: 10px;
+  margin-bottom: 2px;
+  margin-top: 0px;
+ }
+
+ .triangulo{
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  //margin-left: -0.5em;
+  //bottom: -2em;
+  left: 62px;
+  box-sizing: border-box;
+  border: 1em solid #212529;
+  border-color: transparent transparent #fff7f7 #fff7f7;
+  top: 83px;
+  transform-origin: 0 0;
+  transform: rotate(135deg);
+  /* box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.1); */
+  border-radius: 0px 0 0px 5px;
+
+}
+}

@@ -1,0 +1,54 @@
+<div id="bienes-tabla">
+
+    <div class="text-right margintcss mb-4">
+        <button (click)="agregar()" type="button" class="btn btn-circle btn-primary mr-1" [disabled]="!selectedItem.id"  data-toggle="tooltip" data-placement="top" title="Editar"><i class="mdi mdi-border-color"></i></button>
+        <button type="button" class="btn btn-circle btn-primary mr-1" [disabled]="!selectedItem.id" data-toggle="tooltip" data-placement="bottom" title="Duplicar"><i class="mdi mdi-book"></i></button>
+        <button (click)="eliminar()" type="button" class="btn btn-circle btn-primary mr-3" [disabled]="!selectedItem.id" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="mdi mdi-delete"></i></button>
+
+        <button type="button" class="btn btn-primary " (click)="agregar()">Agregar</button>
+    </div>
+    <div class="table-responsive m-t pinky padding-left20 ">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th style="width: 7%;">N°</th>
+                    <th style="width: 15%;">Tipo</th>
+                    <th style="width: 13%;">Marca</th>
+                    <th style="width: 13%;">Modelo</th>
+                    <th style="width: 13%;">Año</th>
+                    <th style="width: 15%;">Valor Unitario</th>
+                    <th style="width: 11%;">Cantidad</th>
+                    <th style="width: 15%;">Valor Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of bienes;let index = index" (click)="fnSelectedItem(data)" [ngClass]="{'highlighted':data.id==selectedItem.id}">
+                    <td class="text-left">{{data.id}}</td>
+                    <td class="text-left">{{data.tipo}}</td>
+                    <td class="text-left">{{data.marca}}</td>
+                    <td class="text-left">{{data.modelo}}</td>
+                    <td class="text-left">{{data.anio}}</td>
+                    <td class="text-left">{{data.valorUnitario | currency:'$':'symbol':'4.2-2'}}</td>
+                    <td class="text-left">{{data.cantidad}}</td>
+                    <td class="text-left">{{data.valorUnitario * data.cantidad | currency:'$':'symbol':'4.2-2'}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row justify-content-end price mt-4 ">
+        <div class="col-6 col-sm-3"><strong>Bruto total:</strong> </div>
+        <div class="col-6 col-sm-2" style="text-align: left;margin-left: -25px;">$ 12,000.00</div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-right mt-4 mb-4 pr-5">
+            <button type="button" (click)="atras()" class="btn btn-secondary mr-3">
+                <span class="mdi mdi-chevron-left"></span>
+                Atrás
+            </button>
+            <button type="button" (click)="guardar()" class="btn btn-primary mr-3">
+                Siguiente
+                <span class="mdi mdi-chevron-right"></span>
+            </button>
+        </div>
+    </div>
+</div>

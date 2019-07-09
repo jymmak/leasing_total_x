@@ -1,0 +1,116 @@
+#busqueda-avanzada {
+  display: inline-block !important;
+  vertical-align: middle !important;
+
+   width: 23% !important;
+
+  // .dropdown-content .dropdown-item {
+  //   // background-color: #ffffff;
+  //   // margin-left: -161px;
+  //   // cursor: pointer;
+  //   background-color: #ffffff00;
+  //   margin-left: -161px;
+  //   cursor: pointer;
+  //   margin-top: 25px;
+  // }
+  .dropdown-item {
+    background-color: #ffffff;
+
+    p {
+      color: #d22919 !important;
+      margin-bottom: 0 !important;
+      font-size: 0.8em;
+    }
+  }
+
+  .dropdown-content .dropdown-item .dropdown-options {
+    position: absolute;
+    width: 60%;
+    // top: 85px;
+    // background: #ffffff;
+    pointer-events: none;
+    opacity: 0;
+    max-height: 0;
+    margin-bottom: 20px;
+    // box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.15);
+    transition: max-height 0.5s, top 0.5s, opacity 0.5s;
+    transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+    // overflow: hidden;
+    color: #707070;
+    border: none;
+    margin-left: -138px;
+    margin-top: 23px;
+    .triangulo{
+      position: absolute;
+      width: 0;
+      height: 0;
+      // margin-left: -0.5em;
+      // bottom: -2em;
+      left: 70px;
+      box-sizing: border-box;
+      border: 1em solid black;
+      border-color:  transparent transparent #ffffff #ffffff;
+      top: 31px;
+      transform-origin: 0 0;
+      transform: rotate(135deg);
+      box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 0px 0 0px 5px;
+    //   width: 0;
+    //  height: 0;
+    //  border-right: 25px solid transparent;
+    //  border-top: 25px solid transparent;
+    //  border-left: 25px solid transparent;
+    //  border-bottom: 25px solid #f0ad4e;
+  }
+  .ibox-content{
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
+    border-radius: 15px;
+    border: none;
+  }
+  }
+  .dropdown-options::before {
+  }
+  .dropdown-content .dropdown-item.active .dropdown-options {
+    pointer-events: auto;
+    opacity: 1;
+    max-height: 430px;
+    z-index: 1;
+    border-radius: 15px;
+   position: absolute;
+
+  //  margin-left: -154px;
+    // margin-top: 19px;
+
+  }
+
+  .ibox-content {
+    label {
+      display: block;
+      font-size: 0.73em;
+      margin-left: 18px;
+    }
+  }
+
+  .ui-datepicker {
+    position: relative;
+   z-index: 1;
+}
+
+.select2-container .select2-selection {
+  border-radius: 10px;
+  border: 1px solid #fdccc9;
+  border-radius: 2em;
+  /* background: #fdccc9 !important; */
+  background: #fff7f7 !important;
+}
+
+.margintops{
+  margin-top: 20px;
+}
+
+.busquedaAvanzada{
+  width: 100% !important;
+  border-radius: 25% !important;
+}
+}

@@ -1,0 +1,151 @@
+<div class="box-consulta mr-4 ml-4 mt-4">
+  <h5 id="exampleModalLabel " class="font-weight-bold">CONSULTA RUC</h5>
+  <form [formGroup]="formConsultarRuc">
+    <div class="row">
+      <div class="col-md-9 mb-4 mt-3 mb-3">
+        <label for="basic-url " class="fs-14">RUC</label>
+        <div>
+          <input #NombreRuc id="name_ruc" class=" btn-rounded  rucc pinky mr-4" name="q" type="text" size="40"
+            formControlName="ruc" [EnteroPositivo] [maxlength]="11" (keyup)="agregarClaseButon()" [ngModel]="Ruc">
+          <span class="search-button">
+            <button (click)="consultar()" [disabled]="!formConsultarRuc.valid" id="btnConsultaRuc" class="btn btn-primary"
+              type="button">
+              Buscar
+            </button>
+
+          </span>
+        </div>
+      </div>
+      <div class="col-md-12 ">
+        <div class="box-basedatos">
+          <div class="file-manager">
+            <label class="mb-3 font-weight-bold fs-14">CONSULTA EN BASE DE DATOS</label>
+            <div class="table-responsive m-t pinky mb-3">
+              <table class="table" [hidden]="!(resultado_busqueda == false)">
+                <thead>
+                  <tr>
+                    <th style="width: 17%;">Nombre</th>
+                    <th style="width: 20%;">Calif. de Riesgo int.</th>
+                    <th style="width: 18%;">Antigüedad</th>
+                    <th style="width: 20%;">Deuda Pendiente</th>
+                    <th class="text-left">Ejecutivo Asignado</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-left">
+                      <!-- Transporte Jose -->
+                    </td>
+                    <td class="text-left">
+                      <!-- Jurídica -->
+                    </td>
+                    <td class="text-left">
+                      <!-- Av. Los Laureles N° 360 -->
+                    </td>
+                    <td class="text-left">
+                      <!-- Mediana -->
+                    </td>
+                    <td class="text-left">
+                      <!-- Normal -->
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+              <div class="col-md-12" *ngIf="cliente_existe == false">
+                <div class="pinky">
+                  <p class="text-center text-cliente">No existe información
+                    de la
+                    empresa<span class="input-group-btn ">
+                      <!-- <button class="button button3  btn-rounded btn-outline button_ln-gradient"
+                                                                        type="button" data-toggle="modal" data-target="#formulario-cliente"
+                                                                        (click)="cerrar()">
+                                                                        Registrar
+                                                                    </button> -->
+                    </span></p>
+
+                </div>
+
+              </div>
+            </div>
+            <h6 class="mb-3 font-weight-bold fs-14">Contratos Vigentes</h6>
+            <div class="table-responsive m-t pinky mb-3">
+              <table class="table" [hidden]="!(resultado_busqueda == false)">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">N CAF</th>
+                    <th style="width: 20%;">Saldo Capital</th>
+                    <th style="width: 18%;">Valor Inicial</th>
+                    <th style="width: 17%;">Valor Total</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-left">
+                      <!-- Transporte Jose -->
+                    </td>
+                    <td class="text-left">
+                      <!-- Jurídica -->
+                    </td>
+                    <td class="text-left">
+                      <!-- Av. Los Laureles N° 360 -->
+                    </td>
+                    <td class="text-left">
+                      <!-- Mediana -->
+                    </td>
+                    <td class="text-left">
+                      <!-- Normal -->
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+            <h6 class="mb-3 font-weight-bold fs-14">CONSULTA SUNAT</h6>
+            <div class="table-responsive m-t pinky mb-3">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 17%;">Nombre</th>
+                    <th style="width: 20%;">Estado</th>
+                    <th style="width: 18%;">Condición</th>
+                    <th style="width: 18%;">Fecha Inicio Actividades</th>
+                    <th style="width: 20%;">Domicilio Fiscal</th>
+                    <th class="text-left">&nbsp;&nbsp;&nbsp;</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-left">
+                      {{data.razon_social}}
+                    </td>
+                    <td class="text-left">{{data.estado_contribuyente}}</td>
+                    <td class="text-left">{{data.condicion_contribuyente}}</td>
+                    <td class="text-left">{{data.fechaInicioActividades}}</td>
+                    <td colspan="2" class="text-left">{{data.direccion}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+
+          <div class="text-right margin-right20">
+
+            <button (click)="cancelarConnsultaRuc()" type="button" class="btn btn-secondary mr-3">
+              Cancelar
+            </button>
+
+            <button id="ruc" (click)="cotizar()" type="button" class="btn btn-primary">
+              Cotizar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

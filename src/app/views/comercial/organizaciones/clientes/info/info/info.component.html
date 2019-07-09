@@ -1,0 +1,295 @@
+<div id="info">
+  <div class="dropdown-content cf " >
+    <div class="dropdown-item" [ngClass]="{'active':show && active}">
+
+      <!-- <button class="mdi mdi-alert-circle  tooltip  iconsborder btn btn-secondary dropdown-toggle " disabled="disabled"
+        (click)="active = !active"><span class="tooltiptext" >
+          Info</span>
+      </button>
+ -->
+
+      <div id="dropdown-info" class="dropdown dropdown-options" style=" width: 333px;">
+        <div class="triangulo"></div>
+        <div class="ibox-content">
+
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                aria-selected="true"><strong>Detalle</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                aria-selected="false"><strong>Historial</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+                aria-selected="false"><strong>Documentos</strong></a>
+            </li>
+          </ul>
+          <div class="tab-content mt-3" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <div class="row">
+                <div class="col-md-4">
+                  <h5>Contratos <br>Vigentes</h5>
+                  <button type="button" class="btn btn-danger btnColor">{{contratosVigentes}}</button>
+                </div>
+                <div class="col-md-4">
+
+                  <h5>Comportamiento <br>de Pago</h5>
+                  <button type="button" class="btn btn-danger btnColor">{{ComportamientoPago}}%</button>
+                </div>
+                <div class="col-md-4">
+
+                  <h5>Calificación <br>Riesgo</h5>
+                  <button type="button" class="btn btn-danger btnColor">{{condicionRiesgo}}</button>
+                </div>
+                <div class="col-md-12 ">
+                  <table class="table table-md " style="margin-bottom: -40px;">
+                    <thead>
+                    </thead>
+                    <tbody class="body detalle">
+                      <tr>
+                        <th scope="row">Ruc</th>
+                        <td>{{lstDetalle.ruc}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Tipo de persona</th>
+                        <td>{{lstDetalle.tipoPersona}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Página Web</th>
+                        <td>{{lstDetalle.paginaWeb}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Tipo</th>
+                        <td>{{lstDetalle.tipo}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Sector</th>
+                        <td>{{lstDetalle.sector}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Segmento</th>
+                        <td>{{lstDetalle.segmento}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">N° Empleados</th>
+                        <td>{{lstDetalle.numEmpleados}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">N° Oficinas</th>
+                        <td>{{lstDetalle.numOficinas}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Creado al</th>
+                        <td>{{lstDetalle.fechaCreacion}} - {{lstDetalle.hora}}</td>
+
+                      </tr>
+                      <tr>
+                        <th scope="row">Actualizado al</th>
+                        <td>{{lstDetalle.fechaActualizacion}} - {{lstDetalle.hora}}</td>
+
+                      </tr>
+                      <tr>
+                        <th scope="row">Actualizado por</th>
+                        <td>{{lstDetalle.actualizado}}</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <div class="row">
+                <div class="col-md-3">
+                  <div id="timeline">
+                    <ul class="timeline">
+                      <li class="timeline-item">
+                        <div class="timeline-info">
+                          <span style="color: #f0f8ff00;"></span>
+                        </div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+
+                        </div>
+                      </li>
+                      <li class="timeline-item">
+                        <div class="timeline-info">
+                          <span style="color: #f0f8ff00;"></span>
+                        </div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+
+                        </div>
+                      </li>
+                      <li class="timeline-item">
+                        <div class="timeline-info">
+                          <span style="color: #f0f8ff00;"></span>
+                        </div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+
+                        </div>
+                      </li>
+                      <li class="timeline-item">
+                        <div class="timeline-info">
+                          <span style="color: #f0f8ff00;"></span>
+                        </div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+
+                        </div>
+                      </li>
+                      <li class="timeline-item">
+                        <div class="timeline-info">
+                          <span style="color: #f0f8ff00;"></span>
+                        </div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+
+                        </div>
+                      </li>
+                      <li class="timeline-item">
+                        <div class="timeline-info">
+                          <span style="color: #f0f8ff00;"></span>
+                        </div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+
+                        </div>
+                      </li>
+
+
+                    </ul>
+
+                  </div>
+                </div>
+                <div class="col-md-9">
+                  <table class="table table-striped" id="tableCliente">
+                    <thead>
+                    </thead>
+                    <tbody class="p-3">
+                      <tr>
+                        <label>
+                          <h4>{{lstHistorial.item1}}</h4>
+                        </label>
+                        <div class="filaTWO">{{lstHistorial.fecha}} - {{lstHistorial.hora}}</div>
+                      </tr>
+                      <tr>
+                        <label>
+                          <h4>{{lstHistorial.item1}}</h4>
+                        </label>
+                        <div class="filaTWO">{{lstHistorial.fecha}} - {{lstHistorial.hora}}</div>
+                      </tr>
+                      <tr>
+                        <label>
+                          <h4>{{lstHistorial.item1}}</h4>
+                        </label>
+                        <div class="filaTWO">{{lstHistorial.fecha}} - {{lstHistorial.hora}}</div>
+                      </tr>
+                      <tr>
+                        <label>
+                          <h4>{{lstHistorial.item1}}</h4>
+                        </label>
+                        <div class="filaTWO">{{lstHistorial.fecha}} - {{lstHistorial.hora}}</div>
+                      </tr>
+                      <tr>
+                        <label>
+                          <h4>{{lstHistorial.item1}}</h4>
+                        </label>
+                        <div class="filaTWO">{{lstHistorial.fecha}} - {{lstHistorial.hora}}</div>
+                      </tr>
+                      <tr>
+                        <label>
+                          <h4>{{lstHistorial.item1}}</h4>
+                        </label>
+                        <div class="filaTWO">{{lstHistorial.fecha}} - {{lstHistorial.hora}}</div>
+                      </tr>
+
+                    </tbody>
+
+                  </table>
+                </div>
+
+
+
+              </div>
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+              <table class="table">
+                <thead>
+                </thead>
+                <tbody class="body p-3">
+                  <tr>
+
+                    <div class="exp">
+                      <label style="text-align: left;margin-bottom: -5px;margin-top: 14px;">Expediente: <h4>{{lstDocumentos.expediente}}</h4></label>
+                      <div class="row">
+                        <div class="col">
+                          <label style="text-align: left;">Estado: <h4>{{lstDocumentos.vigente}}</h4></label>
+                        </div>
+                        <div class="col">
+                          <label>Fecha: <strong>{{lstDocumentos.fecha}} - {{lstDocumentos.hora}}</strong></label>
+                        </div>
+                      </div>
+                    </div>
+                  </tr>
+                  <tr>
+                    <div class="exp">
+                      <label style="text-align: left;margin-bottom: -5px;margin-top: 14px;">Expediente: <h4>{{lstDocumentos.expediente}}</h4></label>
+
+                      <div class="row">
+                        <div class="col">
+                          <label style="text-align: left; ">Estado: <h4>{{lstDocumentos.vigente}}</h4></label>
+                        </div>
+                        <div class="col">
+                          <label>Fecha: <strong>{{lstDocumentos.fecha}} - {{lstDocumentos.hora}}</strong></label>
+                        </div>
+                      </div>
+                    </div>
+                  </tr>
+                  <tr>
+                    <div class="exp">
+                      <label style="text-align: left;margin-bottom: -5px;margin-top: 14px;">Expediente: <h4>{{lstDocumentos.expediente}}</h4></label>
+
+                      <div class="row">
+                        <div class="col">
+                          <label style="text-align: left; ;">Estado: <h4>{{lstDocumentos.vigente}}</h4></label>
+                        </div>
+                        <div class="col">
+                          <label>Fecha: <strong>{{lstDocumentos.fecha}} - {{lstDocumentos.hora}}</strong></label>
+                        </div>
+                      </div>
+                    </div>
+                  </tr>
+                  <tr>
+                    <div class="exp">
+                      <label style="text-align: left;margin-bottom: -5px;margin-top: 14px;">Expediente: <h4>{{lstDocumentos.expediente}}</h4></label>
+
+
+                      <div class="row">
+                        <div class="col">
+                          <label style="text-align: left; ">Estado: <h4>{{lstDocumentos.vigente}}</h4></label>
+                        </div>
+                        <div class="col">
+                          <label>Fecha: <strong>{{lstDocumentos.fecha}} - {{lstDocumentos.hora}} </strong></label>
+                        </div>
+                      </div>
+
+                    </div>
+                  </tr>
+
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

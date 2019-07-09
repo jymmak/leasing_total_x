@@ -1,0 +1,102 @@
+<div id="asignar-clientes">
+
+  <div class=" marginNavs">
+    <div class="row" style=" margin-top: 29px;">
+
+      <div class="col-sm-2 offset-sm-1">
+
+        <div class="titletex">
+          {{provedoresEjecutivos}}
+          <span class="flech">▾</span></div>
+
+      </div>
+
+      <div class="col-sm-5 offset-sm-3" style="text-align: -webkit-right;">
+
+        <div class="titletex">
+          {{clientesProspectados}}
+          <span class="flech">▾</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+
+    <div class="col-sm-4">
+      <table class="table">
+        <thead>
+        </thead>
+        <tbody class="body">
+          <tr>
+
+            <input id="search51" class="ml-2 mb-2" name="q" type="text" />
+
+          </tr>
+
+          <tr *ngFor="let item of listaEjecutivos; let index = index">
+
+            <td style="width:8%;">
+              <!-- <input type="radio" class="d-inline-block" [checked]="item.selected" (ngModelChange)="selectedItem($event,item,index)"
+                id="selected{{index}}" name="selected"> -->
+
+              <div class="custom-control custom-radio position">
+                <input type="radio" class="custom-control-input d-inline-block" [checked]="item.selected"
+                  (ngModelChange)="selectedItem($event,item,index)" id="selected{{index}}" name="selected">
+                <label class="custom-control-label" for="customRadio">
+                </label>
+
+              </div>
+              <div style="display: inline;">
+                <img alt="" [src]="item.imageUrl" alt="">
+              </div>
+              <label class="orderlista">
+                {{item.nombre}}</label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-sm-4">
+      <label class="padding50"> Selecciona a un ejecutivo de la columna izquierda para asignar o designar proveedores
+        de la columna derecha.</label>
+      <div class="actions text-right">
+        <div class="col-sm-12">
+          <button id="btnAplicar" type="button" class="cronogramadisable " (click)="guardarEjecutivo()" disabled>Guardar</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-sm-4">
+      <table class="table">
+        <thead>
+        </thead>
+        <tbody class="body">
+          <tr>
+
+            <input id="search51" class="ml-2 mb-2" name="q" type="text" />
+
+          </tr>
+
+          <tr *ngFor="let item of listaClientes; let index = index">
+            <td style="width:8%;">
+              <div class="custom-control d-inline-block custom-checkbox">
+                <input type="checkbox" class=" custom-control-input" [checked]="item.selected" (ngModelChange)="selectedItem($event,item,index)"
+                  id="selected{{index}}" name="selected">
+                <label class="custom-control-label" for="customCheck"></label>
+
+              </div>
+              <label class="orderlista"> {{item.cliente}} </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
+
+</div>

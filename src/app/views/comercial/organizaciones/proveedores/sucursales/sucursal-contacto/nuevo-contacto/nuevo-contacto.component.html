@@ -1,0 +1,96 @@
+<cabecera-basico [titulo]="titulo" [links]="links"></cabecera-basico>
+<div id="nuevo-contacto">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="wrapper wrapper-content animated fadeInUp">
+
+        <div class="ibox">
+          <div class="ibox-title col-sm-12 col-md-12 col-lg-12">
+            <div class="title-banner">NUEVO CONTACTO</div>
+          </div>
+          <div class="ibox-content">
+            <form [formGroup]="formformularioContacto">
+              <div class="form-group">
+                <div class="related-news" style=" margin-top: 22px;">
+                  <div class="tab-content" id="myTabContent">
+
+                    <div class="row" id="duplicater">
+                      <div class="col-sm-4 ">
+                        <div class="col-sm-12">
+                          <label>Nombres</label>
+                          <input autocomplete="off" class=" btn-rounded  _input pinky margin-bottom30 " formControlName="nombre"
+                            required>
+                        </div>
+                        <div class="col-sm-12">
+                          <label>Fecha de naciemto</label>
+                          <input #fechaInicio autocomplete="off" id="datepicker" (onSelect)="selectedFechaNacimiento($event)" 
+                            datepicker minDate class="icon-calendario btn-rounded  _input pinky margin-bottom30" width="276">
+                        </div>
+                        <div class="col-sm-12">
+                          <label>Teléfono Celular 2</label>
+                          <input [EnteroPositivo] (valueEntero)="validarTelefono($event)" autocomplete="off" class=" btn-rounded  _input pinky margin-bottom30 "
+                            formControlName="celular2" required>
+                        </div>
+
+                      </div>
+
+                      <div class="col-sm-4 ">
+                        <div class="col-sm-12">
+                          <label>Apellidos</label>
+                          <input autocomplete="off" class=" btn-rounded  _input pinky margin-bottom30 " formControlName="apellido"
+                            required>
+                        </div>
+                        <div class="col-sm-12">
+                          <label>Teléfono Fijo</label>
+                          <input [EnteroPositivo] (valueEntero)="validarTelefono($event)" autocomplete="off" class=" btn-rounded  _input pinky margin-bottom30 "
+                            formControlName="telefono" required>
+                        </div>
+                        <div class="col-sm-12">
+                          <label>Email</label>
+                          <input autocomplete="off" class=" btn-rounded  _input pinky margin-bottom30 " formControlName="email"
+                            required>
+                        </div>
+
+                      </div>
+                      <div class="col-sm-4 ">
+                        <div class="col-sm-12">
+                          <label>Cargo</label>
+                          <input autocomplete="off" class=" btn-rounded  _input pinky margin-bottom30 " formControlName="cargo"
+                            required>
+                        </div>
+                        <div class="col-sm-12">
+                          <label>Teléfono Celular 1</label>
+                          <input [EnteroPositivo] (valueEntero)="validarTelefono($event)" autocomplete="off" class=" btn-rounded  _input pinky margin-bottom30 "
+                            formControlName="celular1" required>
+                        </div>
+
+                        <div class="col-md-12">
+                          <label>Tipo de Contacto</label>
+                          <div class="btn-group btn-group-custom pink">
+                            <button id="contactoPrinpal" (click)="checkedTipoPersona(true)" type="button" class="btn"
+                              [ngClass]="{'active': formformularioContacto.controls.tipoContacto.value == true }">Principal</button>
+                            <button id="contactoSecundarios" (click)="checkedTipoPersona(false)" type="button" class="btn "
+                              [ngClass]="{'active': formformularioContacto.controls.tipoContacto.value == false }">Secundario</button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                  <div class="actions text-right margin-top20">
+                    <button type="button" class="btn-rounded button button-cg " style="    margin-right: 35px;" (click)="atras()">
+                      Cancelar</button>
+                    <button id="btnnext" type="button" class="btn btn-primary" (click)="guardar()" [disabled]="!formformularioContacto.valid">
+                      Guardar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
