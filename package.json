@@ -61,7 +61,7 @@
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.3.3",
     "save": "^2.3.3",
-    "select2": "^4.0.6-rc.1",
+    "select2": "^4.0.6",
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^7.26.11",
     "toastr": "^2.1.4",
