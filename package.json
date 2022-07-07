@@ -46,7 +46,7 @@
     "jspdf": "^1.4.1",
     "material-design-icons": "^3.0.1",
     "metismenu": "^3.0.3",
-    "moment": "^2.23.0",
+    "moment": "^2.29.4",
     "multiple-select": "^1.2.1",
     "ng-pdf-make": "0.0.2",
     "ng2-google-charts": "^3.5.0",
